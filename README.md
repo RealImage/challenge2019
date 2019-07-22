@@ -1,12 +1,14 @@
 # Qube Cinemas Challenge 2019
-Qube Delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
+Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
-Delivery partners specify the rate of delivery and price in following manner:
+Delivery partners specify the rate of delivery and price in following manner (All price are in cents):
+
+Table 1
 
 | Theatre       | Content Size Slab (in GB)| Minimum Price | Cost Per GB | Partner ID |
 | ------------- |:----------------:        |:-------------:| :----------:|:----------:|
 |  T1           |         0-200            |       2000    |      20     |     P1     |
-|  T1           |         201-300          |       3000    |      15     |P1          |
+|  T1           |         201-400          |       3000    |      15     |P1          |
 |  T3           |         101-200          |       4000    |      30     |P1          |
 |  T3           |         201-400          |       5000    |      25     |P1          |
 |  T5           |         101-200          |       2000    |      30     |P1          |
@@ -14,65 +16,90 @@ Delivery partners specify the rate of delivery and price in following manner:
 
 First rows allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total price comes less than minimum price, minimum price (2000 cents) will be charged.
 
-*NOTE*: Multiple partners can deliver to same theatre 
+*NOTE*: 
+- Multiple partners can deliver to same theatre
+
+Each partner specifies the **maximum capacity**, they can serve.
+
+Table 2:
+
+| Partner ID    | Capacity (in GB) |
+| ------------- |:----------------:|
+|  P1           |        500       |
+|  P2           |        300       |
 
 
-## Problem Statement
-Given a list of content size and Theatre ID to deliver content to, Find the partner where cost of delivery is minimum. If delivery is not possible to a theatre, mark that delivery impossible. 
+This challenge consist of two problem.
+Write a program in any language you want. Feel free to hold the datasets in whatever data structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
 
-### Sample Scenarios (Based on above table):
+## Problem Statement 1
+Given a list of content size and Theatre ID, Find the partner where cost of delivery is minimum. If delivery is not possible to a theatre, mark that delivery impossible. Assume every partner have infinite capacity.
+
+We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum price and cost per GB. Please use the data mentioned there for this program. The codes you see there may be different from what you see here, so please always use the codes in the CSV. This Readme is only an example.
+
+**Input**: A CSV file `input.csv` containing delivery ID, size of delivery and theatre ID.
+
+**Expected Output**: A CSV `output.csv` containing delivery ID, true/false indication if delivery is possible, selected partner and cost of delivery.
+
+#### Sample Scenarios (Based on above table 1):
 **INPUT**:
 ```
-Number of Deliveries: 1
-Content Size of delivery 1: 100
-Theatre ID of delivery 1  : T1
-Content Size of delivery 2: 300
-Theatre ID of delivery 2  : T1
+D1, 100, T1
+D2, 300, T1
+D3, 350, T1
 ```
 **OUTPUT**
 ```
-Solution: 
-Delivery: 1, Partner: P1, Cost: 2000
-Delivery: 2, Partner: P1, Cost: 4500
-Total Cost: 6500
+D1, true, P1, 2000
+D2, true, P1, 4500
+D3, true, P1, 5250
 ```
 ---
 **INPUT**:
 ```
-Number of Deliveries: 2
-Content Size of delivery 1: 70
-Theatre ID of delivery 1  : T1
-Content Size of delivery 2: 300
-Theatre ID of delivery 2  : T1
+D1, 70, T1
+D2, 300, T1
 ```
 **OUTPUT**
 ```
-Solution: 
-Delivery: 1, Partner: P2, Cost: 1750
-Delivery: 2, Partner: P1, Cost: 4500
-Total Cost: 6250
+D1, true, P2, 1750
+D2, true, P1, 4500
 ```
 
 ---
 **INPUT**:
 ```
-Number of Deliveries: 1
-Content Size of delivery 1: 70
-Theatre ID of delivery 1  : T3
-Content Size of delivery 2: 300
-Theatre ID of delivery 2  : T1
+D1, 70, T3
+D2, 300, T1
 ```
 **OUTPUT**
 ```
-Solution: 
-Delivery: 1, Impossible
-Delivery: 2, Partner: P1, Cost: 4500
-Total Cost: 4500
+D1, false, "", "" 
+D2, true, P1, 4500
 ```
-We've provided a CSV with the list of all partners, theatres, content size, minimum price and cost per GB. Please use the data mentioned there for this program. The codes you see there may be different from what you see here, so please always use the codes in the CSV. This Readme is only an example.
 
-Write a program in any language you want that does this. Feel free to make your own input and output format / command line tool / GUI / Webservice / whatever you want. Feel free to hold the dataset in whatever structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
+## Problem Statement 2
+Given a list of content size and Theatre ID, Assign deliveries to partners in such a way that all deliveries are possible (Higher Priority) and overall cost of delivery is minimum (i.e. First make sure no delivery is impossible and then minimise the sum of cost of all the delivery). If delivery is not possible to a theatre, mark that delivery impossible. Take partner capacity into consideration as well.
 
+Use `partners.csv` and `capacities.csv` which contain partner ID and capacity.
 
+**Input**: A CSV file `input.csv` containing delivery ID, size and theatre ID.
 
+**Expected Output**: A CSV `output.csv` containing delivery ID, true/false indicating if delivery is possible, selected partner and cost of delivery.
 
+#### Sample Scenarios (Based on above table 1 and 2):
+**INPUT**:
+```
+D1, 100, T1
+D2, 240, T1
+D2, 260, T1
+```
+
+**OUTPUT**
+```
+D1, true, P2, 2500
+D2, true, P2, 3600
+D3, true, P1, 3900
+```
+
+**Explanation**: Only partner P1 and P2 can deliver content to T1. Lowest cost of delivery will be achieved if all three deliveries are given to partner P1 (100\*20+240\*15+260\*15 = 9,500). However, P1 has capacity of 500 GB and total assigned capacity is (100+240+260) 600 GB in this case. Assigning any one of the delivery to P2 will bring the capacity under 500. Assigning the D1, D2 and D3 to P2 is increasing the total cost of delivery by 500 (100\*25+240\*15+260\*15-9500), 2400 (100\*20+240\*25+260*15-9500) and 2600 (100\*20+240\*15+260\*25-9500) respectively. Hence, Assigning D1 to P2.
