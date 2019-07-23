@@ -1,11 +1,11 @@
 # Qube Cinemas Challenge 2019
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
-Delivery partners specify the rate of delivery and price in following manner (All price are in cents):
+Delivery partners specify the rate of delivery and cost in following manner (All costs are in cents):
 
 Table 1:
 
-| Theatre       | Content Size Slab (in GB)| Minimum Price | Cost Per GB | Partner ID |
+| Theatre       | Content Size Slab (in GB)| Minimum cost | Cost Per GB | Partner ID |
 | ------------- |:----------------:        |:-------------:| :----------:|:----------:|
 |  T1           |         0-200            |       2000    |      20     |     P1     |
 |  T1           |         201-400          |       3000    |      15     |P1          |
@@ -14,7 +14,7 @@ Table 1:
 |  T5           |         101-200          |       2000    |      30     |P1          |
 |  T1           |         0-400            |       1500    |      25     |P2          |
 
-First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total price comes less than minimum price, minimum price (2000 cents) will be charged.
+First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total cost comes less than minimum cost, minimum cost (2000 cents) will be charged.
 
 *NOTE*: 
 - Multiple partners can deliver to same theatre
@@ -31,7 +31,7 @@ Table 2:
 
 - Write programs in any language you want. Feel free to hold the datasets in whatever data structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
 
-- We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum price and cost per GB. Also `capacities.csv` contain partner ID and capacity. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
+- We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum cost and cost per GB. Also `capacities.csv` contain partner ID and capacity. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
 
 This challenge consist of two problems.
 
