@@ -1,11 +1,11 @@
 # Qube Cinemas Challenge 2019
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
-Delivery partners specify the rate of delivery and cost in following manner (All costs are in cents):
+Delivery partners specify the rate of delivery and cost in following manner (All costs are in paise):
 
 Table 1:
 
-| Theatre       | Content Size Slab (in GB)| Minimum cost | Cost Per GB | Partner ID |
+| Theatre       | Size Slab (in GB)        | Minimum cost  | Cost Per GB | Partner ID |
 | ------------- |:----------------:        |:-------------:| :----------:|:----------:|
 |  T1           |         0-200            |       2000    |      20     |     P1     |
 |  T1           |         201-400          |       3000    |      15     |P1          |
@@ -19,7 +19,7 @@ First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 c
 *NOTE*: 
 - Multiple partners can deliver to same theatre
 
-Each partner specifies the **maximum capacity** they can serve.
+Each partner specifies the **maximum capacity** they can serve, across all their deliveries.
 
 Table 2:
 
