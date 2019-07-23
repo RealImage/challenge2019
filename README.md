@@ -3,7 +3,7 @@ Qube delivers the movie content to theatres all around the world. There are mult
 
 Delivery partners specify the rate of delivery and price in following manner (All price are in cents):
 
-Table 1
+Table 1:
 
 | Theatre       | Content Size Slab (in GB)| Minimum Price | Cost Per GB | Partner ID |
 | ------------- |:----------------:        |:-------------:| :----------:|:----------:|
@@ -14,12 +14,12 @@ Table 1
 |  T5           |         101-200          |       2000    |      30     |P1          |
 |  T1           |         0-400            |       1500    |      25     |P2          |
 
-First rows allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total price comes less than minimum price, minimum price (2000 cents) will be charged.
+First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total price comes less than minimum price, minimum price (2000 cents) will be charged.
 
 *NOTE*: 
 - Multiple partners can deliver to same theatre
 
-Each partner specifies the **maximum capacity**, they can serve.
+Each partner specifies the **maximum capacity** they can serve.
 
 Table 2:
 
@@ -52,7 +52,7 @@ D1, 100, T1
 D2, 300, T1
 D3, 350, T1
 ```
-**OUTPUT**
+**OUTPUT**:
 ```
 D1, true, P1, 2000
 D2, true, P1, 4500
@@ -64,7 +64,7 @@ D3, true, P1, 5250
 D1, 70, T1
 D2, 300, T1
 ```
-**OUTPUT**
+**OUTPUT**:
 ```
 D1, true, P2, 1750
 D2, true, P1, 4500
@@ -76,7 +76,7 @@ D2, true, P1, 4500
 D1, 70, T3
 D2, 300, T1
 ```
-**OUTPUT**
+**OUTPUT**:
 ```
 D1, false, "", "" 
 D2, true, P1, 4500
@@ -99,10 +99,10 @@ D2, 240, T1
 D2, 260, T1
 ```
 
-**OUTPUT**
+**OUTPUT**:
 ```
 D1, true, P2, 2500
-D2, true, P2, 3600
+D2, true, P1, 3600
 D3, true, P1, 3900
 ```
 
