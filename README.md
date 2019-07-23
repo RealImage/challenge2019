@@ -14,7 +14,7 @@ Table 1:
 |  T5           |         101-200          |       2000    |      30     |P1          |
 |  T1           |         0-400            |       1500    |      25     |P2          |
 
-First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 cents per GB. However, if total cost comes less than minimum cost, minimum cost (2000 cents) will be charged.
+First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 paise per GB. However, if total cost comes less than minimum cost, minimum cost (2000 paise) will be charged.
 
 *NOTE*: 
 - Multiple partners can deliver to same theatre
