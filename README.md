@@ -29,17 +29,21 @@ Table 2:
 |  P2           |        300       |
 
 
-This challenge consist of two problem.
-Write a program in any language you want. Feel free to hold the datasets in whatever data structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
+- Write programs in any language you want. Feel free to hold the datasets in whatever data structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
+
+- We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum price and cost per GB. Also `capacities.csv` contain partner ID and capacity. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
+
+This challenge consist of two problems.
 
 ## Problem Statement 1
-Given a list of content size and Theatre ID, Find the partner where cost of delivery is minimum. If delivery is not possible to a theatre, mark that delivery impossible. Assume every partner have infinite capacity.
+Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible. Assume every partner have infinite capacity.
 
-We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum price and cost per GB. Please use the data mentioned there for this program. The codes you see there may be different from what you see here, so please always use the codes in the CSV. This Readme is only an example.
+Use the data given in `partners.csv`.
 
-**Input**: A CSV file `input.csv` containing delivery ID, size of delivery and theatre ID.
 
-**Expected Output**: A CSV `output.csv` containing delivery ID, true/false indication if delivery is possible, selected partner and cost of delivery.
+**Input**: A CSV file `input.csv`. Each row containing delivery ID, size of delivery and theatre ID.
+
+**Expected Output**: A CSV `output.csv`. Each row containing delivery ID, indication if delivery is possible (true/false), selected partner and cost of delivery.
 
 #### Sample Scenarios (Based on above table 1):
 **INPUT**:
@@ -81,13 +85,13 @@ D2, true, P1, 4500
 ## Problem Statement 2
 Given a list of content size and Theatre ID, Assign deliveries to partners in such a way that all deliveries are possible (Higher Priority) and overall cost of delivery is minimum (i.e. First make sure no delivery is impossible and then minimise the sum of cost of all the delivery). If delivery is not possible to a theatre, mark that delivery impossible. Take partner capacity into consideration as well.
 
-Use `partners.csv` and `capacities.csv` which contain partner ID and capacity.
+Use `partners.csv` and `capacities.csv`.
 
-**Input**: A CSV file `input.csv` containing delivery ID, size and theatre ID.
+**Input**: Same as Problem statement 1.
 
-**Expected Output**: A CSV `output.csv` containing delivery ID, true/false indicating if delivery is possible, selected partner and cost of delivery.
+**Expected Output**: Same as Problem statement 1.
 
-#### Sample Scenarios (Based on above table 1 and 2):
+#### Sample Scenario (Based on above table 1 and 2):
 **INPUT**:
 ```
 D1, 100, T1
