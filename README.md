@@ -19,24 +19,15 @@ First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 p
 *NOTE*: 
 - Multiple partners can deliver to same theatre
 
-Each partner specifies the **maximum capacity** they can serve, across all their deliveries.
-
-Table 2:
-
-| Partner ID    | Capacity (in GB) |
-| ------------- |:----------------:|
-|  P1           |        500       |
-|  P2           |        300       |
-
 
 - Write programs in any language you want. Feel free to hold the datasets in whatever data structure you want, but try not to use external databases - as far as possible stick to your langauage without bringing in MySQL/Postgres/MongoDB/Redis/Etc.
 
-- We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum cost and cost per GB. Also `capacities.csv` contain partner ID and capacity. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
+- We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum cost and cost per GB. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
 
 This challenge consist of two problems.
 
 ## Problem Statement 1
-Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible. Assume every partner have infinite capacity (i.e. Do not use capacities.csv).
+Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible.
 
 Use the data given in `partners.csv`.
 
@@ -83,6 +74,18 @@ D2, true, P1, 4500
 ```
 
 ## Problem Statement 2
+
+Each partner specifies the **maximum capacity** they can serve, across all their deliveries in following manner:
+
+Table 2:
+
+| Partner ID    | Capacity (in GB) |
+| ------------- |:----------------:|
+|  P1           |        500       |
+|  P2           |        300       |
+
+We have provided `capacities.csv` which contain ID and capacities for each partner.
+
 Given a list of content size and Theatre ID, Assign deliveries to partners in such a way that all deliveries are possible (Higher Priority) and overall cost of delivery is minimum (i.e. First make sure no delivery is impossible and then minimise the sum of cost of all the delivery). If delivery is not possible to a theatre, mark that delivery impossible. Take partner capacity into consideration as well.
 
 Use `partners.csv` and `capacities.csv`.
