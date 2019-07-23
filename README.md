@@ -36,7 +36,7 @@ Table 2:
 This challenge consist of two problems.
 
 ## Problem Statement 1
-Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible. Assume every partner have infinite capacity.
+Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible. Assume every partner have infinite capacity (i.e. Do not use capacities.csv).
 
 Use the data given in `partners.csv`.
 
