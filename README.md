@@ -8,10 +8,10 @@ Table 1:
 | Theatre       | Size Slab (in GB)        | Minimum cost  | Cost Per GB | Partner ID |
 | ------------- |:----------------:        |:-------------:| :----------:|:----------:|
 |  T1           |         0-200            |       2000    |      20     |     P1     |
-|  T1           |         201-400          |       3000    |      15     |P1          |
-|  T3           |         101-200          |       4000    |      30     |P1          |
-|  T3           |         201-400          |       5000    |      25     |P1          |
-|  T5           |         101-200          |       2000    |      30     |P1          |
+|  T1           |         200-400          |       3000    |      15     |P1          |
+|  T3           |         100-200          |       4000    |      30     |P1          |
+|  T3           |         200-400          |       5000    |      25     |P1          |
+|  T5           |         100-200          |       2000    |      30     |P1          |
 |  T1           |         0-400            |       1500    |      25     |P2          |
 
 First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 paise per GB. However, if total cost comes less than minimum cost, minimum cost (2000 paise) will be charged.
