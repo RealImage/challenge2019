@@ -1,15 +1,15 @@
 ## RealImage challenge 2019
 [Problem statement Link](https://github.com/RealImage/challenge2019/blob/master/README.md)
-###Tech stack
+### Tech stack
 - golang v1.10.4
 
-###Execution
+### Execution
 - The extracted Qube folder should reside within go path.
 - `cd src/qube` and `./bin/main`
 <br> or <br>
 - `cd src/qube` and `go run main`
 
-###Folder structure
+### Folder structure
 - module based structure. `src` folder will contain modules.
 - main.go file resides in `module` root 
 - `module/static` contains input and output(generated automatically after running the code) csv.
