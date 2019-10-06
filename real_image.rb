@@ -11,11 +11,11 @@ class RealImage
 
   def deliver_content_to_theatre
     puts "*********************************************************************"
-    puts "Results fot the First Problem"
+    puts "Results for the First Problem"
     puts "---------------------------------------------------------------------"
     problem_1_sent_content
     puts "---------------------------------------------------------------------"
-    puts "Results fot the Second Problem"
+    puts "Results for the Second Problem"
     puts "*********************************************************************"
     problem_2_send_content
     puts "---------------------------------------------------------------------"
