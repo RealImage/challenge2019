@@ -1,0 +1,22 @@
+{
+  "name": "challenge2019",
+  "version": "1.0.0",
+  "description": "coding challenge by Qube",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RealImage/challenge2019.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RealImage/challenge2019/issues"
+  },
+  "homepage": "https://github.com/RealImage/challenge2019#readme",
+  "dependencies": {
+    "fast-csv": "^3.4.0"
+  }
+}
