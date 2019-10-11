@@ -238,9 +238,9 @@ func solveProblemTwo(partners []Partner, capacities Capacity, deliveries []Deliv
 		minCost := math.MaxInt64
 		for i, s := range schedules {
 			if s.DID == d.ID {
-				found = true // There exists atleast on solution
 				if capacities[s.PID] >= d.Size {
 					if s.Cost < minCost {
+						found = true
 						minCost = s.Cost
 						capacities[s.PID] -= d.Size
 						sIdx = i
