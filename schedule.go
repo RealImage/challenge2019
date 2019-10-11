@@ -247,8 +247,6 @@ func solveProblemTwo(partners []Partner, capacities Capacity, deliveries []Deliv
 						capacities[s.PID] -= d.Size
 						sIdx = i
 					}
-				} else {
-					found = false
 				}
 			}
 		}
