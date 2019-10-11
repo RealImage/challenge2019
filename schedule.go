@@ -56,6 +56,20 @@ func init() {
 	flag.StringVar(&inputFile, "input", defaultInputFile, "Input")
 }
 
+func readRecords(reader *csv.Reader, o chan []string) {
+	for {
+		r, err := reader.Read()
+		if err == io.EOF {
+			close(o)
+			return
+		}
+		if err != nil {
+			log.Fatal(err)
+		}
+		o <- r
+	}
+}
+
 func readPartners() []Partner {
 	partnersCSV, err := os.Open(partnersFile)
 	defer partnersCSV.Close()
@@ -66,23 +80,18 @@ func readPartners() []Partner {
 	pr := csv.NewReader(partnersCSV)
 	var partners []Partner
 	pr.Read() // Ignore header
-	for {
-		record, err := pr.Read()
-		if err == io.EOF {
-			break
-		}
+	records := make(chan []string)
+	go readRecords(pr, records)
+	for r := range records {
+		minCost, err := strconv.Atoi(strings.TrimSpace(r[2]))
 		if err != nil {
 			log.Fatal(err)
 		}
-		minCost, err := strconv.Atoi(strings.TrimSpace(record[2]))
+		costGB, err := strconv.Atoi(strings.TrimSpace(r[3]))
 		if err != nil {
 			log.Fatal(err)
 		}
-		costGB, err := strconv.Atoi(strings.TrimSpace(record[3]))
-		if err != nil {
-			log.Fatal(err)
-		}
-		minMax := strings.Split(record[1], "-")
+		minMax := strings.Split(r[1], "-")
 		minGB, err := strconv.Atoi(strings.TrimSpace(minMax[0]))
 		if err != nil {
 			log.Fatal(err)
@@ -92,14 +101,15 @@ func readPartners() []Partner {
 			log.Fatal(err)
 		}
 		p := Partner{
-			strings.TrimSpace(record[4]),
-			strings.TrimSpace(record[0]),
+			strings.TrimSpace(r[4]),
+			strings.TrimSpace(r[0]),
 			minCost,
 			costGB,
 			minGB,
 			maxGB,
 		}
 		partners = append(partners, p)
+
 	}
 	return partners
 }
@@ -114,20 +124,14 @@ func readCapacities() Capacity {
 	cr := csv.NewReader(capCSV)
 	capacities := make(Capacity)
 	cr.Read() // dump header
-	for {
-		record, err := cr.Read()
-		if err == io.EOF {
-			break
-		}
+	c := make(chan []string)
+	go readRecords(cr, c)
+	for r := range c {
+		cap, err := strconv.Atoi(strings.TrimSpace(r[1]))
 		if err != nil {
 			log.Fatal(err)
 		}
-
-		cap, err := strconv.Atoi(strings.TrimSpace(record[1]))
-		if err != nil {
-			log.Fatal(err)
-		}
-		capacities[strings.TrimSpace(record[0])] = cap
+		capacities[strings.TrimSpace(r[0])] = cap
 	}
 	return capacities
 }
@@ -141,23 +145,17 @@ func readInput() []Delivery {
 
 	ir := csv.NewReader(inputCSV)
 	var deliveries []Delivery
-
-	for {
-		record, err := ir.Read()
-		if err == io.EOF {
-			break
-		}
-		if err != nil {
-			log.Fatal(err)
-		}
-		size, err := strconv.Atoi(strings.TrimSpace(record[1]))
+	c := make(chan []string)
+	go readRecords(ir, c)
+	for r := range c {
+		size, err := strconv.Atoi(strings.TrimSpace(r[1]))
 		if err != nil {
 			log.Fatal(err)
 		}
 		d := Delivery{
-			strings.TrimSpace(record[0]),
+			strings.TrimSpace(r[0]),
 			size,
-			strings.TrimSpace(record[2]),
+			strings.TrimSpace(r[2]),
 		}
 		deliveries = append(deliveries, d)
 	}
