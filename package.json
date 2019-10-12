@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RealImage/challenge2019#readme",
   "dependencies": {
+    "csv-writer": "^1.5.0",
     "fast-csv": "^3.4.0"
   }
 }

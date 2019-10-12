@@ -4,6 +4,8 @@ const partner_csv = fs.createReadStream('./partners.csv');
 const capacity_csv = fs.createReadStream('./capacities.csv');
 const input_csv = fs.createReadStream('./input.csv');
 const output_csv = fs.createReadStream('./output2.csv');
+const ws = fs.createWriteStream('solution_for_problem_2.csv');
+
 let partnersData = [];
 let capacityData = [];
 let actualResult = [];
@@ -36,6 +38,17 @@ partner_csv
           .on('end', () => {
             console.log('EXPECTED RESULT :');
             console.table(expectedResult);
+            fastcsv
+              .write(expectedResult, {
+                headers: [
+                  'deliveryID',
+                  'deliveryPossible',
+                  'partnerId',
+                  'minimumCost'
+                ]
+              })
+              .pipe(ws);
+
             console.log(
               '-----------------------------------------------------------------'
             );
