@@ -3,15 +3,12 @@ const fastcsv = require('fast-csv');
 const partner_csv = fs.createReadStream('./partners.csv');
 const capacity_csv = fs.createReadStream('./capacities.csv');
 const input_csv = fs.createReadStream('./input.csv');
-const output_csv = fs.createReadStream('./output2.csv');
-const ws = fs.createWriteStream('solution_for_problem_2.csv');
+const ws = fs.createWriteStream('output2.csv');
 
 let partnersData = [];
 let capacityData = [];
 let actualResult = [];
-let expectedResult = [];
 
-console.log('PROBLEM 2 ::::::::::');
 capacity_csv.pipe(fastcsv.parse({ headers: true })).on('data', row => {
   capacityData.push(row);
 });
@@ -28,36 +25,22 @@ partner_csv
         minimumCapacity(row);
       })
       .on('end', function() {
-        console.log('ACTUAL RESULT :');
+        console.log('SOLUTION FOR PROBLEM 2:');
         console.table(actualResult);
-        output_csv
-          .pipe(fastcsv.parse({ headers: false }))
-          .on('data', row => {
-            expectedResult.push(row);
+        fastcsv
+          .write(actualResult, {
+            headers: [
+              'deliveryID',
+              'deliveryPossible',
+              'partnerId',
+              'minimumCost'
+            ]
           })
-          .on('end', () => {
-            console.log('EXPECTED RESULT :');
-            console.table(expectedResult);
-            fastcsv
-              .write(expectedResult, {
-                headers: [
-                  'deliveryID',
-                  'deliveryPossible',
-                  'partnerId',
-                  'minimumCost'
-                ]
-              })
-              .pipe(ws);
-
-            console.log(
-              '-----------------------------------------------------------------'
-            );
-          });
+          .pipe(ws);
       });
   });
 
 function minimumCapacity(input) {
-  // console.log(capacityData);
   let deliveryID = input[0];
   let deliverySize = input[1];
   let theatreID = input[2];

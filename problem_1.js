@@ -2,20 +2,14 @@ const fs = require('fs');
 const fastcsv = require('fast-csv');
 const partner_csv = fs.createReadStream('./partners.csv');
 const input_csv = fs.createReadStream('./input.csv');
-const output_csv = fs.createReadStream('./output1.csv');
-const ws = fs.createWriteStream('solution_for_problem_1.csv');
+const ws = fs.createWriteStream('output1.csv');
 
 let partnersData = []; // initial partners data array
 let actualResult = []; // actual result data array
-let expectedResult = [];
-
-console.log('PROBLEM 1 :');
 
 partner_csv
   .pipe(fastcsv.parse({ headers: true }))
   .on('data', row => {
-    // console.log("INPUT CSV DATA");
-    // console.log(row);
     // pushing partner's csv data row into initialised array
     partnersData.push(row);
   })
@@ -23,38 +17,21 @@ partner_csv
     input_csv
       .pipe(fastcsv.parse({ headers: false }))
       .on('data', row => {
-        console.log('INPUT CSV DATA');
-        console.log(row);
-        //find Minimum Cost
-
         minimumCost(row);
       })
       .on('end', function() {
-        console.log('ACTUAL RESULT :');
+        console.log('SOLUTION FOR PROBLEM 1:');
         console.table(actualResult);
-        output_csv
-          .pipe(fastcsv.parse({ headers: false }))
-          .on('data', row => {
-            expectedResult.push(row);
+        fastcsv
+          .write(actualResult, {
+            headers: [
+              'deliveryID',
+              'deliveryPossible',
+              'partnerId',
+              'minimumCost'
+            ]
           })
-          .on('end', () => {
-            console.log('EXPECTED RESULT :');
-            console.log(expectedResult);
-            fastcsv
-              .write(expectedResult, {
-                headers: [
-                  'deliveryID',
-                  'deliveryPossible',
-                  'partnerId',
-                  'minimumCost'
-                ]
-              })
-              .pipe(ws);
-
-            console.log(
-              '-----------------------------------------------------------------'
-            );
-          });
+          .pipe(ws);
       });
   });
 
@@ -72,8 +49,6 @@ function minimumCost(input) {
   };
 
   partnersData.map(res => {
-    // console.log("result set :", res);
-
     if (
       res.Theatre.trim().toLowerCase() === theatreID.toLowerCase() &&
       isSizeSlabAvailable(res['Size Slab (in GB)'], deliverySize)
@@ -99,7 +74,7 @@ function minimumCost(input) {
       return res;
     }
   });
-  console.log('bingo :', finalResult);
+  // console.log('bingo :', finalResult);
   actualResult.push(finalResult);
 }
 
