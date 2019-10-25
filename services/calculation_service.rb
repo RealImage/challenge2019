@@ -11,8 +11,8 @@ class CalculationService
       delivery_possible = false
       mincost = ""
       delivery_partner = ""
-      @partners.each do|partner|
-        next unless valid_partner?(partner, row)
+      partner_delivering_to_location = fetch_partner_delivering_to_location(row)
+      partner_delivering_to_location.each do|partner|
         if row[1].to_i >= partner.min_size && row[1].to_i < partner.max_size
           total_cost = calculate_total_cost(partner, row)
           if mincost.to_i == 0 || total_cost < mincost
@@ -42,9 +42,6 @@ class CalculationService
   end
   
   private
-  def valid_partner?(partner, row)
-    partner.theatre_id == row[2]
-  end
 
   def update_partner_capacity(partner_id, row)
     @partners.each do|partner|
@@ -57,6 +54,11 @@ class CalculationService
     capacity_map[partner_id] < assigned_capacity_map[partner_id]
   end
 
+  def fetch_partner_delivering_to_location(row, partner_id: nil)
+    partners = @partners.select { |partner| partner.theatre_id == row[2] }
+    partner_id.nil? ? partners : partners.reject { |partner| partner.partner_id == partner_id }
+  end
+
   def reassign_partner(input_map, partner_delivery_map, assigned_capacity_map, partner_id)
     delivery_data = partner_delivery_map[partner_id]
     min_diff = new_min_cost = prev_diff = 0
@@ -65,8 +67,8 @@ class CalculationService
     delivery_partner_id = delivery_id = ""
     delivery_data.each do|row|
       input_row = input_map[row[:delivery]]
-      @partners.each do|partner|
-        next unless partner.theatre_id == input_row[2] && partner.partner_id != partner_id
+      partner_delivering_to_location = fetch_partner_delivering_to_location(input_row, partner_id: partner_id)
+      partner_delivering_to_location.each do|partner|
         next if partner.max_capacity < (assigned_capacity_map[partner.partner_id].to_i + input_row[1].to_i)
         if input_row[1].to_i >= partner.min_size && input_row[1].to_i < partner.max_size
           total_cost = calculate_total_cost(partner, input_row)
