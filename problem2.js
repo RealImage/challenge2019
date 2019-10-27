@@ -42,11 +42,11 @@ let capacities = csvparser("./capacities.csv");
 
 capacities = capacities.sort(function (a, b) { return b["Capacity (in GB)"] - a["Capacity (in GB)"] });
 
-console.log(capacities);
+// console.log(capacities);
 
 let inputs = inputparser("./input.csv");
 inputs = inputs.sort(function (a, b) { return b[1] - a[1] });
-
+let outputs = [];
 inputs.forEach((e) => {
     let deliveryID = e[0];
     let sizeofdelivery = parseInt(e[1]);
@@ -78,14 +78,19 @@ inputs.forEach((e) => {
             }
         }
     }
-    capacities.map((x)=>{
-        if(x["Partner ID"] === parterID)
-         x["Capacity (in GB)"] = x["Capacity (in GB)"] - sizeofdelivery;
-         return x;
+    capacities.map((x) => {
+        if (x["Partner ID"] === parterID)
+            x["Capacity (in GB)"] = x["Capacity (in GB)"] - sizeofdelivery;
+        return x;
     });
     // console.log('cpa', capacities);
 
     let transferable = max === Number.MAX_VALUE ? false : true;
     let value = max === Number.MAX_VALUE ? "" : max;
-    console.log(`${deliveryID},${transferable},${parterID},${value}`);
-})
+    outputs.push([deliveryID, transferable, parterID, value])
+    // console.log(`deliveryID},${transferable},${parterID},${value}`);
+});
+
+outputs = outputs.sort(function (a, b) { return b[0] < a[0] });
+
+console.log(outputs);
