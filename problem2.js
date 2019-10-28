@@ -24,7 +24,7 @@ function inputparser(fileName) {
     let propname = array[0].replace(/"/g, "").split(',');
 
     for (var i = 0; i < array.length; i++) {
-        let obj = [];
+        let obj = [i];
         let propvalue = array[i].split(',');
         if (propvalue[0].trim() !== "") {
             for (var j in propvalue) {
@@ -45,12 +45,14 @@ capacities = capacities.sort(function (a, b) { return b["Capacity (in GB)"] - a[
 // console.log(capacities);
 
 let inputs = inputparser("./input.csv");
-inputs = inputs.sort(function (a, b) { return b[1] - a[1] });
+inputs = inputs.sort(function (a, b) { return b[2] - a[2] });
 let outputs = [];
+
 inputs.forEach((e) => {
-    let deliveryID = e[0];
-    let sizeofdelivery = parseInt(e[1]);
-    let theatreID = e[2];
+    let id = e[0];
+    let deliveryID = e[1];
+    let sizeofdelivery = parseInt(e[2]);
+    let theatreID = e[3];
     // console.log(deliveryID, sizeofdelivery, theatreID);
     let max = Number.MAX_VALUE;
     let parterID = "";
@@ -87,10 +89,10 @@ inputs.forEach((e) => {
 
     let transferable = max === Number.MAX_VALUE ? false : true;
     let value = max === Number.MAX_VALUE ? "" : max;
-    outputs.push([deliveryID, transferable, parterID, value])
+    outputs.push([id, deliveryID, transferable, parterID, value])
     // console.log(`deliveryID},${transferable},${parterID},${value}`);
 });
 
-outputs = outputs.sort(function (a, b) { return b[0] < a[0] });
+outputs = outputs.sort(function (a, b) { return a[0] - b[0] });
 
-console.log(outputs);
+outputs.forEach(x=> console.log(`${x[1]}, ${x[2]}, ${x[3]}, ${x[4]}`));
