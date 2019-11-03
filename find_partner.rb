@@ -73,7 +73,7 @@ class FindPartner
 		low_cost_delivery
 		low_cost_delivery_within_capacity
 	end
-	
+
 	def low_cost_delivery
 		fetch_details
 		input_data = read_csv('input', false)
@@ -103,7 +103,48 @@ class FindPartner
 			end
 		end
 
+		delivery_options_array = @deliverables.map { |e| e.delivery_options  } #.map { |p| p.partner_id }
+		delivery_options_array.select!{|e| e.size>0}
 
+		puts "======= delivery_options_array = #{delivery_options_array} ============================"
+		combinations = delivery_options_array.first.product(*delivery_options_array.drop(1))
+		final_hash = Hash.new
+		last_combo_cost = nil
+		combinations.each_with_index do |combo, index|
+			puts "============================== = #{index} ================================="
+			available_capacity = @partners.dup
+			puts "============= first loop available_capacity = #{available_capacity} =========="
+			puts "============= first loop @partners = #{@partners} =========="
+			current_hash = Hash.new
+			current_combo_cost = 0
+			combo.each do |del_opt|
+				puts "============= second loop available_capacity = #{available_capacity} =========="
+				puts "============= second loop @partners = #{@partners} =========="
+				puts "============= current_combo_cost = #{current_combo_cost}, last_combo_cost = #{last_combo_cost} =========="
+				puts "============= second loop del_opt.cost_of_delivery = #{del_opt.cost_of_delivery} =========="
+				if available_capacity[del_opt.partner_id] >= del_opt.size_of_delivery
+					current_hash[del_opt.delivery_id] = del_opt
+					available_capacity[del_opt.partner_id] -= del_opt.size_of_delivery
+					current_combo_cost += del_opt.cost_of_delivery
+				else
+					puts "============= loop break = #{current_combo_cost} =========="
+					current_hash = final_hash.dup
+					current_combo_cost = last_combo_cost
+					break
+				end
+			end
+			puts "============= current_combo_cost = #{current_combo_cost} =========="
+			if last_combo_cost.nil? || last_combo_cost > current_combo_cost
+				last_combo_cost = current_combo_cost
+				final_hash = current_hash
+			end
+			puts "======= #{index} final_hash = #{final_hash} ============================"
+		end
+
+		puts "======= final_hash = #{final_hash} ============================"
+		output2 = @deliverables.map { |del| final_hash[del.delivery_id].nil? ? DeliveryOption.new(del.delivery_id, false) : final_hash[del.delivery_id]  }
+		puts "======= output2 = #{output2} ============================"
+		write_csv('output2', output2)
 	end
 
 	def read_csv(file_name, have_headers=true)
