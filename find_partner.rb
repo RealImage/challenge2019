@@ -1,19 +1,5 @@
 require 'csv'
 
-#Partner = Struct.new(:partner_id, :capacity)
-#TheaterPartnerCost = Struct.new(:theater_id, :slab_start, :slab_end, :minimum_cost, :cost_per_gb, :partner_id, :capacity)
-
-# class Partner
-# 	attr_accessor :partner_id, :capacity
-
-# 	def initialize(partner_id, capacity)
-# 		self.partner_id = partner_id
-# 		self.capacity = capacity
-# 	end
-
-# 	def partner
-# end
-
 class TheaterPartnerCost
 	attr_accessor :theater_id, :slab_start, :slab_end, :minimum_cost, :cost_per_gb, :partner_id
 
@@ -54,7 +40,7 @@ class Deliverable
 		self.delivery_id = delivery_id
 		self.size_of_delivery = size_of_delivery
 		self.theater_id = theater_id
-		self.delivery_options = Array.new #[DeliveryOption.new(self.delivery_id, false)]
+		self.delivery_options = Array.new 
 	end
 
 	def sort_delivery_options
@@ -78,72 +64,42 @@ class FindPartner
 		fetch_details
 		input_data = read_csv('input', false)
 		initialize_deliveries(input_data)
-		puts "======= @deliverables = #{@deliverables.inspect} ==========="
 		@deliverables.each do |deliverable|
 			set_delivery_options(deliverable)
 		end
-		puts "======= after cost @deliverables = #{@deliverables.inspect} ==========="
 		output1 = @deliverables.map { |del| del.lowest_delivery_cost  }
-		puts "======= after output1 = #{output1.inspect} ==========="
-		puts "======= output1 ============================"
 		write_csv('output1', output1)
 	end
 
 	def low_cost_delivery_within_capacity
-
-		puts "======= ====================================="
-		@deliverables.each{|del| del.sort_delivery_options}
-		puts "======= after sort @deliverables = #{@deliverables.inspect} ==========="
-
-		puts "======= deliverables ============================"
-		@deliverables.each do |del|
-			puts "======= del.size_of_delivery = #{del.size_of_delivery} ============================"
-			del.delivery_options.each do |del_opt|
-				puts "=== #{del_opt.delivery_id}, #{del_opt.is_deliverable}, #{del_opt.partner_id}, #{del_opt.cost_of_delivery} ==="
-			end
-		end
-
-		delivery_options_array = @deliverables.map { |e| e.delivery_options  } #.map { |p| p.partner_id }
+		delivery_options_array = @deliverables.map { |e| e.delivery_options  }
 		delivery_options_array.select!{|e| e.size>0}
 
-		puts "======= delivery_options_array = #{delivery_options_array} ============================"
 		combinations = delivery_options_array.first.product(*delivery_options_array.drop(1))
 		final_hash = Hash.new
 		last_combo_cost = nil
 		combinations.each_with_index do |combo, index|
-			puts "============================== = #{index} ================================="
 			available_capacity = @partners.dup
-			puts "============= first loop available_capacity = #{available_capacity} =========="
-			puts "============= first loop @partners = #{@partners} =========="
 			current_hash = Hash.new
 			current_combo_cost = 0
-			combo.each do |del_opt|
-				puts "============= second loop available_capacity = #{available_capacity} =========="
-				puts "============= second loop @partners = #{@partners} =========="
-				puts "============= current_combo_cost = #{current_combo_cost}, last_combo_cost = #{last_combo_cost} =========="
-				puts "============= second loop del_opt.cost_of_delivery = #{del_opt.cost_of_delivery} =========="
+			combo.each do |del_opt|				
 				if available_capacity[del_opt.partner_id] >= del_opt.size_of_delivery
 					current_hash[del_opt.delivery_id] = del_opt
 					available_capacity[del_opt.partner_id] -= del_opt.size_of_delivery
 					current_combo_cost += del_opt.cost_of_delivery
 				else
-					puts "============= loop break = #{current_combo_cost} =========="
 					current_hash = final_hash.dup
 					current_combo_cost = last_combo_cost
 					break
 				end
 			end
-			puts "============= current_combo_cost = #{current_combo_cost} =========="
 			if last_combo_cost.nil? || last_combo_cost > current_combo_cost
 				last_combo_cost = current_combo_cost
 				final_hash = current_hash
 			end
-			puts "======= #{index} final_hash = #{final_hash} ============================"
 		end
 
-		puts "======= final_hash = #{final_hash} ============================"
 		output2 = @deliverables.map { |del| final_hash[del.delivery_id].nil? ? DeliveryOption.new(del.delivery_id, false) : final_hash[del.delivery_id]  }
-		puts "======= output2 = #{output2} ============================"
 		write_csv('output2', output2)
 	end
 
@@ -155,37 +111,28 @@ class FindPartner
 	end
 
 	def write_csv(file_name, output)
+		puts "================= #{file_name} =============="
 		CSV.open("#{file_name}.csv", "wb") do |csv|
 			output.each do |delivery|
 				puts "=== #{delivery.delivery_id}, #{delivery.is_deliverable}, #{delivery.partner_id}, #{delivery.cost_of_delivery} ==="
 				csv << [delivery.delivery_id, delivery.is_deliverable, delivery.partner_id, delivery.cost_of_delivery]
 			end
 		end
+		puts "================= #{file_name}.csv updated =============="
 	end
 
 	def fetch_details
 		partners_capacity = read_csv('capacities')
-		puts "======= parners_capacity = #{partners_capacity.inspect} ==========="
 		initialize_partners(partners_capacity)
-		puts "======= @partners = #{@partners.inspect} ==========="
 		partners_cost = read_csv('partners')
-		puts "======= partners_cost = #{partners_cost.inspect} ==========="
 		initialize_partners_costs(partners_cost)
-		puts "======= @theater_partner_cost = #{@theater_partner_cost.inspect} ==========="
-
-		t1_user = find_by_partner_id(@theater_partner_cost, 'P3')
-		puts "======= t1_user = #{t1_user.inspect} ==========="
-
-		
-
-		#parners_capacity = read_csv('partners')
 	end
 
 	#@partners - Hash , key = partner_id, value - capacity
 	def initialize_partners(partners_capacity)
 		@partners = Hash.new
 		partners_capacity.each do |partner|
-			@partners[partner[0].strip] = partner[1].strip.to_f # << Partner.new(partner[0].strip, partner[1].strip.to_f)
+			@partners[partner[0].strip] = partner[1].strip.to_f
 		end
 	end
 
@@ -225,109 +172,3 @@ class FindPartner
 end
 
 FindPartner.new
-# def update_quality(items)
-#   items.each do |item|
-# 	updateter = ItemUpdaterFactory.getUpdater(item.name)
-# 	item = updateter.updateItem(item)
-#   end
-# end
-
-# # Factory Class
-# class ItemUpdaterFactory
-# 	def self.getUpdater(name)		
-# 		case name.downcase
-# 		when "aged brie"
-# 			AgedBrieUpdater.new
-# 		when "backstage passes"
-# 			BackstagePassesUpdater.new
-# 		when "sulfuras"
-# 			SulfurasUpdater.new
-# 		when "conjured"
-# 			ConjuredUpdater.new
-# 		else
-# 			NormalUpdater.new
-# 		end
-# 	end
-# end
-
-# class  NormalUpdater
-# 	def updateItem(item)
-# 		updated_item = update_sell_in(item)
-# 		updated_item = update_quality(item)
-# 		updated_item
-# 	end
-	
-# 	def update_sell_in(item)
-# 		item.sell_in += get_sell_in_degrade
-# 	end
-	
-# 	def update_quality(item)
-# 		item.quality += (get_quality_degrade(item) * get_quality_degrade_multiplier(item)) 
-# 		normalize_item(item)
-# 	end
-	
-# 	def normalize_item(item)
-# 		item.quality = 0 if item.quality < 0 
-# 		item.quality = getQualityMax if item.quality > getQualityMax
-# 		item
-# 	end
-	
-# 	def get_sell_in_degrade
-# 		-1
-# 	end
-	
-# 	def get_quality_degrade(item=nil)
-# 		-1
-# 	end
-	
-# 	def get_quality_degrade_multiplier(item)
-# 		isExpired(item) ? 2 : 1
-# 	end
-	
-# 	def isExpired(item)
-# 		item.sell_in < 0
-# 	end
-	
-# 	def getQualityMax
-# 		50
-# 	end
-# end
-
-# class  AgedBrieUpdater < NormalUpdater
-	
-# 	def get_quality_degrade(item=nil)
-# 		1
-# 	end
-	
-# 	def get_quality_degrade_multiplier(item)
-# 		1
-# 	end
-# end
-
-# class  BackstagePassesUpdater < AgedBrieUpdater
-	
-# 	def get_quality_degrade(item=nil)
-# 		quality_loss = super
-# 		quality_loss += 1 if item.sell_in < 10
-# 		quality_loss += 1 if item.sell_in < 5
-# 		quality_loss = (- item.quality) if item.sell_in < 0
-# 		quality_loss
-# 	end
-	
-# end
-
-# class  SulfurasUpdater < NormalUpdater
-	
-# 	def updateItem(item)
-# 		item
-# 	end
-# end
-
-# class  ConjuredUpdater < NormalUpdater
-	
-# 	def get_quality_degrade_multiplier(item)
-# 		qLoss = super * 2
-# 		qLoss
-# 	end
-# end
-######### DO NOT CHANGE BELOW #########
