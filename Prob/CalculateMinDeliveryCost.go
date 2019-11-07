@@ -2,19 +2,19 @@ package Prob
 
 import "fmt"
 
-func CalculateMinDeliveryCost(data []PartnerData) {
+func FindAllPartnerInfo(data []PartnerData) ([]FinalChoice, []DeliveryAndPartners) {
 	input := []DeliveryInfo{
 		{"D1", 150, "T1"},
 		{"D2", 325, "T2"},
 		{"D3", 510, "T1"},
 		{"D4", 700, "T2"},
 	}
-	fin := FindMostSuitablePartner(data, input)
-	fmt.Println(fin)
+	bestPartner, allApplicablePartners := findAllPartnerInfo(data, input)
+	return bestPartner, allApplicablePartners
 }
 
-func FindMostSuitablePartner(data []PartnerData, input []DeliveryInfo) []FinalChoice {
-	d := make([]DeliveryAndPartners, 0)
+func findAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
+	dAndp := make([]DeliveryAndPartners, 0)
 	fin := make([]FinalChoice, 0)
 	for v, i := range input {
 		applicablePartners := make([]PartnerData, 0)
@@ -25,15 +25,15 @@ func FindMostSuitablePartner(data []PartnerData, input []DeliveryInfo) []FinalCh
 				applicablePartners = append(applicablePartners, r)
 			}
 		}
-		d = append(d, DeliveryAndPartners{i, applicablePartners})
-		best := FindBestPartner(d[v])
+		dAndp = append(dAndp, DeliveryAndPartners{i, applicablePartners})
+		best := FindBestPartner(dAndp[v])
 		if len(best.Partners) == 0 {
-			fin = append(fin, FinalChoice{d[v].Delivery.DeliveryID, false, "", ""})
+			fin = append(fin, FinalChoice{dAndp[v].Delivery.DeliveryID, false, "", ""})
 		} else {
-			fin = append(fin, FinalChoice{d[v].Delivery.DeliveryID, true, best.Partners[0].PartnerID, fmt.Sprintf("%.0f", best.Partners[0].DeliveryCost)})
+			fin = append(fin, FinalChoice{dAndp[v].Delivery.DeliveryID, true, best.Partners[0].PartnerID, fmt.Sprintf("%f", best.Partners[0].DeliveryCost)})
 		}
 	}
-	return fin
+	return fin, dAndp
 }
 
 func CalculateDeliveryCost(total, min float64) float64 {

@@ -16,6 +16,7 @@ type PartnerData struct {
 	PartnerID    string
 	TotalCost    float64
 	DeliveryCost float64
+	Capacity     int
 }
 
 type SizeSlab struct {
@@ -39,4 +40,20 @@ type FinalChoice struct {
 	IsPossible    bool
 	ChosenPartner string
 	MinimumCost   string
+}
+
+type PartnerInfo struct {
+	PartnerID    string
+	DeliveryCost float64
+	Capacity     int
+}
+
+type DeliveryDetails struct {
+	DeliveryID   string
+	DeliverySize int
+}
+
+type CapacityInfo struct {
+	PartnerID string
+	Capacity  string
 }
