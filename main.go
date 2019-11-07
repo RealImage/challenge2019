@@ -8,6 +8,6 @@ func main() {
 	partnerData := Prob.FetchPartnerDataFromCSV("partners.csv")
 	_, AllApplicablePartners := Prob.FindAllPartnerInfo(partnerData)
 	capacityInfo := Prob.FetchPartnerCapacityFromCSV("capacities.csv")
-	Prob.FindAllCombinations(AllApplicablePartners, capacityInfo)
+	Prob.UpdatePartnersCapacity(AllApplicablePartners, capacityInfo)
 
 }
