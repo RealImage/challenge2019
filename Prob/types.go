@@ -62,3 +62,8 @@ type CapacityInfo struct {
 	PartnerID string
 	Capacity  string
 }
+
+type CapacityDetails struct {
+	PartnerID string
+	Capacity  int
+}
