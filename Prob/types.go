@@ -22,7 +22,8 @@ type DelAndPartners struct {
 	DeliveryID   string
 	DeliverySize int
 	TheatreID    string
-	//	Capacity     int
+	PartnerID    string
+	//Capacity     int
 }
 type SizeSlab struct {
 	Min int
