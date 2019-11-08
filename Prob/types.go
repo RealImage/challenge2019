@@ -16,13 +16,13 @@ type PartnerData struct {
 	PartnerID    string
 	TotalCost    float64
 	DeliveryCost float64
-	Capacity     int
+	//Capacity     int
 }
 type DelAndPartners struct {
 	DeliveryID   string
 	DeliverySize int
 	TheatreID    string
-	Capacity     int
+	//	Capacity     int
 }
 type SizeSlab struct {
 	Min int
