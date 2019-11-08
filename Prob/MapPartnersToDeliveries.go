@@ -21,12 +21,11 @@ func UpdatePartnersCapacity(allApplicablePartners []DeliveryAndPartners, capacit
 	dpMap := MapPartnerToDelivery(allApplicablePartners, capacityInfo)
 	//	Calculate(dpMap)
 	arr := ArrayOfPartners(dpMap)
-	p := PermuteDel(arr...)
-	fmt.Println("PERMUTATION :", p)
+	_ = PermuteDel(arr...)
 }
 
 func MapPartnerToDelivery(allApplicablePartners []DeliveryAndPartners, partners []CapacityInfo) map[CapacityDetails][]DelAndPartners {
-
+	fmt.Println("APPLICABLE PARTNERS", allApplicablePartners)
 	dpMap := make(map[CapacityDetails][]DelAndPartners)
 	for pp, _ := range partners {
 		tmp := make([]DelAndPartners, 0)
@@ -78,7 +77,6 @@ func ArrayOfPartners(m map[CapacityDetails][]DelAndPartners) [][]DelAndPartners 
 	for _, v := range m {
 		a = append(a, v)
 	}
-	fmt.Println("Array of arrays :", a)
 	return a
 }
 

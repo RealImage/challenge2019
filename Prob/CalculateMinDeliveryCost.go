@@ -4,9 +4,9 @@ import "fmt"
 
 func FindAllPartnerInfo(data []PartnerData) ([]FinalChoice, []DeliveryAndPartners) {
 	input := []DeliveryInfo{
-		{"D1", 150, "T1"},
+		{"D1", 150, "T2"},
 		{"D2", 325, "T2"},
-		{"D3", 510, "T1"},
+		{"D3", 510, "T2"},
 		{"D4", 700, "T2"},
 	}
 	bestPartner, allApplicablePartners := findAllPartnerInfo(data, input)
