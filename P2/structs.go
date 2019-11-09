@@ -14,3 +14,14 @@ type Delivery struct {
 	Size      int
 	TheatreID string
 }
+
+// Solution :
+type Solution struct {
+	Deliveries map[string]*DeliverySolution
+}
+
+// DeliverySolution :
+type DeliverySolution struct {
+	PartnerID string
+	Cost      int
+}
