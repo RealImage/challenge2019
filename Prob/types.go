@@ -37,6 +37,12 @@ type DeliveryInfo struct {
 	Theatre      string
 }
 
+type DeliveryInfoStr struct {
+	DeliveryID   string
+	DeliverySize string
+	Theatre      string
+}
+
 type DeliveryAndPartners struct {
 	Delivery DeliveryInfo
 	Partners []PartnerData

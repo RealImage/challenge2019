@@ -2,12 +2,12 @@ package Prob
 
 import "fmt"
 
-func FindAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
-	bestPartner, allApplicablePartners := findAllPartnerInfo(data, input)
+func FindBestApplicablePartner(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
+	bestPartner, allApplicablePartners := findBestApplicablePartner(data, input)
 	return bestPartner, allApplicablePartners
 }
 
-func findAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
+func findBestApplicablePartner(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
 	dAndp := make([]DeliveryAndPartners, 0)
 	fin := make([]FinalChoice, 0)
 	for v, i := range input {
@@ -17,8 +17,8 @@ func findAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice
 				r.TotalCost = r.CostPerGB * float64(i.DeliverySize)
 				r.DeliveryCost = CalculateDeliveryCost(r.TotalCost, r.MinCost)
 				r.Delivery = i
+				fmt.Println(r.Delivery, r.TotalCost, r.Delivery)
 				applicablePartners = append(applicablePartners, r)
-
 			}
 		}
 		dAndp = append(dAndp, DeliveryAndPartners{i, applicablePartners})

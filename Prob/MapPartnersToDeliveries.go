@@ -2,24 +2,44 @@ package Prob
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
 func Prob2(allApplicablePartners []DeliveryAndPartners, capacityInfo []CapacityInfo) {
 	allApplicablePartners = UpdatePartnersCapacity(allApplicablePartners, capacityInfo)
-	partners := FindAllPartners(capacityInfo)
-	fmt.Println(allApplicablePartners)
-	fmt.Println(partners)
+	//partners := FindAllPartners(capacityInfo)
+	//fmt.Println(allApplicablePartners)
+	//	fmt.Println(partners)
 
 	p := FindAllPermutations(allApplicablePartners)
 	feasibleArray := FindAllFeasiblePermutations(p, capacityInfo)
 	fmt.Println(feasibleArray)
-	for _, l := range feasibleArray {
-		dMap := make(map[[]PartnerData]int)
+
+	fMap := make(map[int]int)
+	for i, l := range feasibleArray {
+		fmt.Println("ARRAY :", l)
 		sum := FindTotalDeliveryCharge(l)
-		dMap[l] = sum
-		fmt.Println(dMap)
+		fmt.Println("DELIVERY CHARGE :", sum)
+		fMap[sum] = i
 	}
+	fmt.Println(fMap)
+	index := SortDeliveryPrices(fMap)
+	fmt.Println(feasibleArray[index])
+}
+
+func SortDeliveryPrices(fmap map[int]int) int {
+	sMap := make(map[int]int)
+	keys := make([]int, 0, len(fmap))
+	for k := range fmap {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
+
+	for _, k := range keys {
+		sMap[k] = fmap[k]
+	}
+	return sMap[keys[0]]
 }
 func FindAllFeasiblePermutations(allPermutations [][]PartnerData, cInfo []CapacityInfo) [][]PartnerData {
 	var possible [][]PartnerData
@@ -61,9 +81,9 @@ func FindAllPermutations(allApplicablePartners []DeliveryAndPartners) [][]Partne
 	}
 
 	res := findAllPermutations(partners...)
-	for _, s := range res {
-		fmt.Println("-->", s)
-	}
+	//for _, s := range res {
+	//		fmt.Println("-->", s)
+	//}
 	return res
 
 }
