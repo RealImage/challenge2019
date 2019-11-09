@@ -7,11 +7,7 @@ import (
 
 func SortFeasibleArray(a [][]types.PartnerData) {
 
-	for _, m := range a {
-		for i, j := 0, len(m)-1; i < j; i, j = i+1, j-1 {
-			m[i], m[j] = m[j], m[i]
-		}
-	}
+	a = ReverseArray(a)
 
 	sort.Slice(a[:], func(i, j int) bool {
 		for x := range a[i] {
@@ -23,4 +19,15 @@ func SortFeasibleArray(a [][]types.PartnerData) {
 		return false
 	})
 
+	a = ReverseArray(a)
+
+}
+
+func ReverseArray(a [][]types.PartnerData) [][]types.PartnerData {
+	for _, m := range a {
+		for i, j := 0, len(m)-1; i < j; i, j = i+1, j-1 {
+			m[i], m[j] = m[j], m[i]
+		}
+	}
+	return a
 }

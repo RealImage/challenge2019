@@ -4,7 +4,9 @@ import (
 	"challenge2019/Prob/types"
 )
 
-func CalculateTheBestFeasiblePartner(allApplicablePartners []types.DeliveryAndPartners, capacityInfo []types.CapacityDetailsStr, inputData []types.DeliveryInfo) []types.FinalChoice {
+func CalculateBestFeasiblePartnerList(allApplicablePartners []types.DeliveryAndPartners,
+	capacityInfo []types.CapacityDetailsStr, inputData []types.DeliveryInfo) []types.FinalChoice {
+
 	//Update Capacity of each appicable partner
 	allApplicablePartners = UpdatePartnersCapacity(allApplicablePartners, capacityInfo)
 
@@ -26,5 +28,6 @@ func CalculateTheBestFeasiblePartner(allApplicablePartners []types.DeliveryAndPa
 
 	//Converting result into expected output format
 	result := Output(feasibleArray, inputData)
+
 	return result
 }
