@@ -1,4 +1,4 @@
-package Prob
+package types
 
 type PartnerDataStr struct {
 	Theatre   string
@@ -18,13 +18,6 @@ type PartnerData struct {
 	TotalCost    float64
 	DeliveryCost float64
 	Capacity     int
-}
-type DelAndPartners struct {
-	DeliveryID   string
-	DeliverySize int
-	TheatreID    string
-	PartnerID    string
-	//Capacity     int
 }
 type SizeSlab struct {
 	Min int
@@ -55,18 +48,7 @@ type FinalChoice struct {
 	MinimumCost   string
 }
 
-type PartnerInfo struct {
-	PartnerID    string
-	DeliveryCost float64
-	Capacity     int
-}
-
-type DeliveryDetails struct {
-	DeliveryID   string
-	DeliverySize int
-}
-
-type CapacityInfo struct {
+type CapacityDetailsStr struct {
 	PartnerID string
 	Capacity  string
 }

@@ -1,18 +1,18 @@
-package Prob
+package FetchInput
 
 import (
 	"bufio"
+	"challenge2019/Prob/types"
 	"encoding/csv"
-	"fmt"
 	"io"
 	"log"
 	"os"
 )
 
-func FetchInputFromCSV(filename string) []DeliveryInfo {
+func FetchInputFromCSV(filename string) []types.DeliveryInfo {
 	csvFile, _ := os.Open(filename)
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	var data []DeliveryInfoStr
+	var data []types.DeliveryInfoStr
 	for {
 		line, error := reader.Read()
 		if error == io.EOF {
@@ -21,7 +21,7 @@ func FetchInputFromCSV(filename string) []DeliveryInfo {
 			log.Fatal(error)
 		}
 
-		data = append(data, DeliveryInfoStr{
+		data = append(data, types.DeliveryInfoStr{
 			DeliveryID:   line[0],
 			DeliverySize: line[1],
 			Theatre:      line[2],
@@ -29,17 +29,16 @@ func FetchInputFromCSV(filename string) []DeliveryInfo {
 		)
 	}
 
-	fmt.Println("INPUT :", data)
 	FormattedData := ConvertToDeliveryInfo(data)
 	return FormattedData
 }
 
-func ConvertToDeliveryInfo(data []DeliveryInfoStr) []DeliveryInfo {
-	newArr := []DeliveryInfo{}
+func ConvertToDeliveryInfo(data []types.DeliveryInfoStr) []types.DeliveryInfo {
+	newArr := []types.DeliveryInfo{}
 	for _, v := range data {
-		newArr = append(newArr, DeliveryInfo{
+		newArr = append(newArr, types.DeliveryInfo{
 			DeliveryID:   v.DeliveryID,
-			DeliverySize: ConvertToInt(v.DeliverySize),
+			DeliverySize: types.ConvertToInt(v.DeliverySize),
 			Theatre:      v.Theatre})
 	}
 	return newArr

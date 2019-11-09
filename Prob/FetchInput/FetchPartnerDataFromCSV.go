@@ -1,7 +1,8 @@
-package Prob
+package FetchInput
 
 import (
 	"bufio"
+	"challenge2019/Prob/types"
 	"encoding/csv"
 	"io"
 	"log"
@@ -9,10 +10,10 @@ import (
 	"strings"
 )
 
-func FetchPartnerDataFromCSV(filename string) []PartnerData {
+func FetchPartnerDataFromCSV(filename string) []types.PartnerData {
 	csvFile, _ := os.Open(filename)
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	var data []PartnerDataStr
+	var data []types.PartnerDataStr
 	for {
 		line, error := reader.Read()
 		if error == io.EOF {
@@ -21,7 +22,7 @@ func FetchPartnerDataFromCSV(filename string) []PartnerData {
 			log.Fatal(error)
 		}
 
-		data = append(data, PartnerDataStr{
+		data = append(data, types.PartnerDataStr{
 			Theatre:   line[0],
 			Size:      line[1],
 			MinCost:   line[2],
@@ -38,19 +39,19 @@ func FetchPartnerDataFromCSV(filename string) []PartnerData {
 	return FormattedData
 }
 
-func RemoveArrayElement(arr []PartnerDataStr, index int) []PartnerDataStr {
+func RemoveArrayElement(arr []types.PartnerDataStr, index int) []types.PartnerDataStr {
 	return append(arr[:index], arr[index+1:]...)
 }
 
-func ConvertToPartnerData(arr []PartnerDataStr) (newArr []PartnerData) {
+func ConvertToPartnerData(arr []types.PartnerDataStr) (newArr []types.PartnerData) {
 	for _, r := range arr {
-		res := SplitString(r.Size)
+		res := types.SplitString(r.Size)
 		theatre := strings.TrimSpace(r.Theatre)
-		newArr = append(newArr, PartnerData{
+		newArr = append(newArr, types.PartnerData{
 			Theatre:   theatre,
-			Size:      SizeSlab{Min: ConvertToInt(res[0]), Max: ConvertToInt(res[1])},
-			MinCost:   ConvertToFloat(r.MinCost),
-			CostPerGB: ConvertToFloat(r.CostPerGB),
+			Size:      types.SizeSlab{Min: types.ConvertToInt(res[0]), Max: types.ConvertToInt(res[1])},
+			MinCost:   types.ConvertToFloat(r.MinCost),
+			CostPerGB: types.ConvertToFloat(r.CostPerGB),
 			PartnerID: r.PartnerID,
 		})
 	}

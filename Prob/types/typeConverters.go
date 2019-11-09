@@ -1,4 +1,4 @@
-package Prob
+package types
 
 import (
 	"strconv"

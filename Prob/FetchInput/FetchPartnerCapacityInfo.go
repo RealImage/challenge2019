@@ -1,17 +1,18 @@
-package Prob
+package FetchInput
 
 import (
 	"bufio"
+	"challenge2019/Prob/types"
 	"encoding/csv"
 	"io"
 	"log"
 	"os"
 )
 
-func FetchPartnerCapacityFromCSV(filename string) []CapacityInfo {
+func FetchPartnerCapacityFromCSV(filename string) []types.CapacityDetailsStr {
 	csvFile, _ := os.Open(filename)
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	var data []CapacityInfo
+	var data []types.CapacityDetailsStr
 	for {
 		line, error := reader.Read()
 		if error == io.EOF {
@@ -20,7 +21,7 @@ func FetchPartnerCapacityFromCSV(filename string) []CapacityInfo {
 			log.Fatal(error)
 		}
 
-		data = append(data, CapacityInfo{
+		data = append(data, types.CapacityDetailsStr{
 			PartnerID: line[0],
 			Capacity:  line[1],
 		},
