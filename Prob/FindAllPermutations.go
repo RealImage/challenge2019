@@ -1,6 +1,8 @@
 package Prob
 
-import "challenge2019/Prob/types"
+import (
+	"challenge2019/Prob/types"
+)
 
 func FindAllPermutations(allApplicablePartners []types.DeliveryAndPartners) [][]types.PartnerData {
 	partners := [][]types.PartnerData{}

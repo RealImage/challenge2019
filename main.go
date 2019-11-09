@@ -12,7 +12,7 @@ func main() {
 	partnerData := f.FetchPartnerDataFromCSV("partners.csv")
 	capacityInfo := f.FetchPartnerCapacityFromCSV("capacities.csv")
 	_, AllApplicablePartners := Prob.FindBestApplicablePartner(partnerData, inputData)
-	fmt.Println(AllApplicablePartners)
-	Prob.Prob2(AllApplicablePartners, capacityInfo)
+	res := Prob.CalculateTheBestFeasiblePartner(AllApplicablePartners, capacityInfo, inputData)
+	fmt.Println(res)
 
 }
