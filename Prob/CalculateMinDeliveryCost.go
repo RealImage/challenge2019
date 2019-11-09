@@ -2,13 +2,7 @@ package Prob
 
 import "fmt"
 
-func FindAllPartnerInfo(data []PartnerData) ([]FinalChoice, []DeliveryAndPartners) {
-	input := []DeliveryInfo{
-		{"D1", 150, "T2"},
-		{"D2", 325, "T2"},
-		{"D3", 510, "T2"},
-		{"D4", 700, "T2"},
-	}
+func FindAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice, []DeliveryAndPartners) {
 	bestPartner, allApplicablePartners := findAllPartnerInfo(data, input)
 	return bestPartner, allApplicablePartners
 }
@@ -22,7 +16,9 @@ func findAllPartnerInfo(data []PartnerData, input []DeliveryInfo) ([]FinalChoice
 			if r.Theatre == i.Theatre && (r.Size.Min <= i.DeliverySize) && (i.DeliverySize <= r.Size.Max) {
 				r.TotalCost = r.CostPerGB * float64(i.DeliverySize)
 				r.DeliveryCost = CalculateDeliveryCost(r.TotalCost, r.MinCost)
+				r.Delivery = i
 				applicablePartners = append(applicablePartners, r)
+
 			}
 		}
 		dAndp = append(dAndp, DeliveryAndPartners{i, applicablePartners})

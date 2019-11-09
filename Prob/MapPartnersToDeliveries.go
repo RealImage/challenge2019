@@ -5,88 +5,76 @@ import (
 	"strings"
 )
 
-func UpdatePartnersCapacity(allApplicablePartners []DeliveryAndPartners, capacityInfo []CapacityInfo) {
-	/*
-		for i, a := range allApplicablePartners {
-			for j, vv := range a.Partners {
-				for _, pp := range capacityInfo {
-					if strings.TrimSpace(pp.PartnerID) == vv.PartnerID {
-						allApplicablePartners[i].Partners[j].Capacity = ConvertToInt(pp.Capacity)
-					}
+func Prob2(allApplicablePartners []DeliveryAndPartners, capacityInfo []CapacityInfo) {
+	allApplicablePartners = UpdatePartnersCapacity(allApplicablePartners, capacityInfo)
+	partners := FindAllPartners(capacityInfo)
+	fmt.Println(allApplicablePartners)
+	fmt.Println(partners)
+
+	p := FindAllPermutations(allApplicablePartners)
+	feasibleArray := FindAllFeasiblePermutations(p, capacityInfo)
+	fmt.Println(feasibleArray)
+	for _, l := range feasibleArray {
+		dMap := make(map[[]PartnerData]int)
+		sum := FindTotalDeliveryCharge(l)
+		dMap[l] = sum
+		fmt.Println(dMap)
+	}
+}
+func FindAllFeasiblePermutations(allPermutations [][]PartnerData, cInfo []CapacityInfo) [][]PartnerData {
+	var possible [][]PartnerData
+	var isPossible bool
+	for _, v := range allPermutations {
+		isPossible = FindIfPossible(v, cInfo)
+		if isPossible == true {
+			possible = append(possible, v)
+		}
+	}
+	return possible
+}
+func FindAllPartners(capacityInfo []CapacityInfo) []string {
+	pArray := []string{}
+	for _, r := range capacityInfo {
+		p := strings.TrimSpace(r.PartnerID)
+		pArray = append(pArray, p)
+	}
+	return pArray
+}
+
+func UpdatePartnersCapacity(allApplicablePartners []DeliveryAndPartners, capacityInfo []CapacityInfo) []DeliveryAndPartners {
+	for i, a := range allApplicablePartners {
+		for j, vv := range a.Partners {
+			for _, pp := range capacityInfo {
+				if strings.TrimSpace(pp.PartnerID) == vv.PartnerID {
+					allApplicablePartners[i].Partners[j].Capacity = ConvertToInt(pp.Capacity)
 				}
 			}
 		}
-	*/
-	//Remove
-	dpMap := MapPartnerToDelivery(allApplicablePartners, capacityInfo)
-	//	Calculate(dpMap)
-	arr := ArrayOfPartners(dpMap)
-	_ = PermuteDel(arr...)
-}
-
-func MapPartnerToDelivery(allApplicablePartners []DeliveryAndPartners, partners []CapacityInfo) map[CapacityDetails][]DelAndPartners {
-	fmt.Println("APPLICABLE PARTNERS", allApplicablePartners)
-	dpMap := make(map[CapacityDetails][]DelAndPartners)
-	for pp, _ := range partners {
-		tmp := make([]DelAndPartners, 0)
-		for _, r := range allApplicablePartners {
-			for _, l := range r.Partners {
-				if strings.TrimSpace(partners[pp].PartnerID) == l.PartnerID {
-					t := DelAndPartners{r.Delivery.DeliveryID, r.Delivery.DeliverySize, l.Theatre, l.PartnerID}
-					tmp = append(tmp, t)
-				}
-			}
-		}
-		tp1 := strings.TrimSpace(partners[pp].PartnerID)
-		tp2 := ConvertToInt(partners[pp].Capacity)
-		dpMap[CapacityDetails{tp1, tp2}] = tmp
 	}
-	fmt.Println(dpMap)
-	return dpMap
+	return allApplicablePartners
 }
 
-func Calculate(dpMap map[CapacityDetails][]DelAndPartners) {
-	finMap := make(map[CapacityDetails][]DelAndPartners)
-
-	for k, v := range dpMap {
-		arr := make([]DelAndPartners, 0)
-		sum := 0
-
-		for _, r := range v {
-
-			if sum < k.Capacity {
-				sum = sum + r.DeliverySize
-				if sum < k.Capacity {
-					arr = append(arr, r)
-				} else {
-					sum = sum - r.DeliverySize
-
-				}
-			}
-		}
-
-		finMap[CapacityDetails{k.PartnerID, sum}] = arr
+func FindAllPermutations(allApplicablePartners []DeliveryAndPartners) [][]PartnerData {
+	partners := [][]PartnerData{}
+	for _, r := range allApplicablePartners {
+		partners = append(partners, r.Partners)
 	}
 
-	//fmt.Println(finMap)
-	//fmt.Println(dpMap)
-}
-
-func ArrayOfPartners(m map[CapacityDetails][]DelAndPartners) [][]DelAndPartners {
-	var a [][]DelAndPartners
-	for _, v := range m {
-		a = append(a, v)
+	res := findAllPermutations(partners...)
+	for _, s := range res {
+		fmt.Println("-->", s)
 	}
-	return a
+	return res
+
 }
 
-func PermuteDel(parts ...[]DelAndPartners) (ret [][]DelAndPartners) {
+func findAllPermutations(parts ...[]PartnerData) (ret [][]PartnerData) {
 	{
 		var n = 1
 		for _, ar := range parts {
 			n *= len(ar)
 		}
-		ret = [][]DelAndPartners{}
+		ret = [][]PartnerData{}
 	}
 	var at = make([]int, len(parts))
 loop:
@@ -101,7 +89,7 @@ loop:
 			}
 		}
 		// construct permutated string
-		tmp := []DelAndPartners{}
+		tmp := []PartnerData{}
 		for i, ar := range parts {
 			var p = at[i]
 			if p >= 0 && p < len(ar) {
@@ -113,3 +101,59 @@ loop:
 	}
 	return ret
 }
+
+func FindIfPossible(partners []PartnerData, all []CapacityInfo) bool {
+
+	for _, i := range all {
+		sum := 0
+		for _, j := range partners {
+			if strings.TrimSpace(i.PartnerID) == j.PartnerID {
+				sum = sum + j.Delivery.DeliverySize
+			}
+		}
+		if sum > ConvertToInt(i.Capacity) {
+			return false
+		} else if sum <= ConvertToInt(i.Capacity) {
+			return true
+		}
+	}
+	return false
+}
+
+func FindTotalDeliveryCharge(fPartners []PartnerData) int {
+	sum := 0
+	for _, i := range fPartners {
+		sum = sum + int(i.DeliveryCost)
+	}
+	return sum
+}
+
+/*
+func MapPartnerToDelivery(allApplicablePartners []DeliveryAndPartners, partners []CapacityInfo) map[CapacityDetails][]DelAndPartners {
+	fmt.Println("APPLICABLE PARTNERS", allApplicablePartners)
+	dpMap := make(map[CapacityDetails][]DelAndPartners)
+	for pp, _ := range partners {
+		tmp := make([]DelAndPartners, 0)
+		for _, r := range allApplicablePartners {
+			for _, l := range r.Partners {
+				if strings.TrimSpace(partners[pp].PartnerID) == l.PartnerID {
+	P				t := DelAndPartners{r.Delivery.DeliveryID, r.Delivery.DeliverySize, l.Theatre, l.PartnerID}
+					tmp = append(tmp, t)
+				}
+			}
+		}
+		tp1 := strings.TrimSpace(partners[pp].PartnerID)
+		tp2 := ConvertToInt(partners[pp].Capacity)
+		dpMap[CapacityDetails{tp1, tp2}] = tmp
+	}
+	fmt.Println(dpMap)
+	return dpMap
+}
+func ArrayOfPartners(m map[CapacityDetails][]DelAndPartners) [][]DelAndPartners {
+	var a [][]DelAndPartners
+	for _, v := range m {
+		a = append(a, v)
+	}
+	return a
+}
+*/

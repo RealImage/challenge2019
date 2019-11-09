@@ -9,6 +9,7 @@ type PartnerDataStr struct {
 }
 
 type PartnerData struct {
+	Delivery     DeliveryInfo
 	Theatre      string
 	Size         SizeSlab
 	MinCost      float64
@@ -16,7 +17,7 @@ type PartnerData struct {
 	PartnerID    string
 	TotalCost    float64
 	DeliveryCost float64
-	//Capacity     int
+	Capacity     int
 }
 type DelAndPartners struct {
 	DeliveryID   string
