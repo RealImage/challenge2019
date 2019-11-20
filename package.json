@@ -1,0 +1,15 @@
+{
+  "name": "qube_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bipin B Narayan",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "argv": "0.0.2",
+    "csvtojson": "^2.0.10"
+  }
+}
