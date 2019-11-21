@@ -1,3 +1,7 @@
+# To Execute:
+
+run a command "node app.js" in project directory
+
 # Qube Cinemas Challenge 2019
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
