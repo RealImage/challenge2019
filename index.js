@@ -65,8 +65,9 @@ var print_ps1 = async function(input) {
   for(let i of input) {
     let data = [ i[0] ];
 
-    if(!ranked_data[i[0]].length)
-      data.push(false);
+    if(!ranked_data[i[0]].length) {
+      data.push([false, "", "" ]);
+    }
     else {
       data.push(true);
       let partner_id = ranked_data[i[0]][0][0];
@@ -78,7 +79,7 @@ var print_ps1 = async function(input) {
 
     result.push(data.toString());
   }
-
+  await fs.writeFileSync('./out2.csv', result);
   console.log(result);
 };
 
