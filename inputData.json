@@ -1,0 +1,17 @@
+[{
+"deliveryPartner":"D1"
+,"totalSize":"150"
+,"theatre":"T1"
+},{
+    "deliveryPartner":"D2"
+    ,"totalSize":"325"
+    ,"theatre":"T2"
+    },{
+        "deliveryPartner":"D3"
+        ,"totalSize":"510"
+        ,"theatre":"T1"
+        },{
+            "deliveryPartner":"D4"
+            ,"totalSize":"700"
+            ,"theatre":"T2"
+            }]
