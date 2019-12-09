@@ -1,3 +1,4 @@
+require 'csv'
 
 def get_partners_list(theater)
   {
@@ -36,52 +37,36 @@ def partner_cost_evaluation(partner, size_slab_in_gb)
 end
 
 
-def evaluate_best_partner(partners_available, delivery)
+def evaluate_best_partner(partners_available, delivery, output_1)
   best_partner = partners_available.first
-  best_partner_cost = partner_cost_evaluation(best_partner, delivery[:size_slab_in_gb])
+  best_partner_cost = partner_cost_evaluation(best_partner, delivery['size_slab_in_gb'])
   for i in 1..(partners_available.length - 1)
-    partner_cost = partner_cost_evaluation(partners_available[i], delivery[:size_slab_in_gb])
+    partner_cost = partner_cost_evaluation(partners_available[i], delivery['size_slab_in_gb'])
     if partner_cost < best_partner_cost
       best_partner = partners_available[i]
       best_partner_cost = partner_cost
     end
   end
-  puts "#{delivery[:delivery_id]}, true, #{best_partner[:partner]}, #{best_partner_cost}"
+  output_1 << [delivery['delivery_id'], true, best_partner[:partner], best_partner_cost]
 end
 
-def find_best_partner(theater, delivery)
-  return "Please input theater id" if theater.nil?
-  partners = get_partners_list(theater)
-  return "Theatre not found" if partners.nil?
-  return "There are no partners for given theater" if partners.empty?
-  partners_available = partners.select {|x| x[:size_slab_in_gb].include?(delivery[:size_slab_in_gb])}
+output_1 = CSV.open("output1.csv", "wb")
+CSV.foreach('input.csv', :headers => true) do |row|
+  delivery = row.to_h
+  delivery['size_slab_in_gb'] = delivery['size_slab_in_gb'].to_i
+  partners = get_partners_list(delivery['theater'])
+  partners_available = partners.select {|x| x[:size_slab_in_gb].include?(delivery['size_slab_in_gb'])}
   if partners_available.empty?
-    puts "#{delivery[:delivery_id]}, false, '', ''"
-    return
+    output_1 << [delivery['delivery_id'], false, nil, nil]
+    next
   end
   if partners_available.size == 1
     partner = partners_available.first
-    partner_cost = partner_cost_evaluation(partner, delivery[:size_slab_in_gb])
-    puts "#{delivery[:delivery_id]}, true, #{partner[:partner]}, #{partner_cost}"
-    return
+    partner_cost = partner_cost_evaluation(partner, delivery['size_slab_in_gb'])
+    output_1 << [delivery['delivery_id'], true, partner[:partner], partner_cost]
+    next
   end
-  evaluate_best_partner(partners_available, delivery)
-end
-
-deliveries = [
-  {delivery_id: 'D1', size_slab_in_gb: 50, theater: 'T1'},
-  {delivery_id: 'D2', size_slab_in_gb: 325, theater: 'T2'},
-  {delivery_id: 'D3', size_slab_in_gb: 510, theater: 'T1'},
-  {delivery_id: 'D4', size_slab_in_gb: 700, theater: 'T2'}
-]
-
-
-deliveries.each do |delivery|
-  find_best_partner(delivery[:theater], delivery)
+  evaluate_best_partner(partners_available, delivery, output_1)
 end
 
 
-# D1, true, P2, 1000
-# D2, true, P1, 3250
-# D3, true, P3, 15300
-# D4, false, '', ''
