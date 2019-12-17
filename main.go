@@ -152,7 +152,7 @@ func ReadRates(file string) ([]*Rate, error) {
 	pr := csv.NewReader(f)
 	pr.ReuseRecord = true
 
-	pr.Read() // The header, remove this id there is no header
+	pr.Read() // The header, remove this if there is no header
 
 	rr := make([]*Rate, 0, 20) // Optimisation based on example partners file.
 	for {
