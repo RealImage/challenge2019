@@ -5,6 +5,8 @@ To run:
 Problem 1: go run main.go
 Problem 2: go run main.go -capacities capacities.csv
 
+Go 1.13 is required (new error handling syntax is used)
+
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
 Delivery partners specify the rate of delivery and cost in following manner (All costs are in paise):
