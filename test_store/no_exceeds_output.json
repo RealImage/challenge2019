@@ -1,0 +1,26 @@
+[
+	{
+		"delivery_id": "D1",
+		"delivery_possible": true,
+		"partner_id": "P1",
+		"cost_of_delivery": 2000
+	},
+	{
+		"delivery_id": "D2",
+		"delivery_possible": false,
+		"partner_id": "",
+		"cost_of_delivery": null
+	},
+	{
+		"delivery_id": "D3",
+		"delivery_possible": true,
+		"partner_id": "P1",
+		"cost_of_delivery": 2500
+	},
+	{
+		"delivery_id": "D4",
+		"delivery_possible": false,
+		"partner_id": "",
+		"cost_of_delivery": null
+	}
+]
