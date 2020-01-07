@@ -1,0 +1,19 @@
+{
+  "name": "challenge2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev_test": "nodemon --exec 'mocha -R min'",
+    "test": "mocha --recursive",
+    "MIGRATE_DATA_STORE": "node ./data_store/migrate_csv_to_json",
+    "MIGRATE_TEST_STORE": "node ./test_store/migrate_csv_to_json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-csv": "2.4.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  }
+}

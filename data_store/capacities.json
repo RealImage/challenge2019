@@ -1,0 +1,14 @@
+[
+	{
+		"partner_id": "P1",
+		"max_capacity": 350
+	},
+	{
+		"partner_id": "P2",
+		"max_capacity": 500
+	},
+	{
+		"partner_id": "P3",
+		"max_capacity": 1500
+	}
+]

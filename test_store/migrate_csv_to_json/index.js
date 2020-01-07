@@ -1,0 +1,14 @@
+require('./input/input');
+require('./input/no_exceeds_input');
+require('./input/sample_input1');
+require('./input/sample_input2');
+require('./input/sample_input3');
+require('./input/sample_input_exceeds');
+require('./output/output1');
+require('./output/output2');
+require('./output/output2_other_possibility');
+require('./output/sample_output1');
+require('./output/sample_output2');
+require('./output/sample_output3');
+require('./output/sample_output_exceeds');
+require('./output/no_exceeds_output');

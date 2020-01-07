@@ -1,0 +1,4 @@
+Delivery ID,Delivery Possible,Partner ID,Cost of Delivery
+D1,true,P2,2500
+D2,true,P1,3600
+D3,true,P1,3900

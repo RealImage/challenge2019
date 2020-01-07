@@ -1,0 +1,12 @@
+[
+	{
+		"delivery_id": "D1",
+		"size_of_delivery": 70,
+		"theatre_id": "T3"
+	},
+	{
+		"delivery_id": "D2",
+		"size_of_delivery": 300,
+		"theatre_id": "T1"
+	}
+]
