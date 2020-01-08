@@ -87,9 +87,11 @@ module.exports.fetchPartners = () => {
 
               case constant.cost_per_gb:
                 partnerObj.costGB = parseInt(value);
+                break;
 
               case constant.partner_id:
                 partnerObj.partnerId = value;
+                break;
             }
           });
           partnersList.push(partnerObj);
