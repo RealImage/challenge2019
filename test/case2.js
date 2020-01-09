@@ -2,8 +2,12 @@ const partners = require("../data/partners");
 const capacities = require("../data/capacities");
 const input = require("../input/input");
 
+// const partners = require("../data/partnerstest");
+// const capacities = require("../data/capacitiestest");
+// const input = require("../input/test4");
+
 const writeSecondResult = require("../functions/writeFile").writeSecondResult;
-const getMinFare = require("../functions/minCost").getMinCost;
+const getMinCost = require("../functions/minCost").getMinCost;
 
 let copiedCapacities = [...capacities];
 
@@ -31,37 +35,61 @@ sortedInput.map(theatre => {
         partner.sizeslab[0] <= contentSize && contentSize <= partner.sizeslab[1]
     );
 
-    let sortedPartners = filteredPartners.sort(
-      (p1, p2) => p1.costGB - p2.costGB
-    );
+    let capacityIndex = 0;
+    let partnerIndex = 0;
+    let assumedMinCost = 0;
 
-    let found = false;
-    let i = 0;
+    let minCostIndex = 0;
+    let minCostFound = false;
 
-    while (!found) {
+    while (!minCostFound) {
       let index = copiedCapacities.findIndex(
-        cp => cp.partnerId === sortedPartners[i].partnerId
+        cp => cp.partnerId === filteredPartners[minCostIndex].partnerId
       );
 
-      if (copiedCapacities[index].capacity >= contentSize) {
-        copiedCapacities[index].capacity =
-          copiedCapacities[index].capacity - contentSize;
-
-        found = true;
-
-        formattedRow = `${delivery}, "true", ${
-          sortedPartners[i].partnerId
-        } , ${getMinFare(
-          sortedPartners[i].minCost,
-          sortedPartners[i].costGB,
+      if (index > -1 && copiedCapacities[index].capacity >= contentSize) {
+        assumedMinCost = getMinCost(
+          filteredPartners[minCostIndex].minCost,
+          filteredPartners[minCostIndex].costGB,
           contentSize
-        )}`;
+        );
 
-        resultArray.push(formattedRow);
+        capacityIndex = index;
+        partnerIndex = minCostIndex;
+        minCostFound = true;
       }
 
-      i++;
+      minCostIndex++;
     }
+
+    filteredPartners.map((partner, index) => {
+      const calculatedMinCost = getMinCost(
+        partner.minCost,
+        partner.costGB,
+        contentSize
+      );
+
+      let cpIndex = copiedCapacities.findIndex(
+        cp => cp.partnerId === partner.partnerId
+      );
+
+      if (cpIndex > -1) {
+        if (
+          calculatedMinCost < assumedMinCost &&
+          copiedCapacities[cpIndex].capacity >= contentSize
+        ) {
+          assumedMinCost = calculatedMinCost;
+          partnerIndex = index;
+          capacityIndex = cpIndex;
+        }
+      }
+    });
+
+    copiedCapacities[capacityIndex].capacity =
+      copiedCapacities[capacityIndex].capacity - contentSize;
+    formattedRow = `${delivery}, "true", ${filteredPartners[partnerIndex].partnerId} , ${assumedMinCost}`;
+
+    resultArray.push(formattedRow);
   } else {
     formattedRow = `${delivery}, "false", "",""`;
     resultArray.push(formattedRow);

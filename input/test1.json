@@ -1,0 +1,17 @@
+[
+  {
+    "delivery": "D1",
+    "contentSize": 100,
+    "theatreId": "T1"
+  },
+  {
+    "delivery": "D2",
+    "contentSize": 300,
+    "theatreId": "T1"
+  },
+  {
+    "delivery": "D3",
+    "contentSize": 350,
+    "theatreId": "T1"
+  }
+]
