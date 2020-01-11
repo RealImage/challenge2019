@@ -1,0 +1,5 @@
+[
+  { "partnerId": "P1", "capacity": 350 },
+  { "partnerId": "P2", "capacity": 500 },
+  { "partnerId": "P3", "capacity": 1500 }
+]

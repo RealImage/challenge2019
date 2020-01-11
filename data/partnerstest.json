@@ -1,0 +1,44 @@
+[
+  {
+    "theatre": "T1",
+    "sizeslab": [0, 200],
+    "minCost": 2000,
+    "costGB": 20,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [200, 400],
+    "minCost": 3000,
+    "costGB": 15,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T3",
+    "sizeslab": [100, 200],
+    "minCost": 4000,
+    "costGB": 30,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T3",
+    "sizeslab": [200, 400],
+    "minCost": 5000,
+    "costGB": 25,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T5",
+    "sizeslab": [100, 200],
+    "minCost": 2000,
+    "costGB": 30,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [0, 400],
+    "minCost": 1500,
+    "costGB": 25,
+    "partnerId": "P2"
+  }
+]

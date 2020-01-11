@@ -1,0 +1,114 @@
+[
+  {
+    "theatre": "T1",
+    "sizeslab": [0, 100],
+    "minCost": 1500,
+    "costGB": 20,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [100, 200],
+    "minCost": 2000,
+    "costGB": 13,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [200, 300],
+    "minCost": 2500,
+    "costGB": 12,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [300, 400],
+    "minCost": 3000,
+    "costGB": 10,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [0, 100],
+    "minCost": 1500,
+    "costGB": 20,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [100, 200],
+    "minCost": 2000,
+    "costGB": 15,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [200, 300],
+    "minCost": 2500,
+    "costGB": 12,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [300, 400],
+    "minCost": 3000,
+    "costGB": 10,
+    "partnerId": "P1"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [0, 200],
+    "minCost": 1000,
+    "costGB": 20,
+    "partnerId": "P2"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [200, 400],
+    "minCost": 2500,
+    "costGB": 15,
+    "partnerId": "P2"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [0, 200],
+    "minCost": 2500,
+    "costGB": 20,
+    "partnerId": "P2"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [200, 400],
+    "minCost": 3500,
+    "costGB": 10,
+    "partnerId": "P2"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [100, 200],
+    "minCost": 800,
+    "costGB": 25,
+    "partnerId": "P3"
+  },
+  {
+    "theatre": "T1",
+    "sizeslab": [200, 600],
+    "minCost": 1200,
+    "costGB": 30,
+    "partnerId": "P3"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [100, 200],
+    "minCost": 900,
+    "costGB": 15,
+    "partnerId": "P3"
+  },
+  {
+    "theatre": "T2",
+    "sizeslab": [200, 400],
+    "minCost": 1000,
+    "costGB": 12,
+    "partnerId": "P3"
+  }
+]
