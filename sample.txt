@@ -1,0 +1,97 @@
+import React, { Component } from 'react'
+import { Accordion, Button, Menu, Form, Segment, TextArea, Input, Table, Header, Rating } from 'semantic-ui-react'
+import { Row, Col } from 'react-grid-system'
+
+import './JobTracking.css'
+
+const SizeForm = (
+
+    // <Form.Group grouped  >
+    <Form>
+        <div style={{width: '60vw' , padding: '5px'}}>
+            <TextArea rows={3} style={{ marginBottom: 20 }} />
+            <Button onClick={() => alert('Submit!!')} > Submit </Button>
+            <Button className='ui red button' onClick={this.cancelHandler} > Cancel ></Button>
+        </div>
+    </Form>
+    // {/* </Form.Group> */}
+
+)
+class AccordionExampleForm extends Component {
+    state = { activeIndex: -1 }
+
+    cancelHandler = (e, titleProps) => {
+
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+        this.setState({ activeIndex: newIndex })
+    }
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+        this.setState({ activeIndex: newIndex })
+    }
+
+    render() {
+        const { activeIndex } = this.state
+
+        return (
+            <div style={{ marginLeft: '20px', marginRight: '20px' }}>
+
+                <Form>
+                    <h2 style={{ color: '#cd040b' }}>Job Tracking</h2>
+
+                    <div className={'Tabcontent'}>
+                        <b>job notes</b>
+                    </div>
+
+                    <Accordion as={Menu} styled vertical className="fluid" style={{ borderWidth: 0, boxShadow: 0, }}>
+                        <div>
+                            <Menu.Item>
+                                <Accordion.Title
+                                    active={activeIndex === 0}
+                                    content='Notes'
+                                    index={0}
+                                    className={'acctitle'}
+                                    onClick={this.handleClick}
+                                    onClick={this.cancelHandler}
+                                />
+                                <Accordion.Content active={activeIndex === 0} content={SizeForm} />
+                            </Menu.Item>
+                        </div>
+                    </Accordion>
+
+                    <div>
+                        <Input type="text" placeholder="Grid Filter" style={{ marginTop: '10px', marginBottom: '10px' }}></Input>
+                    </div>
+
+                    <div>
+                        <Table celled padded>
+                            <Table.Header>
+                                <Table.Row>
+                                    <Table.HeaderCell singleLine>user</Table.HeaderCell>
+                                    <Table.HeaderCell>Note Date</Table.HeaderCell>
+                                    <Table.HeaderCell>Note</Table.HeaderCell>
+                                    <Table.HeaderCell>Edit</Table.HeaderCell>
+                                    <Table.HeaderCell>Action</Table.HeaderCell>
+                                </Table.Row>
+                            </Table.Header>
+
+                            <Table.Body>
+                                <Table.Row textAlign="center">
+                                    No Data available in Table
+                                </Table.Row>
+                          </Table.Body>
+                        </Table>
+
+                    </div>
+                </Form>
+
+            </div>
+        )
+    }
+}
+export default AccordionExampleForm
+
