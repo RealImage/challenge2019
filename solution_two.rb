@@ -16,12 +16,11 @@ class SolutionTwo
       unless !matched_partners.empty? && have_capacity
         solution << { delivery_id: input[0], deliverable: false, partner_id: "", cost: "" }
       else
-        temp_cost = (input[1].to_i) * matched_partners[0]["Cost Per GB"].strip.to_i
-        cost = matched_partners[0]["Minimum cost"].strip.to_i < temp_cost ? matched_partners[0]["Minimum cost"] : temp_cost
+        cost = SolutionHelper.get_cost(input[1].to_i, matched_partners[0]["Cost Per GB"].strip.to_i, matched_partners[0]["Minimum cost"].strip.to_i)
         solution << { delivery_id: input[0], deliverable: true, partner_id: matched_partners[0]["Partner ID"], cost: cost }
       end
     end
-    SolutionHelper.output_csv(solution)
+    SolutionHelper.output_csv(solution, "output2.csv")
   end
 
   def self.get_capacity(input, partner_id, capacity_limits)
