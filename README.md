@@ -110,3 +110,28 @@ D3, true, P1, 3900
 ```
 
 **Explanation**: Only partner P1 and P2 can deliver content to T1. Lowest cost of delivery will be achieved if all three deliveries are given to partner P1 (100\*20+240\*15+260\*15 = 9,500). However, P1 has capacity of 500 GB and total assigned capacity is (100+240+260) 600 GB in this case. Assigning any one of the delivery to P2 will bring the capacity under 500. Assigning the D1, D2 and D3 to P2 is increasing the total cost of delivery by 500 (100\*25+240\*15+260\*15-9500), 2400 (100\*20+240\*25+260*15-9500) and 2600 (100\*20+240\*15+260\*25-9500) respectively. Hence, Assigning D1 to P2.
+
+
+
+
+
+Steps to run:-
+1> Clone the ruby files
+
+Program 1:
+----------
+1> Run `ruby filename.rb "partners.csv path" "input.csv path" "output.csv path"
+
+Program 2:
+----------
+ 
+1>  Run `ruby filename.rb "partners.csv path" "capacities.csv path" "input.csv path" "output.csv path"
+
+
+
+
+
+
+
+
+
