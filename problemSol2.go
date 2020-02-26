@@ -9,7 +9,6 @@ import (
 )
 
 var count int = 1
-capMap = make(map[string][int])
 
 func readCsvFile(path string) [][]string { //to read the csv file and return as array
 	file, err := os.Open(path)
@@ -94,51 +93,50 @@ func delivery(inputRecords [][]string, partnerRecords [][]string) [][]string { /
 
 func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string) [][]string { ///method for problem statement-2
 	var output [][]string
-	var mapp = make(map[string][]int)
-	totalCapacity := getCapacity(inputRecords)
-	var actualCapacity int
-	var partnerId string
-	lowestCost := totalCapacity
-	for i, pCapacity := range capacityRecords {
+	var capMap = make(map[string]int)
+	for i, cap := range capacityRecords {
 		if i != 0 {
-			capacityinGB, _ := strconv.Atoi(pCapacity[1])
-			cost := totalCapacity - capacityinGB
-			if cost < lowestCost {
-				lowestCost = cost
-				partnerId = strings.Trim(pCapacity[0], " ")
-				actualCapacity = capacityinGB
-			}
+			actualCapacity, _ := strconv.Atoi(cap[1])
+			capMap[strings.Trim(cap[0], " ")] = actualCapacity
 		}
+
 	}
-	totalMinCost := 0
+	output = readCsvFile("myOutput1.csv")
 	partners := getPartners(inputRecords, partnerRecords)
-	pArray := getRecordsByPartner(partnerRecords, inputRecords, partnerId, actualCapacity, totalMinCost, &mapp)
-	totalCost := 0
-	for _, array := range pArray {
-		tCost, _ := strconv.Atoi(array[3])
-		totalCost += tCost
-	}
-	fmt.Println(totalCost)
-	for _, pId := range partners {
-		for i, pCapacity := range capacityRecords {
-			if i != 0 {
-				if strings.Trim(pCapacity[0], " ") == pId {
-					actualCapacity, _ = strconv.Atoi(pCapacity[1])
-					capMap[pId] =  actualCapacity
+
+	if checkCapacity(output, inputRecords, partnerRecords, capacityRecords, capMap) {
+		return output
+	} else {
+		for index := 0; index < len(output); index++ {
+			for _, pId := range partners {
+				if output[0][2] != pId {
+					output[0][2] = pId
+					if checkCapacity(output, inputRecords, partnerRecords, capacityRecords, capMap) {
+						return output
+					}
 				}
 			}
 		}
-		if pId != partnerId {
-			_ = getRecordsByPartner(partnerRecords, inputRecords, pId, actualCapacity, totalMinCost, &mapp)
+	}
+	return output
+}
+
+func checkCapacity(output [][]string, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, capMap map[string]int) bool {
+	for i, cap := range capacityRecords {
+		if i != 0 {
+			actualCapacity, _ := strconv.Atoi(cap[1])
+			capMap[strings.Trim(cap[0], " ")] = actualCapacity
 		}
 
 	}
-	fmt.Println(mapp)
-
-	finalCombination := checkPermutation(partners, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
-	fmt.Println(finalCombination)
-
-	return output
+	for i, oRecord := range output {
+		c, _ := strconv.Atoi(inputRecords[i][1])
+		capMap[oRecord[2]] = capMap[oRecord[2]] - c
+		if capMap[oRecord[2]] < 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func getPartners(inputRecords [][]string, partnerRecords [][]string) []string {
@@ -157,40 +155,31 @@ func getPartners(inputRecords [][]string, partnerRecords [][]string) []string {
 	return partners
 }
 
-func getRecordsByPartner(partnerRecords [][]string, inputRecords [][]string, pId string, actualCapacity int, totalMinCost int, mapp *map[string][]int) [][]string {
-	var pArray [][]string
-	for _, pInput := range inputRecords {
-		minimumCost := 0
-		capacity := actualCapacity
-		array := []string{"", "", "", ""}
-		array[0] = pInput[0]
-		for i, pPartner := range partnerRecords {
-			if i != 0 {
-				pPartner[1] = strings.Trim(pPartner[1], " ")
-				slabSize, _ := strconv.Atoi(pInput[1])
-				if (pId == pPartner[4] && pInput[2] == pPartner[0]) && checkSize(slabSize, pPartner[1]) && actualCapacity >= capacity {
-					costPerGB, _ := strconv.Atoi(pPartner[3])
-					cost := slabSize * costPerGB
-					minCost, _ := strconv.Atoi(pPartner[2])
-					if cost < minCost {
-						cost = minCost
-					}
-					if minimumCost == 0 || cost < minimumCost {
-						minimumCost = cost
-						pId = pPartner[4]
-					}
-					capacity = capacity - minimumCost
-					totalMinCost = totalMinCost + minimumCost
-					array[1] = "true"
-					array[2] = pId
-					array[3] = strconv.Itoa(minimumCost)
+func getRecords(partnerRecords [][]string, array []string, capacity int, minimumCost int, pInput []string, actualCapacity int, partnerId string, totalMinCost int) ([]string, int) {
+	for i, pPartner := range partnerRecords {
+		if i != 0 {
+			pPartner[1] = strings.Trim(pPartner[1], " ")
+			slabSize, _ := strconv.Atoi(pInput[1])
+			if (pInput[2] == pPartner[0]) && checkSize(slabSize, pPartner[1]) && actualCapacity >= capacity {
+				costPerGB, _ := strconv.Atoi(pPartner[3])
+				cost := slabSize * costPerGB
+				minCost, _ := strconv.Atoi(pPartner[2])
+				if cost < minCost {
+					cost = minCost
 				}
+				if minimumCost == 0 || cost < minimumCost {
+					minimumCost = cost
+					partnerId = pPartner[4]
+				}
+				capacity = capacity - minimumCost
+				totalMinCost = totalMinCost + minimumCost
+				array[1] = "true"
+				array[2] = partnerId
+				array[3] = strconv.Itoa(minimumCost)
 			}
 		}
-		(*mapp)[pId] = append((*mapp)[pId], minimumCost)
-		pArray = append(pArray, array)
 	}
-	return pArray
+	return array, capacity
 }
 
 func getCapacity(inputRecords [][]string) int { // to get the partners eligible to deliver
@@ -219,46 +208,6 @@ func checkSize(size int, slabSize string) bool {
 	min, _ := strconv.Atoi(sizeRange[0])
 	max, _ := strconv.Atoi(sizeRange[1])
 	return size >= min && size <= max
-}
-
-func checkPermutation(set []string, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int, totalCost int) []string {
-	return checkPermutationRec(set, "", len(set), len(set), inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
-}
-
-func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int, totalCost int) []string {
-
-	var finalCombination []string
-	if k == 0 {
-		var arr []string
-		capacity := 0
-		cost := 0
-		isCapable := true
-		for i := 0; i < len(prefix); i = i + 2 {
-			arr = append(arr, prefix[i:i+2])
-			c,_ := strconv.Atoi(inputRecords[i][1])
-			capacity += c
-		}
-		for index, arrValue := range arr {
-			cost += mapp[arrValue][index]
-			if mapp[arrValue][index] == 0 {
-				isCapable = false
-			}
-		}
-		if cost < totalCost && isCapable != false {
-			finalCombination = arr
-			//totalCost = cost
-			fmt.Println(arr, totalCost, cost, capacity)
-		}
-		return finalCombination
-	}
-
-	for i := 0; i < n; i = i + 1 {
-
-		newPrefix := prefix + set[i]
-
-		finalCombination = checkPermutationRec(set, newPrefix, n, k-1, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
-	}
-	return finalCombination
 }
 
 func main() {
