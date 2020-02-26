@@ -9,7 +9,6 @@ import (
 )
 
 var count int = 1
-capMap = make(map[string][int])
 
 func readCsvFile(path string) [][]string { //to read the csv file and return as array
 	file, err := os.Open(path)
@@ -92,6 +91,8 @@ func delivery(inputRecords [][]string, partnerRecords [][]string) [][]string { /
 	return output
 }
 
+var capMap = make(map[string]int)
+
 func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string) [][]string { ///method for problem statement-2
 	var output [][]string
 	var mapp = make(map[string][]int)
@@ -124,7 +125,7 @@ func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capaci
 			if i != 0 {
 				if strings.Trim(pCapacity[0], " ") == pId {
 					actualCapacity, _ = strconv.Atoi(pCapacity[1])
-					capMap[pId] =  actualCapacity
+					capMap[pId] = actualCapacity
 				}
 			}
 		}
@@ -229,18 +230,25 @@ func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords
 
 	var finalCombination []string
 	if k == 0 {
+		for i, pCapacity := range capacityRecords {
+			if i != 0 {
+				actualCapacity, _ := strconv.Atoi(pCapacity[1])
+				capMap[strings.Trim(pCapacity[0]," ")] = actualCapacity
+			}
+		}
+		fmt.Println(capMap)
 		var arr []string
 		capacity := 0
 		cost := 0
 		isCapable := true
 		for i := 0; i < len(prefix); i = i + 2 {
 			arr = append(arr, prefix[i:i+2])
-			c,_ := strconv.Atoi(inputRecords[i][1])
-			capacity += c
 		}
 		for index, arrValue := range arr {
 			cost += mapp[arrValue][index]
-			if mapp[arrValue][index] == 0 {
+			tempCap, _ := strconv.Atoi(inputRecords[index][1])
+			capMap[arrValue] = capMap[arrValue] - tempCap
+			if mapp[arrValue][index] == 0 || capMap[arrValue] < 0 {
 				isCapable = false
 			}
 		}
