@@ -11,10 +11,10 @@ func main() {
 	const inputFilePath string = "./input.csv"
 	const capcitiesFilePath string = "./capacities.csv"
 	const parternsFilePath string = "./partners.csv"
-	var theatreDetials customType.Theatre = fileparser.UpdateTheatreDetials(parternsFilePath)
+	var theaterDetials customType.Theatre = fileparser.LoadTheatreDetials(parternsFilePath)
 	fileparser.ParseCapacitiesDetials(capcitiesFilePath)
-	fileparser.GenerateOutput(inputFilePath, theatreDetials)
-	fileparser.GenerateOutputV1(inputFilePath, theatreDetials)
+	fileparser.GenerateOutput(inputFilePath, theaterDetials)
+	fileparser.GenerateOutputV1(inputFilePath, theaterDetials)
 	fmt.Println("Output generated successfully")
 
 }

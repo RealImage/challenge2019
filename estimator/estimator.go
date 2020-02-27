@@ -20,8 +20,8 @@ var Cost int64
 // GetBilling to caculate output
 func GetBilling(theatreDetials customType.Theatre, theatre string, data int64) (int64, string) {
 	partners := theatreDetials[theatre]
-	partnerKeys := reflect.ValueOf(partners).MapKeys()
-	for _, partner := range partnerKeys {
+	partnersList := reflect.ValueOf(partners).MapKeys()
+	for _, partner := range partnersList {
 		slots := partners[partner.String()]
 		Cost, Partner = estimateFare(partner.String(), slots, data)
 	}
@@ -31,8 +31,8 @@ func GetBilling(theatreDetials customType.Theatre, theatre string, data int64) (
 // GetBillingV1 to caculate output
 func GetBillingV1(theatreDetials customType.Theatre, theatre string, data int64) (int64, string) {
 	partners := theatreDetials[theatre]
-	partnerKeys := reflect.ValueOf(partners).MapKeys()
-	for _, partner := range partnerKeys {
+	partnersList := reflect.ValueOf(partners).MapKeys()
+	for _, partner := range partnersList {
 		slots := partners[partner.String()]
 		if Capacities[partner.String()] < data {
 			continue

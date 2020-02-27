@@ -144,14 +144,14 @@ func GenerateOutput(filePath string, theaterDetials customType.Theatre) {
 
 }
 
-// UpdateTheatreDetials get detials
-func UpdateTheatreDetials(file string) customType.Theatre {
+// LoadTheatreDetials get detials
+func LoadTheatreDetials(file string) customType.Theatre {
 	f, _ := os.Open(file)
 	defer f.Close()
 
 	csvr := csv.NewReader(f)
 	csvr.Read()
-	sample := make(customType.Theatre)
+	theaterRecord := make(customType.Theatre)
 
 	for {
 		records, err := csvr.Read()
@@ -161,9 +161,11 @@ func UpdateTheatreDetials(file string) customType.Theatre {
 		if err != nil {
 			panic(err)
 		}
-		partner, found := sample[strings.TrimSpace(records[0])]
+
+		partner, found := theaterRecord[strings.TrimSpace(records[0])]
 		minimumCost, _ := strconv.ParseInt(strings.TrimSpace(records[2]), 10, 64)
 		fare, _ := strconv.ParseInt(strings.TrimSpace(records[3]), 10, 64)
+
 		if found {
 			slot, slotFound := partner[strings.TrimSpace(records[4])]
 			if slotFound {
@@ -182,7 +184,7 @@ func UpdateTheatreDetials(file string) customType.Theatre {
 				}
 			}
 		} else {
-			sample[strings.TrimSpace(records[0])] = customType.Partner{
+			theaterRecord[strings.TrimSpace(records[0])] = customType.Partner{
 				strings.TrimSpace(records[4]): customType.Slots{
 					strings.TrimSpace(records[1]): customType.Slot{
 						Slot:        strings.TrimSpace(records[1]),
@@ -193,5 +195,5 @@ func UpdateTheatreDetials(file string) customType.Theatre {
 			}
 		}
 	}
-	return sample
+	return theaterRecord
 }
