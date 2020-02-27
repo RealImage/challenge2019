@@ -9,6 +9,8 @@ import (
 )
 
 var count int = 1
+var totalCost int
+var finalCombination []string
 
 func readCsvFile(path string) [][]string { //to read the csv file and return as array
 	file, err := os.Open(path)
@@ -96,7 +98,7 @@ var capMap = make(map[string]int)
 func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string) [][]string { ///method for problem statement-2
 	var output [][]string
 	var mapp = make(map[string][]int)
-	totalCapacity := getCapacity(inputRecords)
+	totalCapacity,combinationCount := getCapacity(inputRecords)
 	var actualCapacity int
 	var partnerId string
 	lowestCost := totalCapacity
@@ -114,12 +116,12 @@ func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capaci
 	totalMinCost := 0
 	partners := getPartners(inputRecords, partnerRecords)
 	pArray := getRecordsByPartner(partnerRecords, inputRecords, partnerId, actualCapacity, totalMinCost, &mapp)
-	totalCost := 0
+	//totalCost := 0
 	for _, array := range pArray {
 		tCost, _ := strconv.Atoi(array[3])
 		totalCost += tCost
 	}
-	fmt.Println(totalCost)
+	//fmt.Println(totalCost)
 	for _, pId := range partners {
 		for i, pCapacity := range capacityRecords {
 			if i != 0 {
@@ -134,11 +136,16 @@ func deliveryCapacity(inputRecords [][]string, partnerRecords [][]string, capaci
 		}
 
 	}
-	fmt.Println(mapp)
+	//fmt.Println(mapp)
+	//fmt.Println(pArray)
 
-	finalCombination := checkPermutation(partners, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
-	fmt.Println(finalCombination)
-
+	checkPermutation(partners, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, combinationCount) //compare total cost with all combinations 
+	//fmt.Println(finalCombination)
+	for index,partner:= range finalCombination{
+		pArray[index][2] = partner
+		pArray[index][3] = strconv.Itoa(mapp[partner][index])
+	}
+	output = pArray // assign the partners with minimum totalcost to output
 	return output
 }
 
@@ -188,22 +195,27 @@ func getRecordsByPartner(partnerRecords [][]string, inputRecords [][]string, pId
 				}
 			}
 		}
+		if array[1]!="true"{
+			array[1] = "false"
+		}
 		(*mapp)[pId] = append((*mapp)[pId], minimumCost)
 		pArray = append(pArray, array)
 	}
 	return pArray
 }
 
-func getCapacity(inputRecords [][]string) int { // to get the partners eligible to deliver
+func getCapacity(inputRecords [][]string) (int, int) { // to get the partners eligible to deliver
 	totalCapacity := 0
+	combinationCount := 0
 	output1Records := readCsvFile("myOutput1.csv")
 	for index, pOutput := range output1Records {
 		if pOutput[1] == "true" {
 			data, _ := strconv.Atoi(inputRecords[index][1])
 			totalCapacity += data
+			combinationCount++
 		}
 	}
-	return totalCapacity
+	return totalCapacity,combinationCount
 }
 
 func contains(partners []string, str string) bool {
@@ -222,13 +234,12 @@ func checkSize(size int, slabSize string) bool {
 	return size >= min && size <= max
 }
 
-func checkPermutation(set []string, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int, totalCost int) []string {
-	return checkPermutationRec(set, "", len(set), len(set), inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
+func checkPermutation(set []string, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int, combinationCount int){
+	checkPermutationRec(set, "", len(set), combinationCount, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity)
 }
 
-func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int, totalCost int) []string {
+func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords [][]string, partnerRecords [][]string, capacityRecords [][]string, mapp map[string][]int, totalCapacity int) {
 
-	var finalCombination []string
 	if k == 0 {
 		for i, pCapacity := range capacityRecords {
 			if i != 0 {
@@ -236,9 +247,7 @@ func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords
 				capMap[strings.Trim(pCapacity[0]," ")] = actualCapacity
 			}
 		}
-		fmt.Println(capMap)
 		var arr []string
-		capacity := 0
 		cost := 0
 		isCapable := true
 		for i := 0; i < len(prefix); i = i + 2 {
@@ -254,19 +263,18 @@ func checkPermutationRec(set []string, prefix string, n int, k int, inputRecords
 		}
 		if cost < totalCost && isCapable != false {
 			finalCombination = arr
-			//totalCost = cost
-			fmt.Println(arr, totalCost, cost, capacity)
+			totalCost = cost
 		}
-		return finalCombination
+		return 
 	}
 
 	for i := 0; i < n; i = i + 1 {
 
 		newPrefix := prefix + set[i]
 
-		finalCombination = checkPermutationRec(set, newPrefix, n, k-1, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity, totalCost)
+		checkPermutationRec(set, newPrefix, n, k-1, inputRecords, partnerRecords, capacityRecords, mapp, totalCapacity)
 	}
-	return finalCombination
+	return
 }
 
 func main() {
@@ -276,5 +284,5 @@ func main() {
 	writeCsvFile(output1Records)
 	capacityRecords := readCsvFile("capacities.csv")
 	output2Records := deliveryCapacity(inputRecords, partnerRecords, capacityRecords)
-	fmt.Println(output2Records)
+	writeCsvFile(output2Records)
 }
