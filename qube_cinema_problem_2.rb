@@ -1,5 +1,5 @@
 require 'csv'
-    csv_data = CSV.read(ARGV[0])
+    csv_data = CSV.read(Dir.pwd + "/partners.csv")
     data_set = []
     csv_data.each_with_index do |data, index|
       next if index.zero?
@@ -11,7 +11,7 @@ require 'csv'
           partner_id: data[4].strip
       }
     end
-    capacities = CSV.read(ARGV[1])
+    capacities = CSV.read(Dir.pwd + "/capacities.csv")
 
     partner_capacities = []
     capacities.each_with_index do |cap_data, index1|
@@ -22,7 +22,7 @@ require 'csv'
       }
     end
 
-    input_data_1 = CSV.read(ARGV[2])
+    input_data_1 = CSV.read(Dir.pwd + "/input.csv")
     deliveries = []
     input_data_1.each do |input|
       deliveries << {
@@ -31,7 +31,7 @@ require 'csv'
           theatre: input[2]
       }
     end
-    CSV.open(ARGV[3], "a+") do |output|
+    CSV.open(Dir.pwd + "/#{ARGV[0]}.csv", "a+") do |output|
       output << %w[Delivery Possibility Partner Cost]
       deliveries.each_with_index do |delivery|
         cost = ""
