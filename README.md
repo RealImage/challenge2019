@@ -24,7 +24,7 @@ First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 p
 
 - We've provided a CSV `partners.csv` with the list of all partners, theatres, content size, minimum cost and cost per GB. Please use the data mentioned there for this program instead of data given in Table 1 and 2. The codes you see in csv may be different from what you see in tables, so please always use the codes in the CSV. This Readme is only an example.
 
-This challenge consist of two problems.
+This challenge consist of two problems. Aim to solve atleast Problem Statement 1.
 
 ## Problem Statement 1
 Given a list of content size and Theatre ID, Find the partner for each delivery where cost of delivery is minimum. If delivery is not possible, mark that delivery impossible.
@@ -110,3 +110,7 @@ D3, true, P1, 3900
 ```
 
 **Explanation**: Only partner P1 and P2 can deliver content to T1. Lowest cost of delivery will be achieved if all three deliveries are given to partner P1 (100\*20+240\*15+260\*15 = 9,500). However, P1 has capacity of 500 GB and total assigned capacity is (100+240+260) 600 GB in this case. Assigning any one of the delivery to P2 will bring the capacity under 500. Assigning the D1, D2 and D3 to P2 is increasing the total cost of delivery by 500 (100\*25+240\*15+260\*15-9500), 2400 (100\*20+240\*25+260*15-9500) and 2600 (100\*20+240\*15+260\*25-9500) respectively. Hence, Assigning D1 to P2.
+
+To submit a solution, fork this repo and send a Pull Request on Github.
+
+For any questions or clarifications, raise an issue on this repo and we'll answer your questions as fast as we can.
