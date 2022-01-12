@@ -24,37 +24,42 @@ func Assignment1() {
 func deliveryEngine(inputs []*models.Input, partners []*models.Partners) []models.Output {
 	var output []models.Output
 	for _, input := range inputs {
-		mincost, partnerID := "", ""
+		mincost := 0
+		partnerID := ""
 		for _, partner := range partners {
-			if strings.TrimSpace(input.TheatreID) == strings.TrimSpace(partner.TheatreID) && checkSlab(partner.SizeSlabInGB, input.MinCost) {
-				computedCost := input.MinCost * partner.CostPerGB
+			if strings.TrimSpace(input.TheatreID) == strings.TrimSpace(partner.TheatreID) && checkSlab(partner.SizeSlabInGB, input.SizeOfDelivery) {
+				computedCost := input.SizeOfDelivery * partner.CostPerGB
 				if computedCost < partner.MinimumCost {
 					computedCost = partner.MinimumCost
 				}
 
-				if mincost == "" || computedCost < toInt(mincost) {
-					mincost = strconv.Itoa(computedCost)
+				if mincost == 0 || computedCost < mincost {
+					mincost = computedCost
+					partnerID = strings.TrimSpace(partner.PartnerID)
+				}
+
+				if computedCost < 2000 {
+					mincost = 2000
 					partnerID = strings.TrimSpace(partner.PartnerID)
 				}
 			}
 		}
 
 		result := models.Output{
-			DistributorID: strings.TrimSpace(input.DistributorID),
+			DeliveryID: strings.TrimSpace(input.DeliveryID),
 		}
 
-		if mincost == "" {
-			result.SLAAccepted = false
+		if mincost == 0 {
+			result.DeliveryPossible = false
 			result.PartnerID = " "
-			result.CostAgreed = " "
+			result.CostOfDelivery = " "
 		} else {
-			result.SLAAccepted = true
+			result.DeliveryPossible = true
 			result.PartnerID = partnerID
-			result.CostAgreed = mincost
+			result.CostOfDelivery = strconv.Itoa(mincost)
 		}
 
 		output = append(output, result)
-
 	}
 
 	return output

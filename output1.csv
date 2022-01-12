@@ -1,4 +1,4 @@
-distributorId,slaAccepted,partnerId,costAgreed
+deliveryId,deliveryPossible,partnerId,costOfDelivery
 D1,true,P1,2000
-D2,true,P1,3000
-D3,true,P1,3500
+D2,true,P1,3600
+D3,true,P1,3900

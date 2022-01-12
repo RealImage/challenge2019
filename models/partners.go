@@ -10,6 +10,7 @@ type Partners struct {
 	NotUsed      string `csv:"-"`
 }
 
+//PartnerConfig denotes attribute with PartnerID as Primary Key
 type PartnerConfig struct {
 	TID         string
 	MinSlabSize int
