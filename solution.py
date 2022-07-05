@@ -7,8 +7,8 @@ import csv
 '''
     @author Arjun Balasubramanian
     The general idea is to first find which all partners deliver to the target theater
-    Once this is found, sort the range of partners obtained in the last based on their starting index Eg: ('0-100') becomes the interval[0, 100]
-    and this comes before [200, 300] so on and so forth.
+    Once this is found, convert the range into intervals and sort the 2d list thus obtained by the start value of each interval
+    Eg: ('0-100') becomes the interval[0, 100] and this comes before [200, 300] so on and so forth.
     Now find all the intervals that can contain the target amount of data. This will be the candidate list.
     Now calculate the cost for each candidate and then finally, return the candidate with minimum possible cost
 '''
@@ -66,7 +66,7 @@ def find_minimum_cost(i):
             partner_index['cost'] = min_cost_for_this_partner
         else:
             partner_index['cost'] = calculated_cost
-            
+
     min_cost_partner = None
     min_cost = 99999999
        
@@ -87,8 +87,6 @@ def convert_to_range(str_range):
     elem.append(int(str_range.strip().split('-')[0]))
     elem.append(int(str_range.strip().split('-')[1]))
     return elem;
-
-
 
 
 if __name__ == "__main__":
