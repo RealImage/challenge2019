@@ -2,15 +2,6 @@ import pandas as pd
 from typing import List, Optional
 
 
-# Select thorugh Size Stash
-# Get the cost, and see whos the minimum
-
-
-def calculate_min(delivery_id: str, size: int, theatre_id: str) -> bool:
-    # check if theatre_id is in partners dataframe
-    pass
-
-
 def check_range(input_value: int, range: str) -> bool:
     _min = int(range.split("-")[0])
     _max = int(range.split("-")[1])
