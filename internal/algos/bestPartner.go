@@ -3,6 +3,7 @@ package algos
 import (
 	"log"
 	"strconv"
+	"strings"
 
 	"github.com/purush7/challenge2019/v1/internal/populate"
 	"github.com/purush7/challenge2019/v1/types"
@@ -30,9 +31,9 @@ func BestPartner(ops types.ProblemOps) {
 
 	for _, record := range inputRecords {
 		outputRecord := make([]string, 4)
-		outputRecord[0] = record[0]
-		content := util.StringToInt(record[1])
-		theartre := types.Theartre(record[2])
+		outputRecord[0] = strings.TrimSpace(record[0])
+		content := util.StringToInt(strings.TrimSpace(record[1]))
+		theartre := types.Theartre(strings.TrimSpace(record[2]))
 
 		//fill partnerOps
 		partnerOps.content = content
