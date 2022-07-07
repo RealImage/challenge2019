@@ -1,35 +1,38 @@
 package populate
 
 import (
+	"log"
+	"strings"
+
 	"github.com/purush7/challenge2019/v1/types"
 	"github.com/purush7/challenge2019/v1/util"
 )
 
 func PopulateData(partnersFile string) (data types.WholeData) {
 
-	records := util.ReadCsv(partnersFile)
+	data = make(types.WholeData)
+	records := util.ReadCSV(partnersFile)
 
-	for _, record := range records {
-		theatre := types.Theartre(record[0])
-		//Todo: check if below code is required or not?
-		// _, exists := data[theatre]
-		// if !exists {
-		// 	data[theatre] = types.PartnersData{}
-		// }
+	for _, record := range records[1:] {
+		theatre := types.Theartre(strings.TrimSpace(record[0]))
+		_, exists := data[theatre]
+		if !exists {
+			data[theatre] = make(types.PartnersData)
+		}
 		partnerData := data[theatre]
 
-		//slabRange := record[1]
-		//Todo: split the slab range to min and max
-		minRange := 0
-		maxRange := 0
+		slabRange := strings.Split(strings.TrimSpace(record[1]), "-")
+		if len(slabRange) != 2 {
+			log.Fatal("slabRange len isn't 2 of having range value", record[1], "and theartre", theatre)
+		}
+		minRange := util.StringToInt(slabRange[0])
+		maxRange := util.StringToInt(slabRange[1])
 
-		minCost := util.StringToInt(record[2])
-		costPerGB := util.StringToInt(record[3])
-		partner := types.Partner(record[4])
-		newSlab := types.Slabs{minRange, maxRange, minCost, costPerGB}
+		minCost := util.StringToInt(strings.TrimSpace(record[2]))
+		costPerGB := util.StringToInt(strings.TrimSpace(record[3]))
+		partner := types.Partner(strings.TrimSpace(record[4]))
+		newSlab := types.Slab{minRange, maxRange, minCost, costPerGB}
 		partnerData[partner] = append(partnerData[partner], newSlab)
-
 	}
-
 	return data
 }

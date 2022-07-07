@@ -3,12 +3,12 @@ package main
 import (
 	"flag"
 
-	"github.com/purush7/challenge2019/v1/definitions"
 	"github.com/purush7/challenge2019/v1/internal/algos"
+	"github.com/purush7/challenge2019/v1/types"
 	"github.com/purush7/challenge2019/v1/util"
 )
 
-var Ops = definitions.ProblemOps{}
+var Ops = types.ProblemOps{}
 
 func init() {
 	flag.StringVar(&Ops.InputFile, "inputFile", "", "specify the input Filepath(Absolute or Relavtive path)")

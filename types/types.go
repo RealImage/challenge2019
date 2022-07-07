@@ -7,7 +7,7 @@ type ProblemOps struct {
 	PartnersFile   string
 }
 
-type Slabs struct {
+type Slab struct {
 	MinRange int
 	MaxRange int
 	MinCost  int
@@ -18,6 +18,6 @@ type Theartre string
 
 type Partner string
 
-type PartnersData map[Partner][]Slabs
+type PartnersData map[Partner][]Slab
 
 type WholeData map[Theartre]PartnersData
