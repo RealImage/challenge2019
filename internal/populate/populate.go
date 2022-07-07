@@ -31,7 +31,7 @@ func PopulateData(partnersFile string) (data types.WholeData) {
 		minCost := util.StringToInt(strings.TrimSpace(record[2]))
 		costPerGB := util.StringToInt(strings.TrimSpace(record[3]))
 		partner := types.Partner(strings.TrimSpace(record[4]))
-		newSlab := types.Slab{minRange, maxRange, minCost, costPerGB}
+		newSlab := types.Slab{MinRange: minRange, MaxRange: maxRange, MinCost: minCost, CostGB: costPerGB}
 		partnerData[partner] = append(partnerData[partner], newSlab)
 	}
 	return data
