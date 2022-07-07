@@ -1,5 +1,7 @@
+from typing import Optional, Dict
+
 import pandas as pd
-from typing import List, Optional
+from pandas import DataFrame
 
 
 def check_range(input_value: int, range: str) -> bool:
@@ -11,7 +13,7 @@ def check_range(input_value: int, range: str) -> bool:
     return False
 
 
-def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[int | float]:
+def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[int]:
     partners = pd.read_csv(r"G:\Projects\challenge2019\partners.csv")
     min_cost: int | float = float("+inf")
     for _, partner in partners.iterrows():
@@ -29,10 +31,28 @@ def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[int | flo
 
 if __name__ == "__main__":
 
-    input_values = pd.read_csv("input.csv", header=None)
+    input_values = pd.read_csv(r"G:\Projects\challenge2019\input.csv", header=None)
 
     zipped: zip = zip(input_values[0].tolist(), input_values[1].tolist(), input_values[2].tolist())
     unpacked_values = list(map(list, zipped))
 
+    result_list = []
     for delivery_id, size, theatre_id in unpacked_values:
-        print(get_required_cost(theatre_id=theatre_id, delivery_size=size))
+
+        min_cost: Optional[int] = get_required_cost(theatre_id=theatre_id, delivery_size=size)
+        possible: bool = True
+        if not min_cost:
+            possible = False
+
+        data: Dict = {
+            "delivery ID": delivery_id,
+            "Delivery Possible": possible,
+            "Selected Partner": "TBD",
+            "Cost of Delivery": min_cost
+        }
+
+        result_list.append(data)
+
+    result: DataFrame = pd.DataFrame(result_list)
+
+    result.to_csv("result.csv", header=False, index=False)
