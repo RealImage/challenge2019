@@ -114,3 +114,11 @@ D3, true, P1, 3900
 To submit a solution, fork this repo and send a Pull Request on Github.
 
 For any questions or clarifications, raise an issue on this repo and we'll answer your questions as fast as we can.
+
+
+**Solution to Problem 1**:
+
+Run the following to get solution to problem 1 (Python >= 3.7)
+```
+python solution.py input.csv
+```
