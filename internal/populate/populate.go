@@ -8,7 +8,7 @@ import (
 	"github.com/purush7/challenge2019/v1/util"
 )
 
-func PopulateData(partnersFile string) (data types.WholeData) {
+func PopulatePartnersData(partnersFile string) (data types.WholeData) {
 
 	data = make(types.WholeData)
 	records := util.ReadCSV(partnersFile)
@@ -33,6 +33,17 @@ func PopulateData(partnersFile string) (data types.WholeData) {
 		partner := types.Partner(strings.TrimSpace(record[4]))
 		newSlab := types.Slab{MinRange: minRange, MaxRange: maxRange, MinCost: minCost, CostGB: costPerGB}
 		partnerData[partner] = append(partnerData[partner], newSlab)
+	}
+	return data
+}
+
+func PopulateCapacitiesData(capacitiesFile string) (data types.CapacityData) {
+	data = make(types.CapacityData)
+	records := util.ReadCSV(capacitiesFile)
+
+	for _, record := range records[1:] {
+		partner := types.Partner(strings.TrimSpace(record[0]))
+		data[partner] = util.StringToInt(strings.TrimSpace(record[1]))
 	}
 	return data
 }

@@ -21,3 +21,12 @@ type Partner string
 type PartnersData map[Partner][]Slab
 
 type WholeData map[Theartre]PartnersData
+
+type CapacityData map[Partner]int
+
+type Combination struct {
+	Cost        int
+	PartnerComb string
+	Possible    bool
+	Undel       int
+}

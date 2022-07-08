@@ -22,7 +22,7 @@ type findPartnerOps struct {
 func BestPartner(ops types.ProblemOps) {
 	//populate data
 
-	data := populate.PopulateData(ops.PartnersFile)
+	data := populate.PopulatePartnersData(ops.PartnersFile)
 	inputRecords := util.ReadCSV(ops.InputFile)
 
 	var outputRecords [][]string
@@ -74,23 +74,15 @@ func findPartner(ops *findPartnerOps) {
 	var found bool = false
 	var minCost int = 0
 	var cost int = 0
-	var tmpCost = 0
 	var finalPartner types.Partner
 
 	for partner, slabSlice := range partnersData {
-		for _, slab := range slabSlice {
-			if content >= slab.MinRange && content <= slab.MaxRange {
-				tmpCost = content * slab.CostGB
-				if tmpCost >= slab.MinCost {
-					cost = tmpCost
-				} else {
-					cost = slab.MinCost
-				}
-				if !found || minCost >= cost {
-					minCost = cost
-					finalPartner = partner
-				}
-				found = true
+		cost = findMinCost(content, slabSlice)
+		if cost != -1 {
+			found = true
+			if cost < minCost {
+				finalPartner = partner
+				minCost = cost
 			}
 		}
 	}
