@@ -9,16 +9,18 @@ def test_input_file() -> None:
     assert list(map(list, zipped))[0] == ['D1', 150, 'T1']
 
 
-def test_check_custom() -> None:
-    assert get_required_cost("T1", 300) == 3000
-    assert get_required_cost("T2", 120) == 1800
-    assert get_required_cost("T1", 450) == 13500
-    assert get_required_cost("T3", 129) is None
-    assert get_required_cost("T1", 0) == 1000
 
 
-def test_check_output_one() -> None:
-    assert get_required_cost("T1", 150) == 2000
-    assert get_required_cost("T2", 325) == 3250
-    assert get_required_cost("T1", 510) == 15300
+
+def test_check_min_cost() -> None:
+    assert get_required_cost("T1", 150)[0] == 2000
+    assert get_required_cost("T2", 325)[0] == 3250
+    assert get_required_cost("T1", 510)[0] == 15300
+    assert get_required_cost("T2", 700) is None
+
+
+def test_check_partnerId() -> None:
+    assert get_required_cost("T1", 150)[1] == "P1"
+    assert get_required_cost("T2", 325)[1] == "P1"
+    assert get_required_cost("T1", 510)[1] == "P3"
     assert get_required_cost("T2", 700) is None

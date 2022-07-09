@@ -1,4 +1,4 @@
-from typing import Optional, Dict
+from typing import Optional, Dict, List
 
 import pandas as pd
 from pandas import DataFrame
@@ -13,20 +13,27 @@ def check_range(input_value: int, range: str) -> bool:
     return False
 
 
-def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[int]:
+def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[List]:
     partners = pd.read_csv(r"G:\Projects\challenge2019\partners.csv")
     min_cost: int | float = float("+inf")
+    partner_id: str = ""
     for _, partner in partners.iterrows():
         if partner.Theatre.strip() == theatre_id.strip() and check_range(input_value=delivery_size,
                                                                          range=partner["Size Slab (in GB)"]):
+
             cost_right_now: int = delivery_size * int(partner["Cost Per GB"])
+
             if cost_right_now <= partner["Minimum cost"]:
                 cost_right_now = partner["Minimum cost"]
 
-            min_cost = min(cost_right_now, min_cost)
+            
+            if cost_right_now < min_cost:
+                min_cost = cost_right_now
+                partner_id = partner["Partner ID"]
+
     if min_cost == float("+inf"):
         return None
-    return min_cost
+    return [min_cost, partner_id]
 
 
 if __name__ == "__main__":
@@ -39,7 +46,7 @@ if __name__ == "__main__":
     result_list = []
     for delivery_id, size, theatre_id in unpacked_values:
 
-        min_cost: Optional[int] = get_required_cost(theatre_id=theatre_id, delivery_size=size)
+        min_cost: Optional[List] = get_required_cost(theatre_id=theatre_id, delivery_size=size)
         possible: bool = True
         if not min_cost:
             possible = False
@@ -47,8 +54,8 @@ if __name__ == "__main__":
         data: Dict = {
             "delivery ID": delivery_id,
             "Delivery Possible": possible,
-            "Selected Partner": "TBD",
-            "Cost of Delivery": min_cost
+            "Selected Partner": min_cost[1],
+            "Cost of Delivery": min_cost[0]
         }
 
         result_list.append(data)
