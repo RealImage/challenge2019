@@ -28,6 +28,7 @@ def filteredMinimumCostForInputList(value,optlist):
     return [True, optlist[minKey]["partner"], minCost]
   else:
     return [False, None, None]
+
 def calculateCostForInputList(inputs,distList):
   inputList = list()
   for each in inputs:
