@@ -55,9 +55,9 @@ def get_capacities(filename)
   end
 end
 
-def calculate_delivery_cost1(list)
+def calculate_delivery_cost1
   result = []
-  list.each do |delivery|
+  $delivery_list.each do |delivery|
     # if theatre to which delivery is assigned doesn't exist then retun false for that
     if $theatre_partner_list.key?(delivery['theatre'])
       cheapest_rate = {'partner' => 'false', 'cost' => ''}
@@ -71,9 +71,11 @@ def calculate_delivery_cost1(list)
           end
         end
       end
-      result << [delivery['id'].upcase,'true',cheapest_rate['partner'].upcase,cheapest_rate['cost']]
-    else
-      result << [delivery['id'].upcase,'false','','']
+      if cheapest_rate['partner'] == 'false'
+        result << [delivery['id'].upcase,false,'','']
+      else
+        result << [delivery['id'].upcase,'true',cheapest_rate['partner'].upcase,cheapest_rate['cost']]
+      end
     end
   end
   make_csv_file('output1',result)
@@ -167,5 +169,5 @@ get_partners(partner_file)
 get_input(input_file)
 get_capacities(capacities_file)
 
-calculate_delivery_cost1($delivery_list)
+calculate_delivery_cost1
 calculate_delivery_cost2
