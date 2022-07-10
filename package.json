@@ -1,0 +1,22 @@
+{
+  "name": "challenge2019",
+  "version": "1.0.0",
+  "description": "Qube Cinemas",
+  "main": "parseCSVFiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nimesh060/challenge2019.git"
+  },
+  "author": "Nimesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nimesh060/challenge2019/issues"
+  },
+  "homepage": "https://github.com/Nimesh060/challenge2019#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}

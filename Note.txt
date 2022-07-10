@@ -1,0 +1,5 @@
+//Execute commands to run prpgram:
+node problemSolution1.js
+node problemSolution2.js
+
+//Ouput will be stored in output.csv file
