@@ -34,11 +34,6 @@ class Solution:
         print(f'Input DF:\n{self.input_df}')
         self.partners_df = pd.read_csv(partners_file)
         print(f'Partners DF:\n{self.partners_df}')
-        if capacities_file:
-            capacities_df = pd.read_csv(capacities_file)
-            self.capacities_dict = \
-                capacities_df.set_index('Partner ID').to_dict()
-            print(f'Capacities Dict:\n{self.capacities_dict}')
 
     def get_possible_slab(
         self, slab_str,
