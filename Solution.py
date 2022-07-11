@@ -14,7 +14,7 @@ def check_range(input_value: int, range: str) -> bool:
 
 
 def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[List]:
-    partners = pd.read_csv(r"G:\Projects\challenge2019\partners.csv")
+    partners = pd.read_csv(r"partners.csv")
     min_cost: int | float = float("+inf")
     partner_id: str = ""
     for _, partner in partners.iterrows():
@@ -25,8 +25,7 @@ def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[List]:
 
             if cost_right_now <= partner["Minimum cost"]:
                 cost_right_now = partner["Minimum cost"]
-
-            
+ 
             if cost_right_now < min_cost:
                 min_cost = cost_right_now
                 partner_id = partner["Partner ID"]
@@ -38,22 +37,21 @@ def get_required_cost(theatre_id: str, delivery_size: int) -> Optional[List]:
 
 if __name__ == "__main__":
 
-    input_values = pd.read_csv(r"G:\Projects\challenge2019\input.csv", header=None)
+    input_values = pd.read_csv(r"input.csv", header=None)
+    unpacked_values = input_values.values.tolist()
 
-    zipped: zip = zip(input_values[0].tolist(), input_values[1].tolist(), input_values[2].tolist())
-    unpacked_values = list(map(list, zipped))
-
-    result_list = []
+    result_list: List = []
     for delivery_id, size, theatre_id in unpacked_values:
 
         min_cost: Optional[List] = get_required_cost(theatre_id=theatre_id, delivery_size=size)
-        possible: bool = True
+        delivery_possible: bool = True
         if not min_cost:
-            possible = False
+            delivery_possible = False
+            min_cost = ["''","''"]
 
         data: Dict = {
             "delivery ID": delivery_id,
-            "Delivery Possible": possible,
+            "Delivery Possible": delivery_possible,
             "Selected Partner": min_cost[1],
             "Cost of Delivery": min_cost[0]
         }
@@ -62,4 +60,8 @@ if __name__ == "__main__":
 
     result: DataFrame = pd.DataFrame(result_list)
 
+
     result.to_csv("result.csv", header=False, index=False)
+
+    # capacities = pd.read_csv(r"capacities.csv")
+
