@@ -5,7 +5,7 @@ import csv
 
 
 partnerss = "E:/challenge2019-master/partners.csv"
-input_file = "E:/challenge2019-master/input.csv"
+input_file = "E:/challenge2019-master/input1.csv"
 
 
 output = []
