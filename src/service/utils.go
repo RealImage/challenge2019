@@ -2,6 +2,8 @@ package service
 
 import (
 	"challenge2019/src/models"
+	"strconv"
+	"strings"
 )
 
 func ReadPartnerCsv(path string) []models.PartnerRecord {
@@ -33,4 +35,20 @@ func WriteOutput(path string, outputList []models.Output) bool {
 		stringfyOutputList = append(stringfyOutputList, val.String())
 	}
 	return writeCSVFile(path, stringfyOutputList)
+}
+
+func ReadCapacities(path string) map[string]int {
+	capcitiesRecord := readCSVFile(path)
+	capMap := make(map[string]int, 0)
+	var partnerID string
+	var capacity int
+	for index, record := range capcitiesRecord {
+		if index == 0 {
+			continue
+		}
+		partnerID = strings.TrimSpace(record[0])
+		capacity, _ = strconv.Atoi(strings.TrimSpace(record[1]))
+		capMap[partnerID] = capacity
+	}
+	return capMap
 }
