@@ -14,7 +14,7 @@ func ReadPartnerCsv(path string) []models.PartnerRecord {
 			continue
 		}
 		partner := models.NewPartnerRecord(record)
-		partnersList = append([]models.PartnerRecord{partner}, partnersList...)
+		partnersList = append(partnersList, partner)
 	}
 	return partnersList
 }
