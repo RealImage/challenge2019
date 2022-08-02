@@ -1,4 +1,4 @@
-"Partner ID","Capacity (in GB)"
+partner_id,capacity_in_gb
 P1          ,350
 P2          ,500
 P3          ,1500
