@@ -1,5 +1,6 @@
 package delivery
 
+// Delivery holds information about Delivery.
 type Delivery struct {
 	OrderID   int
 	Size      int

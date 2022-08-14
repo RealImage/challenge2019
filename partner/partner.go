@@ -1,6 +1,6 @@
 package partner
 
-// Partner holds detailed information about a Partner's delivery capability.
+// Partner holds information about Partner.
 type Partner struct {
 	ID        string
 	MinCost   int

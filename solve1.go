@@ -15,6 +15,7 @@ var (
 	Error = errs.Class("root folder: first task solve error")
 )
 
+// TaskOne performs solving first task and parsing answer to file
 func TaskOne() error {
 	log.Println("Running first problem solve...")
 
@@ -34,6 +35,7 @@ func TaskOne() error {
 	return Error.Wrap(err)
 }
 
+// taskOneAnswer returns answer to first task
 func taskOneAnswer(deliveries map[string]*delivery.Delivery, partnerLists map[string][]partner.Partner) map[string]*delivery.Delivery {
 	for id, delivery := range deliveries {
 		// Not possible while solution not found.
@@ -66,7 +68,7 @@ func taskOneAnswer(deliveries map[string]*delivery.Delivery, partnerLists map[st
 	return deliveries
 }
 
-// Getting maximum int value.
+// maxVal returning maximum int value.
 func maxVal(x, y int) int {
 	if x > y {
 		return x

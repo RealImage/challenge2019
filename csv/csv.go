@@ -18,7 +18,7 @@ var (
 	Error = errs.Class("csv internal error")
 )
 
-// ReadDeliveriesInput performs parsing input info from csv file to map.
+// ReadDeliveriesInput performs parsing input info from csv file to a map.
 func ReadDeliveriesInput(filePath string) (map[string]*delivery.Delivery, error) {
 	csvLines, err := openAndRead(filePath)
 	if err != nil {
@@ -53,7 +53,7 @@ func ReadDeliveriesInput(filePath string) (map[string]*delivery.Delivery, error)
 	return deliveries, nil
 }
 
-// ReadPartners performs parsing input info from csv file to map.
+// ReadPartners performs parsing partners info from csv file to a map.
 func ReadPartners(filePath string) (map[string][]partner.Partner, error) {
 	csvLines, err := openAndRead(filePath)
 	if err != nil {
