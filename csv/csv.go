@@ -114,6 +114,7 @@ func ReadPartners(filePath string) (map[string][]partner.Partner, error) {
 	return costLists, nil
 }
 
+// WriteOutput performs writing result to output.csv
 func WriteOutput(deliveries map[string]*delivery.Delivery) error {
 	outputFile, err := os.Create("output.csv")
 	if err != nil {
