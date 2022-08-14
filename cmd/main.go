@@ -1,9 +1,11 @@
 package main
 
 import (
-	solve "challenge2019"
-	"github.com/zeebo/errs"
 	"log"
+
+	"github.com/zeebo/errs"
+
+	solve "challenge2019"
 )
 
 var (
@@ -12,5 +14,9 @@ var (
 )
 
 func main() {
-	log.Print(solve.SolveFirstTask())
+	if err := solve.TaskOne(); err != nil {
+		log.Fatal(Error.Wrap(err))
+	}
+
+	log.Println("Solved successful: result saved in output.csv")
 }

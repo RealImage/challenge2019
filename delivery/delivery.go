@@ -1,7 +1,7 @@
 package delivery
 
 type Delivery struct {
-	ID        string
+	OrderID   int
 	Size      int
 	TheatreID string
 	Possible  bool
