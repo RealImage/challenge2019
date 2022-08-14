@@ -1,4 +1,4 @@
-package solve
+package challenge2019
 
 import (
 	"log"
