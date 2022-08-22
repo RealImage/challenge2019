@@ -8,8 +8,8 @@ import (
 )
 
 type CsvReaderConfig struct {
-	SkipHeader     bool
 	SourceFilepath string
+	SkipHeader     bool
 	RowChan        chan *CsvRow
 	ErrChan        chan error
 }
@@ -19,19 +19,22 @@ type CsvRow struct {
 	Value      []string
 }
 
-func NewCsvReaderConfig(
-	skipHeader bool,
-	sourceFilepath string,
-	rows chan *CsvRow,
-	errors chan error) *CsvReaderConfig {
+func NewCsvReaderConfig(sourceFilepath string, skipHeader bool, chanBufferSize int) *CsvReaderConfig {
+	return &CsvReaderConfig{
+		sourceFilepath,
+		skipHeader,
+		make(chan *CsvRow, chanBufferSize),
+		make(chan error, chanBufferSize),
+	}
+}
 
-	return &CsvReaderConfig{skipHeader, sourceFilepath, rows, errors}
+func (cfg *CsvReaderConfig) CloseChannels() {
+	close(cfg.RowChan)
+	close(cfg.ErrChan)
 }
 
 func (cfg *CsvReaderConfig) ReadLineFromCsv() {
-	defer close(cfg.RowChan)
-	defer close(cfg.ErrChan)
-
+	defer cfg.CloseChannels()
 	f, err := os.Open(cfg.SourceFilepath)
 	if err != nil {
 		cfg.ErrChan <- fmt.Errorf("source: {%s}; can't open deliveries data: {%s}", cfg.SourceFilepath, err)

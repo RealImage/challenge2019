@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"sync"
 )
 
 type PartnerParserConfig struct {
-	CsvData        chan *tools.CsvRow
+	CsvCfg         *tools.CsvReaderConfig
 	ParsedDataChan chan *Partner
 	ErrChan        chan error
 }
@@ -21,6 +22,12 @@ type Partner struct {
 	MinSlabGb int
 	MaxSlabGb int
 	Capacity  int
+	Available bool
+}
+
+type Partners struct {
+	sync.RWMutex
+	Container []*Partner
 }
 
 const (
@@ -32,8 +39,12 @@ const (
 	PartnersDataColumnCount
 )
 
-func NewPartnerParserConfig(csvData chan *tools.CsvRow, parsedDataChan chan *Partner, errChan chan error) *PartnerParserConfig {
-	return &PartnerParserConfig{csvData, parsedDataChan, errChan}
+func NewPartnerParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *PartnerParserConfig {
+	return &PartnerParserConfig{
+		csvCfg,
+		make(chan *Partner, chanBufferSize),
+		make(chan error, chanBufferSize),
+	}
 }
 
 func (p *Partner) CalculateCost(contentSize int) (int, bool) {
@@ -53,20 +64,25 @@ func (p *Partner) ReadCapacity(capacityPath string, logger tools.SomeLogger) {
 
 }
 
-func (cfg *PartnerParserConfig) ParsePartnerByTheaterFromCsv(theaterId string) {
-	defer close(cfg.ParsedDataChan)
-	defer close(cfg.ErrChan)
+func (pp *PartnerParserConfig) ReadPartnerFromCsv() {
+	defer close(pp.ParsedDataChan)
+	defer close(pp.ErrChan)
 
-	for row := range cfg.CsvData {
+	go func() {
+		go pp.CsvCfg.ReadLineFromCsv()
+		for err := range pp.CsvCfg.ErrChan {
+			pp.ErrChan <- err
+		}
+	}()
+
+	for row := range pp.CsvCfg.RowChan {
 		p, err := parsePartnerFromRow(row.Value)
 		if err != nil {
-			cfg.ErrChan <- fmt.Errorf("line: %d; can't parse partner data: %s", row.LineNumber, err)
+			pp.ErrChan <- fmt.Errorf("line: %d; can't parse partner data: %s", row.LineNumber, err)
 			continue
 		}
 
-		if p.TheaterID == theaterId {
-			cfg.ParsedDataChan <- p
-		}
+		pp.ParsedDataChan <- p
 	}
 }
 

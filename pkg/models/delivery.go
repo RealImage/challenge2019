@@ -9,7 +9,7 @@ import (
 )
 
 type DeliveryParserConfig struct {
-	CsvData        chan *tools.CsvRow
+	CsvCfg         *tools.CsvReaderConfig
 	ParsedDataChan chan *DeliveryInput
 	ErrChan        chan error
 }
@@ -20,6 +20,11 @@ type DeliveryInput struct {
 	TheaterID   string
 }
 
+type DeliveryInputList struct {
+	sync.RWMutex
+	Container []*DeliveryInput
+}
+
 type DeliveryOutput struct {
 	ID         string
 	PartnerID  string
@@ -27,9 +32,9 @@ type DeliveryOutput struct {
 	Cost       int
 }
 
-type DeliveryOutputStorage struct {
-	Container []*DeliveryOutput
+type DeliveryOutputList struct {
 	sync.RWMutex
+	Container []*DeliveryOutput
 }
 
 const (
@@ -39,14 +44,22 @@ const (
 	DeliveryDataColumnCount
 )
 
-func NewDeliveryOutputStorage() *DeliveryOutputStorage {
-	return &DeliveryOutputStorage{Container: []*DeliveryOutput{}}
+func (dil *DeliveryInputList) Add(di *DeliveryInput) {
+	dil.Lock()
+	dil.Container = append(dil.Container, di)
+	dil.Unlock()
 }
 
-func FindCheapestDeliveryOutput(d *DeliveryInput, partnerCh <-chan *Partner, output *DeliveryOutputStorage) {
+func (dol *DeliveryOutputList) Add(di *DeliveryOutput) {
+	dol.Lock()
+	dol.Container = append(dol.Container, di)
+	dol.Unlock()
+}
+
+func FindCheapestDeliveryOutput(d *DeliveryInput, partners []*Partner, output *DeliveryOutputList) {
 	do := &DeliveryOutput{ID: d.ID, Cost: -1}
 
-	for p := range partnerCh {
+	for _, p := range partners {
 		cost, isPossible := p.CalculateCost(d.ContentSize)
 
 		if isPossible && (cost < do.Cost || do.Cost < 0) {
@@ -69,22 +82,36 @@ func (do *DeliveryOutput) String() string {
 	return fmt.Sprintf("%s, %t, %s, %s", do.ID, do.isPossible, do.PartnerID, cost)
 }
 
-func NewDeliveryParserConfig(csvData chan *tools.CsvRow, parsedDataChan chan *DeliveryInput, errChan chan error) *DeliveryParserConfig {
-	return &DeliveryParserConfig{csvData, parsedDataChan, errChan}
+func NewDeliveryParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *DeliveryParserConfig {
+	return &DeliveryParserConfig{
+		csvCfg,
+		make(chan *DeliveryInput, chanBufferSize),
+		make(chan error, chanBufferSize),
+	}
 }
 
-func (cfg *DeliveryParserConfig) ParseDeliveriesInputCsv() {
-	defer close(cfg.ParsedDataChan)
-	defer close(cfg.ErrChan)
+func (dp *DeliveryParserConfig) CloseChannels() {
+	close(dp.ErrChan)
+	close(dp.ParsedDataChan)
+}
+func (dp *DeliveryParserConfig) ReadDeliveriesInputFromCsv() {
+	defer dp.CloseChannels()
 
-	for row := range cfg.CsvData {
+	go func() {
+		go dp.CsvCfg.ReadLineFromCsv()
+		for err := range dp.CsvCfg.ErrChan {
+			dp.ErrChan <- err
+		}
+	}()
+
+	for row := range dp.CsvCfg.RowChan {
 		d, err := parseDeliveryFromRow(row.Value)
 		if err != nil {
-			cfg.ErrChan <- fmt.Errorf("line: %d; can't parse deliveries data: %s", row.LineNumber, err)
+			dp.ErrChan <- fmt.Errorf("line: %d; can't parse deliveries data: %s", row.LineNumber, err)
 			continue
 		}
 
-		cfg.ParsedDataChan <- d
+		dp.ParsedDataChan <- d
 	}
 }
 
