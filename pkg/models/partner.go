@@ -5,7 +5,15 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-	"sync"
+)
+
+const (
+	TheaterIdPartnersColumnIndex = iota
+	SizeSlabColumnIndex
+	MinimumCostColumnIndex
+	CostPerGbColumnIndex
+	PartnerIdColumnIndex
+	PartnersDataColumnCount
 )
 
 type PartnerParserConfig struct {
@@ -21,23 +29,12 @@ type Partner struct {
 	MinCost   int
 	MinSlabGb int
 	MaxSlabGb int
-	Capacity  int
-	Available bool
 }
 
-type Partners struct {
-	sync.RWMutex
-	Container []*Partner
+func (p *Partner) String() string {
+	return fmt.Sprintf("id: %s, tId: %s, min cost: %d ,slab: %d-%d; ",
+		p.ID, p.TheaterID, p.MinCost, p.MinSlabGb, p.MaxSlabGb)
 }
-
-const (
-	TheaterIdPartnersColumnIndex = iota
-	SizeSlabColumnIndex
-	MinimumCostColumnIndex
-	CostPerGbColumnIndex
-	PartnerIdColumnIndex
-	PartnersDataColumnCount
-)
 
 func NewPartnerParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *PartnerParserConfig {
 	return &PartnerParserConfig{
@@ -60,10 +57,7 @@ func (p *Partner) CalculateCost(contentSize int) (int, bool) {
 	return actualCost, true
 }
 
-func (p *Partner) ReadCapacity(capacityPath string, logger tools.SomeLogger) {
-
-}
-
+// ReadPartnerFromCsv
 func (pp *PartnerParserConfig) ReadPartnerFromCsv() {
 	defer close(pp.ParsedDataChan)
 	defer close(pp.ErrChan)
