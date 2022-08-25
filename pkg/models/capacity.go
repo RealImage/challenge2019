@@ -14,9 +14,9 @@ const (
 )
 
 type CapacityParserConfig struct {
-	CsvCfg         *tools.CsvReaderConfig
-	ParsedDataChan chan *Capacity
-	ErrChan        chan error
+	CsvCfg         *tools.CsvReaderConfig // config to read csv file
+	ParsedDataChan chan *Capacity         // chan where the parsed Capacity instance is send
+	ErrChan        chan error             // chan were errors, if acquired, are sent
 }
 
 type Capacity struct {
@@ -32,6 +32,9 @@ func NewCapacityParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) 
 	}
 }
 
+// ReadCapacityFromCsv reads data from csv, parses it to Capacity instance and sends it to Capacity.ParsedDataChan,
+// if any error acquired, send it to Capacity.ErrChan.
+// if error acquired when reading from csv, stops method executing.
 func (c *CapacityParserConfig) ReadCapacityFromCsv() {
 	defer close(c.ParsedDataChan)
 	defer close(c.ErrChan)

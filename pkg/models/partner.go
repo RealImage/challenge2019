@@ -17,18 +17,18 @@ const (
 )
 
 type PartnerParserConfig struct {
-	CsvCfg         *tools.CsvReaderConfig
-	ParsedDataChan chan *Partner
-	ErrChan        chan error
+	CsvCfg         *tools.CsvReaderConfig // config to read csv file
+	ParsedDataChan chan *Partner          // chan where the parsed Partner instance is send
+	ErrChan        chan error             // chan were errors, if acquired, are sent
 }
 
 type Partner struct {
-	ID        string
-	TheaterID string
-	CostPerGb int
-	MinCost   int
-	MinSlabGb int
-	MaxSlabGb int
+	ID        string // is not unique field, it is possible few instances may be with same id, but different theater, cost, etc ...
+	TheaterID string // theater the partner is work with
+	CostPerGb int    // cost per Gb of traffic
+	MinCost   int    // minimum costs for the transportation of the relevant content
+	MinSlabGb int    // minimum content size to transport
+	MaxSlabGb int    // maximum content size to transport
 }
 
 func (p *Partner) String() string {
@@ -44,6 +44,7 @@ func NewPartnerParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *
 	}
 }
 
+// CalculateCost calculates the cost of the content transporting for given partner
 func (p *Partner) CalculateCost(contentSize int) (int, bool) {
 	if contentSize < p.MinSlabGb || contentSize > p.MaxSlabGb {
 		return -1, false
@@ -57,7 +58,9 @@ func (p *Partner) CalculateCost(contentSize int) (int, bool) {
 	return actualCost, true
 }
 
-// ReadPartnerFromCsv
+// ReadPartnerFromCsv reads data from csv, parses it to Partner instance and sends it to PartnerParserConfig.ParsedDataChan,
+// if any error acquired, send it to PartnerParserConfig.ErrChan.
+// if error acquired when reading from csv, stops method executing.
 func (pp *PartnerParserConfig) ReadPartnerFromCsv() {
 	defer close(pp.ParsedDataChan)
 	defer close(pp.ErrChan)

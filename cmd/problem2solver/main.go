@@ -1,23 +1,27 @@
 package main
 
 import (
+	"challange2019/pkg/models"
 	"challange2019/pkg/services"
-	"fmt"
+	"log"
 )
 
 func main() {
-	svc := services.NewDeliverySvc(
+	dSvc := services.NewDeliverySvc(
 		"assets/input.csv",
 		"assets/partners.csv",
 		"assets/capacities.csv",
 	)
-	output, errors := svc.DistributeDeliveriesAmongPartnersByMinCostAndCapacity()
 
-	for _, v := range output.Container {
-		fmt.Println(v)
-	}
+	outChan := make(chan *models.Output)
+	errChan := make(chan error)
+	go func() {
+		go dSvc.DistributeDeliveriesAmongPartnersByMinCostAndCapacity(outChan, errChan)
+		for err := range errChan {
+			log.Println(err)
+		}
+	}()
 
-	for err := range errors {
-		fmt.Println(err)
-	}
+	oSvc := services.NewOutputService("assets/output.csv")
+	oSvc.WriteToCsv(outChan)
 }

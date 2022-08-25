@@ -33,11 +33,13 @@ func (cfg *CsvReaderConfig) CloseChannels() {
 	close(cfg.ErrChan)
 }
 
+// ReadLineFromCsv reads line from source csv file and send it to CsvReaderConfig.RowChan,
+// if any error acquired, sends it to CsvReaderConfig.ErrChan and stops reading.
 func (cfg *CsvReaderConfig) ReadLineFromCsv() {
 	defer cfg.CloseChannels()
 	f, err := os.Open(cfg.SourceFilepath)
 	if err != nil {
-		cfg.ErrChan <- fmt.Errorf("source: {%s}; can't open deliveries data: {%s}", cfg.SourceFilepath, err)
+		cfg.ErrChan <- fmt.Errorf("can't open source file: {%s}; err: %s", cfg.SourceFilepath, err)
 		return
 	}
 	defer f.Close()

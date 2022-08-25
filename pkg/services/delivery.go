@@ -17,20 +17,24 @@ type DeliverySvc struct {
 }
 
 func NewDeliverySvc(deliverySourceFilepath, partnerSourceFilepath, partnersCapacitySourceFilepath string) *DeliverySvc {
-	return &DeliverySvc{
-		deliverySourceFilepath,
-		partnerSourceFilepath,
-		partnersCapacitySourceFilepath,
-	}
+	return &DeliverySvc{deliverySourceFilepath, partnerSourceFilepath, partnersCapacitySourceFilepath}
 }
 
-func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost() (*m.OutputList, []error) {
-	output := &m.OutputList{Container: []*m.Output{}}
-	errors := &m.Errors{Container: []error{}}
+// DistributeDeliveriesAmongPartnersByMinCost distributes given deliveries (read from DeliverySvc.DeliveriesSourceFilepath)
+// among the partners (read from DeliverySvc.PartnersSourceFilepath) by minimum cost, packing result to *models.Output
+// and sends it to  chan *models.Output, if any error acquired, sends it to  chan error
+func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost(outChan chan<- *m.Output, errChan chan<- error) {
+	defer close(errChan)
+	defer close(outChan)
 	wg := sync.WaitGroup{}
 
 	dp := m.NewDeliveryParserConfig(tools.NewCsvReaderConfig(svc.DeliveriesSourceFilepath, false, ChanBufferSize), ChanBufferSize)
-	go dp.ReadDeliveriesInputFromCsv()
+	go func() {
+		go dp.ReadDeliveriesFromCsv()
+		for e := range dp.ErrChan {
+			errChan <- e
+		}
+	}()
 
 	dList := []*m.Delivery{}
 	wg.Add(1)
@@ -40,7 +44,12 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost() (*m.OutputL
 	}()
 
 	pp := m.NewPartnerParserConfig(tools.NewCsvReaderConfig(svc.PartnersSourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go pp.ReadPartnerFromCsv()
+	go func() {
+		go pp.ReadPartnerFromCsv()
+		for e := range pp.ErrChan {
+			errChan <- e
+		}
+	}()
 
 	pMap := make(map[string][]*m.Partner)
 	wg.Add(1)
@@ -52,31 +61,38 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost() (*m.OutputL
 	wg.Wait()
 
 	for _, d := range dList {
-		outChan := make(chan *m.Output, ChanBufferSize)
-		
+		outBufferChan := make(chan *m.Output, ChanBufferSize)
+
 		wg.Add(1)
 		go func(d *m.Delivery) {
 			defer wg.Done()
-			m.FindMostProfitableOutput(d, pMap[d.TheaterID], outChan)
-			for o := range outChan {
-				output.Add(o)
+			m.FindMostProfitableOutput(d, pMap[d.TheaterID], outBufferChan)
+			for o := range outBufferChan {
+				outChan <- o
 			}
 		}(d)
 
 	}
 
 	wg.Wait()
-
-	return output, errors.Container
 }
 
-func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity() (*m.OutputList, []error) {
-	output := &m.OutputList{Container: []*m.Output{}}
-	errors := &m.Errors{Container: []error{}}
+// DistributeDeliveriesAmongPartnersByMinCostAndCapacity distributes given deliveries (read from DeliverySvc.DeliveriesSourceFilepath)
+// among the partners (read from DeliverySvc.PartnersSourceFilepath) by minimum cost, takes partner
+// capacity (read from DeliverySvc.PartnersCapacitySourceFilepath) into consideration as well. Packing result to *models.Output
+// and sends it to  chan *models.Output, if any error acquired, sends it to  chan error
+func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity(resChan chan<- *m.Output, errChan chan<- error) {
+	defer close(resChan)
+	defer close(errChan)
 	wg := sync.WaitGroup{}
 
 	dp := m.NewDeliveryParserConfig(tools.NewCsvReaderConfig(svc.DeliveriesSourceFilepath, false, ChanBufferSize), ChanBufferSize)
-	go dp.ReadDeliveriesInputFromCsv()
+	go func() {
+		go dp.ReadDeliveriesFromCsv()
+		for err := range dp.ErrChan {
+			errChan <- err
+		}
+	}()
 
 	dMap := make(map[string][]*m.Delivery)
 	wg.Add(1)
@@ -86,7 +102,13 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity() 
 	}()
 
 	pp := m.NewPartnerParserConfig(tools.NewCsvReaderConfig(svc.PartnersSourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go pp.ReadPartnerFromCsv()
+	go func() {
+		go pp.ReadPartnerFromCsv()
+		for err := range pp.ErrChan {
+			errChan <- err
+		}
+	}()
+
 	pMap := make(map[string][]*m.Partner)
 	wg.Add(1)
 	go func() {
@@ -95,7 +117,13 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity() 
 	}()
 
 	cp := m.NewCapacityParserConfig(tools.NewCsvReaderConfig(svc.PartnersCapacitySourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go cp.ReadCapacityFromCsv()
+	go func() {
+		go cp.ReadCapacityFromCsv()
+		for err := range cp.ErrChan {
+			errChan <- err
+		}
+	}()
+
 	cMap := make(map[string]int)
 	wg.Add(1)
 	go func() {
@@ -110,62 +138,63 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity() 
 		plist := pMap[theaterId]
 
 		wg.Add(1)
-		go func(dlist []*m.Delivery, plist []*m.Partner) {
+		go func(dList []*m.Delivery, plist []*m.Partner) {
 			defer wg.Done()
 
-			outChan := make(chan *m.OutputList)
-			go calculateDeliveriesByCostAndCapacity(dlist, plist, cMap, outChan)
-			output.AppendFromChan(outChan)
-		}(dlist, plist)
+			outTransmitterChan := make(chan *m.Output)
+			go calculateDeliveriesByCostAndCapacity(dList, plist, cMap, outTransmitterChan)
 
+			for o := range outTransmitterChan {
+				resChan <- o
+			}
+		}(dlist, plist)
 	}
 
 	wg.Wait()
 
-	return output, errors.Container
 }
 
-func calculateDeliveriesByCostAndCapacity(dList []*m.Delivery, pList []*m.Partner, cMap map[string]int, outListChan chan *m.OutputList) {
-	defer close(outListChan)
+// calculateDeliveriesByCostAndCapacity finds the best partner delivery option according to the cost and partner's capacity,
+// if delivery is impossible, marks it appropriately. Sends the result to chan *models.Output
+func calculateDeliveriesByCostAndCapacity(dList []*m.Delivery, pList []*m.Partner, cMap map[string]int, outChan chan *m.Output) {
+	defer close(outChan)
+
 	wg := sync.WaitGroup{}
-	res := &m.OutputList{}
-
 	for _, d := range dList {
-		wg.Add(1)
 
+		wg.Add(1)
 		go func(d *m.Delivery) {
 			defer wg.Done()
-			oChan := make(chan *m.OutputList)
-			go m.FindOutputListSortedByCost(d, pList, oChan)
+			sortedOutListChan := make(chan *m.OutputList)
+			go m.GetOutputListSortedByCost(d, pList, sortedOutListChan)
 
-			// key - partner id, value - how much free capacity has
-			availableSpace := make(map[string]int)
-			for oList := range oChan {
-				distributeDeliveriesByPartnersByCapacityAndCost(res, oList, availableSpace, cMap)
+			for sortedOutList := range sortedOutListChan {
+				distributeDeliveriesByPartnersByCapacityAndCost(outChan, sortedOutList, cMap)
 			}
 		}(d)
 	}
-	wg.Wait()
 
-	outListChan <- res
+	wg.Wait()
 
 }
 
 func distributeDeliveriesByPartnersByCapacityAndCost(
-	result *m.OutputList,
+	result chan *m.Output,
 	outVarieties *m.OutputList,
-	availableSpace map[string]int,
 	capacityMap map[string]int) {
+
+	// key - partner id, value - how much free capacity has
+	availableSpace := make(map[string]int)
 
 	for i, possibleOut := range outVarieties.Container {
 		if possibleOut.Partner == nil {
-			result.Add(possibleOut)
+			result <- possibleOut
 			break
 		}
 
 		if _, ok := availableSpace[possibleOut.Partner.ID]; ok {
 			if availableSpace[possibleOut.Partner.ID]-possibleOut.Delivery.ContentSize >= 0 {
-				result.Add(possibleOut)
+				result <- possibleOut
 				availableSpace[possibleOut.Partner.ID] -= possibleOut.Delivery.ContentSize
 				break
 
@@ -174,7 +203,7 @@ func distributeDeliveriesByPartnersByCapacityAndCost(
 		}
 
 		if capacityMap[possibleOut.Partner.ID]-possibleOut.Delivery.ContentSize >= 0 {
-			result.Add(possibleOut)
+			result <- possibleOut
 			availableSpace[possibleOut.Partner.ID] = capacityMap[possibleOut.Partner.ID] - possibleOut.Delivery.ContentSize
 			break
 		}
@@ -183,7 +212,7 @@ func distributeDeliveriesByPartnersByCapacityAndCost(
 			possibleOut.Partner = nil
 			possibleOut.Cost = -1
 			possibleOut.IsPossible = false
-			result.Add(possibleOut)
+			result <- possibleOut
 			break
 		}
 	}

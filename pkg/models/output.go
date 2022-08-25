@@ -7,6 +7,10 @@ import (
 	"sync"
 )
 
+const (
+	OutPutFieldsCount = 4
+)
+
 type Output struct {
 	Delivery   *Delivery
 	Partner    *Partner
@@ -39,7 +43,36 @@ func (ol *OutputList) Append(v *OutputList) {
 	v.Unlock()
 }
 
-func FindMostProfitableOutput(d *Delivery, partners []*Partner, outChan chan *Output) {
+// EncodeOutputToCsvRow encodes Output's data to []string to write it into csv file
+func EncodeOutputToCsvRow(outputChan <-chan *Output, rowChan chan<- []string) {
+	defer close(rowChan)
+
+	for o := range outputChan {
+		rowChan <- encodeOutputDataToStringArray(o)
+	}
+}
+
+func encodeOutputDataToStringArray(o *Output) []string {
+	res := make([]string, OutPutFieldsCount)
+	res[0] = o.Delivery.ID
+	res[1] = fmt.Sprintf("%t", o.IsPossible)
+
+	res[2] = ""
+	if o.Partner != nil {
+		res[2] = o.Partner.ID
+	}
+
+	res[3] = ""
+	if o.Cost >= 0 {
+		res[3] = strconv.Itoa(o.Cost)
+	}
+
+	return res
+}
+
+// FindMostProfitableOutput finds the cheapest offer among the []*Partner for given Delivery,
+// sends result to chan *Output
+func FindMostProfitableOutput(d *Delivery, partners []*Partner, outChan chan<- *Output) {
 	defer close(outChan)
 	o := &Output{Delivery: d, Cost: -1}
 
@@ -56,7 +89,10 @@ func FindMostProfitableOutput(d *Delivery, partners []*Partner, outChan chan *Ou
 	outChan <- o
 }
 
-func FindOutputListSortedByCost(d *Delivery, partners []*Partner, sortedOutList chan *OutputList) {
+// GetOutputListSortedByCost creates *OutputList, where container of *Output is sorted by Output.Cost ascending,
+// the impossible *Output's instances are put in the end of *OutputList,
+// sends the resulting *OutputList to chan *OutputList
+func GetOutputListSortedByCost(d *Delivery, partners []*Partner, sortedOutList chan<- *OutputList) {
 	defer close(sortedOutList)
 	res := &OutputList{}
 	for _, p := range partners {

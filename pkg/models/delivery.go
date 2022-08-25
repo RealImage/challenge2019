@@ -15,15 +15,15 @@ const (
 )
 
 type DeliveryParserConfig struct {
-	CsvCfg         *tools.CsvReaderConfig
-	ParsedDataChan chan *Delivery
-	ErrChan        chan error
+	CsvCfg         *tools.CsvReaderConfig // config to read csv file
+	ParsedDataChan chan *Delivery         // chan where the parsed Delivery instance is send
+	ErrChan        chan error             // chan were errors, if acquired, are sent
 }
 
 type Delivery struct {
-	ID          string
-	ContentSize int
-	TheaterID   string
+	ID          string // unique delivery's id
+	ContentSize int    // content size
+	TheaterID   string // client theater
 }
 
 func (d *Delivery) String() string {
@@ -42,7 +42,11 @@ func (dp *DeliveryParserConfig) CloseChannels() {
 	close(dp.ErrChan)
 	close(dp.ParsedDataChan)
 }
-func (dp *DeliveryParserConfig) ReadDeliveriesInputFromCsv() {
+
+// ReadDeliveriesFromCsv reads data from csv, parses it to Delivery instance and sends it to Delivery.ParsedDataChan,
+// if any error acquired, send it to Delivery.ErrChan.
+// if error acquired when reading from csv, stops method executing.
+func (dp *DeliveryParserConfig) ReadDeliveriesFromCsv() {
 	defer dp.CloseChannels()
 
 	go func() {
