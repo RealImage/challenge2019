@@ -37,10 +37,8 @@ func (ol *OutputList) AppendFromChan(doChan chan *OutputList) {
 
 func (ol *OutputList) Append(v *OutputList) {
 	ol.Lock()
-	v.Lock()
 	ol.Container = append(ol.Container, v.Container...)
 	ol.Unlock()
-	v.Unlock()
 }
 
 // EncodeOutputToCsvRow encodes Output's data to []string to write it into csv file

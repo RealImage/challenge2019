@@ -3,16 +3,21 @@ package main
 import (
 	"challange2019/pkg/models"
 	"challange2019/pkg/services"
+	"challange2019/tools"
 	"flag"
 	"fmt"
 	"log"
 )
 
 func main() {
-	var inputPath, partnersPath, capacity, outputPath string
-	setArgs(&inputPath, &partnersPath, &capacity, &outputPath)
+	var inputPath, partnersPath, capacityPath, outputPath string
+	setArgs(&inputPath, &partnersPath, &capacityPath, &outputPath)
 
-	dSvc := services.NewDeliverySvc(inputPath, partnersPath, capacity)
+	dSvc := services.NewDeliverySvc(
+		tools.NewCsvReaderConfig(inputPath, false),
+		tools.NewCsvReaderConfig(partnersPath, true),
+		tools.NewCsvReaderConfig(capacityPath, true),
+	)
 
 	outChan := make(chan *models.Output)
 	errChan := make(chan error)
@@ -23,8 +28,12 @@ func main() {
 		}
 	}()
 
-	oSvc := services.NewOutputService(outputPath)
-	oSvc.WriteToCsv(outChan)
+	writerErrChan := make(chan error)
+	oSvc := services.NewOutputService(tools.NewCsvWriterConfig(outputPath))
+	go oSvc.WriteToCsv(outChan, writerErrChan)
+	for err := range writerErrChan {
+		log.Println(err)
+	}
 }
 
 func setArgs(inputPath, partnersPath, capacity, outputPath *string) {
@@ -54,7 +63,7 @@ destination filepath - assets/output.csv
 
 	*inputPath = "assets/input.csv"
 	*partnersPath = "assets/partners.csv"
-	*capacity = "assets/capacity.csv"
+	*capacity = "assets/capacities.csv"
 	*outputPath = "assets/output.csv"
 
 	if len(args) > 0 && len(args) != 3 {

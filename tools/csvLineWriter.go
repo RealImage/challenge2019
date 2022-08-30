@@ -6,25 +6,25 @@ import (
 	"os"
 )
 
-type CsvWriterConfig struct {
-	DestinationFilepath string
-	ErrChan             chan error
+type CsvWriter interface {
+	WriteLineToCsv(rowChan <-chan []string, errChan chan<- error)
 }
 
-func NewCsvWriterConfig(destinationFilepath string, chanBufferSize int) *CsvWriterConfig {
-	return &CsvWriterConfig{
-		destinationFilepath,
-		make(chan error, chanBufferSize),
-	}
+type CsvWriteConfig struct {
+	DestinationFilepath string
+}
+
+func NewCsvWriterConfig(destinationFilepath string) *CsvWriteConfig {
+	return &CsvWriteConfig{destinationFilepath}
 }
 
 // WriteLineToCsv writes row to destination csv file.
-// Row is received from chan []string, if any error acquired, send it to CsvWriterConfig.ErrChan and stops writing.
-func (cfg *CsvWriterConfig) WriteLineToCsv(rowChan chan []string) {
-	defer close(cfg.ErrChan)
+// Row is received from chan []string, if any error acquired, send it to CsvWriteConfig.ErrChan and stops writing.
+func (cfg *CsvWriteConfig) WriteLineToCsv(rowChan <-chan []string, errChan chan<- error) {
+	defer close(errChan)
 	f, err := os.Create(cfg.DestinationFilepath)
 	if err != nil {
-		cfg.ErrChan <- fmt.Errorf("can't create destination file: {%s}; err: %s", cfg.DestinationFilepath, err)
+		errChan <- fmt.Errorf("can't create destination file: {%s}; err: %s", cfg.DestinationFilepath, err)
 		return
 	}
 	defer f.Close()
@@ -34,7 +34,7 @@ func (cfg *CsvWriterConfig) WriteLineToCsv(rowChan chan []string) {
 	for row := range rowChan {
 		err := csvWriter.Write(row)
 		if err != nil {
-			cfg.ErrChan <- fmt.Errorf("can't write row {%s} to csv: %s", row, err)
+			errChan <- fmt.Errorf("can't write row {%s} to csv: %s", row, err)
 			return
 		}
 

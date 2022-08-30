@@ -6,25 +6,23 @@ import (
 )
 
 type OutputService struct {
-	DestinationFilepath string
-	ErrChan             chan error
+	tools.CsvWriter
 }
 
-func NewOutputService(destinationFile string) *OutputService {
-	return &OutputService{destinationFile, make(chan error, ChanBufferSize)}
+func NewOutputService(csvWriter tools.CsvWriter) *OutputService {
+	return &OutputService{csvWriter}
 }
 
 // WriteToCsv writes models.Output to csv
-func (svc *OutputService) WriteToCsv(outChan <-chan *models.Output) {
-	defer close(svc.ErrChan)
+func (svc *OutputService) WriteToCsv(outChan <-chan *models.Output, errChan chan<- error) {
+	defer close(errChan)
 
 	rowChan := make(chan []string)
 	go models.EncodeOutputToCsvRow(outChan, rowChan)
 
-	csvCfg := tools.NewCsvWriterConfig(svc.DestinationFilepath, ChanBufferSize)
-	go csvCfg.WriteLineToCsv(rowChan)
-
-	for err := range csvCfg.ErrChan {
-		svc.ErrChan <- err
+	wErrChan := make(chan error, ChanBufferSize)
+	go svc.WriteLineToCsv(rowChan, wErrChan)
+	for e := range wErrChan {
+		errChan <- e
 	}
 }

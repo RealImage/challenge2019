@@ -3,6 +3,7 @@ package main
 import (
 	"challange2019/pkg/models"
 	"challange2019/pkg/services"
+	"challange2019/tools"
 	"flag"
 	"fmt"
 	"log"
@@ -13,20 +14,27 @@ func main() {
 
 	setArgs(&inputPath, &partnersPath, &outputPath)
 
-	dSvc := services.NewDeliverySvc(inputPath, partnersPath, "")
+	dSvc := services.NewDeliverySvc(
+		tools.NewCsvReaderConfig(inputPath, false),
+		tools.NewCsvReaderConfig(partnersPath, true),
+		nil,
+	)
 
 	outChan := make(chan *models.Output)
-	errChan := make(chan error)
+	distributorErrChan := make(chan error)
 	go func() {
-		go dSvc.DistributeDeliveriesAmongPartnersByMinCost(outChan, errChan)
-		for err := range errChan {
+		go dSvc.DistributeDeliveriesAmongPartnersByMinCost(outChan, distributorErrChan)
+		for err := range distributorErrChan {
 			log.Println(err)
 		}
 	}()
 
-	oSvc := services.NewOutputService(outputPath)
-	oSvc.WriteToCsv(outChan)
-
+	writerErrChan := make(chan error)
+	oSvc := services.NewOutputService(tools.NewCsvWriterConfig(outputPath))
+	go oSvc.WriteToCsv(outChan, writerErrChan)
+	for err := range writerErrChan {
+		log.Println(err)
+	}
 }
 
 func setArgs(inputPath, partnersPath, outputPath *string) {

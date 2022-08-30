@@ -13,47 +13,26 @@ const (
 	CapacityDataColumnCount
 )
 
-type CapacityParserConfig struct {
-	CsvCfg         *tools.CsvReaderConfig // config to read csv file
-	ParsedDataChan chan *Capacity         // chan where the parsed Capacity instance is send
-	ErrChan        chan error             // chan were errors, if acquired, are sent
-}
-
 type Capacity struct {
 	PartnerId string
 	Value     int
 }
 
-func NewCapacityParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *CapacityParserConfig {
-	return &CapacityParserConfig{
-		csvCfg,
-		make(chan *Capacity, chanBufferSize),
-		make(chan error, chanBufferSize),
-	}
-}
-
 // ReadCapacityFromCsv reads data from csv, parses it to Capacity instance and sends it to Capacity.ParsedDataChan,
 // if any error acquired, send it to Capacity.ErrChan.
 // if error acquired when reading from csv, stops method executing.
-func (c *CapacityParserConfig) ReadCapacityFromCsv() {
-	defer close(c.ParsedDataChan)
-	defer close(c.ErrChan)
+func ReadCapacityFromCsv(inputRowChan <-chan *tools.CsvRow, parsedCapacityChan chan<- *Capacity, errChan chan<- error) {
+	defer close(parsedCapacityChan)
+	defer close(errChan)
 
-	go func() {
-		go c.CsvCfg.ReadLineFromCsv()
-		for err := range c.CsvCfg.ErrChan {
-			c.ErrChan <- err
-		}
-	}()
-
-	for row := range c.CsvCfg.RowChan {
+	for row := range inputRowChan {
 		capacity, err := parseCapacityFromRow(row.Value)
 		if err != nil {
-			c.ErrChan <- fmt.Errorf("line: %d; can't parse capacity data: %s", row.LineNumber, err)
+			errChan <- fmt.Errorf("line: %d; can't parse capacity data: %s", row.LineNumber, err)
 			continue
 		}
 
-		c.ParsedDataChan <- capacity
+		parsedCapacityChan <- capacity
 	}
 }
 

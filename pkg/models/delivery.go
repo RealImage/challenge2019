@@ -14,12 +14,6 @@ const (
 	DeliveryDataColumnCount
 )
 
-type DeliveryParserConfig struct {
-	CsvCfg         *tools.CsvReaderConfig // config to read csv file
-	ParsedDataChan chan *Delivery         // chan where the parsed Delivery instance is send
-	ErrChan        chan error             // chan were errors, if acquired, are sent
-}
-
 type Delivery struct {
 	ID          string // unique delivery's id
 	ContentSize int    // content size
@@ -30,40 +24,21 @@ func (d *Delivery) String() string {
 	return fmt.Sprintf("id: %s, tId: %s, ctx size: %d;", d.ID, d.TheaterID, d.ContentSize)
 }
 
-func NewDeliveryParserConfig(csvCfg *tools.CsvReaderConfig, chanBufferSize int) *DeliveryParserConfig {
-	return &DeliveryParserConfig{
-		csvCfg,
-		make(chan *Delivery, chanBufferSize),
-		make(chan error, chanBufferSize),
-	}
-}
-
-func (dp *DeliveryParserConfig) CloseChannels() {
-	close(dp.ErrChan)
-	close(dp.ParsedDataChan)
-}
-
-// ReadDeliveriesFromCsv reads data from csv, parses it to Delivery instance and sends it to Delivery.ParsedDataChan,
+// ParseDeliveryFromCsvRow reads data from csv, parses it to Delivery instance and sends it to Delivery.ParsedDataChan,
 // if any error acquired, send it to Delivery.ErrChan.
 // if error acquired when reading from csv, stops method executing.
-func (dp *DeliveryParserConfig) ReadDeliveriesFromCsv() {
-	defer dp.CloseChannels()
+func ParseDeliveryFromCsvRow(inputRowChan <-chan *tools.CsvRow, parsedDeliveryChan chan<- *Delivery, errChan chan<- error) {
+	defer close(parsedDeliveryChan)
+	defer close(errChan)
 
-	go func() {
-		go dp.CsvCfg.ReadLineFromCsv()
-		for err := range dp.CsvCfg.ErrChan {
-			dp.ErrChan <- err
-		}
-	}()
-
-	for row := range dp.CsvCfg.RowChan {
+	for row := range inputRowChan {
 		d, err := parseDeliveryFromRow(row.Value)
 		if err != nil {
-			dp.ErrChan <- fmt.Errorf("line: %d; can't parse deliveries data: %s", row.LineNumber, err)
+			errChan <- fmt.Errorf("line: %d; can't parse deliveries data: %s", row.LineNumber, err)
 			continue
 		}
 
-		dp.ParsedDataChan <- d
+		parsedDeliveryChan <- d
 	}
 }
 

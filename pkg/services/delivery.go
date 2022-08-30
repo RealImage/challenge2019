@@ -11,13 +11,13 @@ const (
 )
 
 type DeliverySvc struct {
-	DeliveriesSourceFilepath       string
-	PartnersSourceFilepath         string
-	PartnersCapacitySourceFilepath string
+	DeliveryReader tools.CsvReader
+	PartnerReader  tools.CsvReader
+	CapacityReader tools.CsvReader
 }
 
-func NewDeliverySvc(deliverySourceFilepath, partnerSourceFilepath, partnersCapacitySourceFilepath string) *DeliverySvc {
-	return &DeliverySvc{deliverySourceFilepath, partnerSourceFilepath, partnersCapacitySourceFilepath}
+func NewDeliverySvc(deliveryReader, partnerReader, capacityReader tools.CsvReader) *DeliverySvc {
+	return &DeliverySvc{deliveryReader, partnerReader, capacityReader}
 }
 
 // DistributeDeliveriesAmongPartnersByMinCost distributes given deliveries (read from DeliverySvc.DeliveriesSourceFilepath)
@@ -28,33 +28,23 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost(outChan chan<
 	defer close(outChan)
 	wg := sync.WaitGroup{}
 
-	dp := m.NewDeliveryParserConfig(tools.NewCsvReaderConfig(svc.DeliveriesSourceFilepath, false, ChanBufferSize), ChanBufferSize)
-	go func() {
-		go dp.ReadDeliveriesFromCsv()
-		for e := range dp.ErrChan {
-			errChan <- e
-		}
-	}()
-
 	dList := []*m.Delivery{}
+	dpChan := make(chan *m.Delivery, ChanBufferSize)
 	wg.Add(1)
+
 	go func() {
-		fillDeliveryListFromChan(&dList, dp.ParsedDataChan)
+		go parseDeliveries(svc, errChan, dpChan)
+		fillDeliveryListFromChan(&dList, dpChan)
 		wg.Done()
 	}()
 
-	pp := m.NewPartnerParserConfig(tools.NewCsvReaderConfig(svc.PartnersSourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go func() {
-		go pp.ReadPartnerFromCsv()
-		for e := range pp.ErrChan {
-			errChan <- e
-		}
-	}()
-
 	pMap := make(map[string][]*m.Partner)
+	ppChan := make(chan *m.Partner, ChanBufferSize)
 	wg.Add(1)
+
 	go func() {
-		fillPartnerMapByTheaterFromChan(pMap, pp.ParsedDataChan)
+		go parsePartners(svc, errChan, ppChan)
+		fillPartnerMapByTheaterFromChan(pMap, ppChan)
 		wg.Done()
 	}()
 
@@ -86,56 +76,41 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity(re
 	defer close(errChan)
 	wg := sync.WaitGroup{}
 
-	dp := m.NewDeliveryParserConfig(tools.NewCsvReaderConfig(svc.DeliveriesSourceFilepath, false, ChanBufferSize), ChanBufferSize)
-	go func() {
-		go dp.ReadDeliveriesFromCsv()
-		for err := range dp.ErrChan {
-			errChan <- err
-		}
-	}()
-
 	dMap := make(map[string][]*m.Delivery)
+	dpChan := make(chan *m.Delivery, ChanBufferSize)
+
 	wg.Add(1)
 	go func() {
-		fillDeliveryMapByTheaterFromChan(dMap, dp.ParsedDataChan)
+		go parseDeliveries(svc, errChan, dpChan)
+		fillDeliveryMapByTheaterFromChan(dMap, dpChan)
 		wg.Done()
-	}()
-
-	pp := m.NewPartnerParserConfig(tools.NewCsvReaderConfig(svc.PartnersSourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go func() {
-		go pp.ReadPartnerFromCsv()
-		for err := range pp.ErrChan {
-			errChan <- err
-		}
 	}()
 
 	pMap := make(map[string][]*m.Partner)
+	ppChan := make(chan *m.Partner, ChanBufferSize)
 	wg.Add(1)
+
 	go func() {
-		fillPartnerMapByTheaterFromChan(pMap, pp.ParsedDataChan)
+		go parsePartners(svc, errChan, ppChan)
+		fillPartnerMapByTheaterFromChan(pMap, ppChan)
 		wg.Done()
 	}()
 
-	cp := m.NewCapacityParserConfig(tools.NewCsvReaderConfig(svc.PartnersCapacitySourceFilepath, true, ChanBufferSize), ChanBufferSize)
-	go func() {
-		go cp.ReadCapacityFromCsv()
-		for err := range cp.ErrChan {
-			errChan <- err
-		}
-	}()
-
+	cChan := make(chan *m.Capacity, ChanBufferSize)
 	cMap := make(map[string]int)
 	wg.Add(1)
+
 	go func() {
-		fillCapacityMapByPartnerFromChan(cMap, cp.ParsedDataChan)
+		go parseCapacity(svc, errChan, cChan)
+		fillCapacityMapByPartnerFromChan(cMap, cChan)
 		wg.Done()
 	}()
 
 	wg.Wait()
 
 	for theaterId, _ := range dMap {
-		dlist := dMap[theaterId]
-		plist := pMap[theaterId]
+		dList := dMap[theaterId]
+		pList := pMap[theaterId]
 
 		wg.Add(1)
 		go func(dList []*m.Delivery, plist []*m.Partner) {
@@ -147,7 +122,7 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity(re
 			for o := range outTransmitterChan {
 				resChan <- o
 			}
-		}(dlist, plist)
+		}(dList, pList)
 	}
 
 	wg.Wait()
@@ -215,6 +190,63 @@ func distributeDeliveriesByPartnersByCapacityAndCost(
 			result <- possibleOut
 			break
 		}
+	}
+}
+
+func parseDeliveries(svc *DeliverySvc, errChan chan<- error, result chan<- *m.Delivery) {
+	// read deliveries from csv
+	drRowChan := make(chan *tools.CsvRow, ChanBufferSize)
+	drErrChan := make(chan error, ChanBufferSize)
+	go func() {
+		go svc.DeliveryReader.ReadLineFromCsv(drRowChan, drErrChan)
+		for e := range drErrChan {
+			errChan <- e
+		}
+	}()
+
+	// parse deliveries from csv
+	dpErrChan := make(chan error, ChanBufferSize)
+	go m.ParseDeliveryFromCsvRow(drRowChan, result, dpErrChan)
+	for e := range drErrChan {
+		errChan <- e
+	}
+}
+
+func parseCapacity(svc *DeliverySvc, errChan chan<- error, result chan<- *m.Capacity) {
+	// read capacity from csv
+	rowChan := make(chan *tools.CsvRow, ChanBufferSize)
+	crErrChan := make(chan error, ChanBufferSize)
+	go func() {
+		go svc.CapacityReader.ReadLineFromCsv(rowChan, crErrChan)
+		for e := range crErrChan {
+			errChan <- e
+		}
+	}()
+
+	// parse capacity from csv
+	cpErrChan := make(chan error, ChanBufferSize)
+	go m.ReadCapacityFromCsv(rowChan, result, cpErrChan)
+	for e := range crErrChan {
+		errChan <- e
+	}
+}
+
+func parsePartners(svc *DeliverySvc, errChan chan<- error, result chan<- *m.Partner) {
+	// read partners from csv
+	rowChan := make(chan *tools.CsvRow, ChanBufferSize)
+	rErrChan := make(chan error, ChanBufferSize)
+	go func() {
+		go svc.PartnerReader.ReadLineFromCsv(rowChan, rErrChan)
+		for e := range rErrChan {
+			errChan <- e
+		}
+	}()
+
+	// parse partners from csv
+	ppErrChan := make(chan error, ChanBufferSize)
+	go m.ParsePartnerFromCsvRow(rowChan, result, ppErrChan)
+	for e := range ppErrChan {
+		errChan <- e
 	}
 }
 
