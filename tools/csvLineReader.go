@@ -14,6 +14,7 @@ type CsvReader interface {
 type CsvReaderConfig struct {
 	SourceFilepath string
 	SkipHeader     bool
+	openSource     func(string) (io.ReadCloser, error)
 }
 
 type CsvRow struct {
@@ -25,6 +26,7 @@ func NewCsvReaderConfig(sourceFilepath string, skipHeader bool) *CsvReaderConfig
 	return &CsvReaderConfig{
 		sourceFilepath,
 		skipHeader,
+		openFile,
 	}
 }
 
@@ -34,7 +36,7 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 	defer close(rowChan)
 	defer close(errChan)
 
-	f, err := os.Open(cfg.SourceFilepath)
+	f, err := cfg.openSource(cfg.SourceFilepath)
 	if err != nil {
 		errChan <- fmt.Errorf("can't open source file: {%s}; err: %s", cfg.SourceFilepath, err)
 		return
@@ -42,6 +44,7 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 	defer f.Close()
 
 	csvReader := csv.NewReader(f)
+	lineCounter := 1
 
 	if cfg.SkipHeader {
 		//read 1st line to skip header
@@ -50,9 +53,9 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 			errChan <- fmt.Errorf(fmt.Sprintf("source: {%s}; can't read header: %s", cfg.SourceFilepath, err))
 			return
 		}
+		lineCounter++
 	}
 
-	lineCounter := 1
 	for {
 		row, err := csvReader.Read()
 		if err == io.EOF {
@@ -67,4 +70,14 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 		lineCounter++
 	}
 
+}
+
+func openFile(name string) (io.ReadCloser, error) {
+	f, err := os.Open(name)
+	if err != nil {
+		return nil, err
+	}
+	// f implements io.ReadCloser interface as *os.File
+	// has Read and Close methods.
+	return f, nil
 }

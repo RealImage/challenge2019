@@ -5,6 +5,10 @@ import (
 	"challange2019/tools"
 )
 
+type OutputServiceInterface interface {
+	WriteToCsv(outChan <-chan *models.Output, errChan chan<- error)
+}
+
 type OutputService struct {
 	tools.CsvWriter
 }
