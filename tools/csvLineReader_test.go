@@ -11,23 +11,23 @@ import (
 )
 
 const (
-	successful  = "successful"
-	badCsv      = "badCsv"
-	withHeader  = "withHeader"
-	headerValue = "header"
-	sendError   = "error"
+	successfulRead = "successful"
+	badCsv         = "badCsv"
+	withHeader     = "withHeader"
+	headerValue    = "header"
+	sendError      = "error"
 )
 
 var (
-	expectedSuccessfulValue = []string{"s1", "s2", "s3"}
-	expectedWithHeaderValue = []string{"s1", "s2", "s3"}
-	expectedBadCsvValue     = []string{"s1", "s2"}
+	expectedSuccessfulReadValue = []string{"s1", "s2", "s3"}
+	expectedWithHeaderValue     = []string{"s1", "s2", "s3"}
+	expectedBadCsvValue         = []string{"s1", "s2"}
 
 	fileContentMock = map[string]string{
-		successful: strings.Join(expectedSuccessfulValue, "\n"),
-		badCsv:     fmt.Sprintf("%s\n%s", strings.Join(expectedBadCsvValue, "\n"), "s3,s4"),
-		withHeader: fmt.Sprintf("%s\n%s", headerValue, strings.Join(expectedWithHeaderValue, "\n")),
-		sendError:  "",
+		successfulRead: strings.Join(expectedSuccessfulReadValue, "\n"),
+		badCsv:         fmt.Sprintf("%s\n%s", strings.Join(expectedBadCsvValue, "\n"), "s3,s4"),
+		withHeader:     fmt.Sprintf("%s\n%s", headerValue, strings.Join(expectedWithHeaderValue, "\n")),
+		sendError:      "",
 	}
 )
 
@@ -41,7 +41,7 @@ func newTestCsvReaderConfig(sourceFilepath string, skipHeader bool) *CsvReaderCo
 
 func openMockFile(str string) (io.ReadCloser, error) {
 	if str == sendError {
-		return nil, fmt.Errorf("error on open")
+		return nil, os.ErrNotExist
 	}
 
 	return io.NopCloser(strings.NewReader(fileContentMock[str])), nil
@@ -54,9 +54,9 @@ func TestReadLineFromCsv(t *testing.T) {
 		expectedRows   []string
 		expectedErrors []error
 	}{
-		{successful,
-			newTestCsvReaderConfig(successful, false),
-			expectedSuccessfulValue,
+		{successfulRead,
+			newTestCsvReaderConfig(successfulRead, false),
+			expectedSuccessfulReadValue,
 			nil,
 		},
 		{withHeader,
@@ -120,7 +120,7 @@ func TestReadLineFromCsv(t *testing.T) {
 						t.Errorf("expected %d errors, got %d", len(subtest.expectedErrors), errCounter)
 					}
 
-					if strings.IndexAny(err.Error(), subtest.expectedErrors[errCounter].Error()) < 0 {
+					if strings.Index(err.Error(), subtest.expectedErrors[errCounter].Error()) < 0 {
 						t.Errorf("mismatched errors:\n%v\n%v", subtest.expectedErrors[errCounter], err)
 					}
 				}
