@@ -38,7 +38,7 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 
 	f, err := cfg.openSource(cfg.SourceFilepath)
 	if err != nil {
-		errChan <- fmt.Errorf("can't open source file: {%s}; err: %s", cfg.SourceFilepath, err)
+		errChan <- fmt.Errorf("can't open source file: {%s}; err: %w", cfg.SourceFilepath, err)
 		return
 	}
 	defer f.Close()
@@ -50,7 +50,7 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 		//read 1st line to skip header
 		_, err = csvReader.Read()
 		if err != nil {
-			errChan <- fmt.Errorf(fmt.Sprintf("source: {%s}; can't read header: %s", cfg.SourceFilepath, err))
+			errChan <- fmt.Errorf("source: {%s}; can't read header: %w", cfg.SourceFilepath, err)
 			return
 		}
 		lineCounter++
@@ -62,7 +62,7 @@ func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan
 			break
 		}
 		if err != nil {
-			errChan <- fmt.Errorf(fmt.Sprintf("source: {%s}; line: %d; can't read data from partners: %s", cfg.SourceFilepath, lineCounter, err))
+			errChan <- fmt.Errorf("source: {%s}; line: %d; can't read data from partners: %w", cfg.SourceFilepath, lineCounter, err)
 			return
 		}
 

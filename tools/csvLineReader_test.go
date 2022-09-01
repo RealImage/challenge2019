@@ -1,8 +1,10 @@
 package tools
 
 import (
+	"encoding/csv"
 	"fmt"
 	"io"
+	"os"
 	"reflect"
 	"strings"
 	"testing"
@@ -25,6 +27,7 @@ var (
 		successful: strings.Join(expectedSuccessfulValue, "\n"),
 		badCsv:     fmt.Sprintf("%s\n%s", strings.Join(expectedBadCsvValue, "\n"), "s3,s4"),
 		withHeader: fmt.Sprintf("%s\n%s", headerValue, strings.Join(expectedWithHeaderValue, "\n")),
+		sendError:  "",
 	}
 )
 
@@ -64,9 +67,12 @@ func TestReadLineFromCsv(t *testing.T) {
 		{badCsv,
 			newTestCsvReaderConfig(badCsv, false),
 			expectedBadCsvValue,
-			[]error{
-				fmt.Errorf("source: {%s}; line: 3; can't read data from partners: record on line 3: wrong number of fields", badCsv),
-			},
+			[]error{&csv.ParseError{Err: csv.ErrFieldCount, Line: 3, StartLine: 3, Column: 1}},
+		},
+		{sendError,
+			newTestCsvReaderConfig(sendError, false),
+			expectedBadCsvValue,
+			[]error{os.ErrNotExist},
 		},
 	}
 
@@ -114,7 +120,7 @@ func TestReadLineFromCsv(t *testing.T) {
 						t.Errorf("expected %d errors, got %d", len(subtest.expectedErrors), errCounter)
 					}
 
-					if subtest.expectedErrors[errCounter] == err {
+					if strings.IndexAny(err.Error(), subtest.expectedErrors[errCounter].Error()) < 0 {
 						t.Errorf("mismatched errors:\n%v\n%v", subtest.expectedErrors[errCounter], err)
 					}
 				}
