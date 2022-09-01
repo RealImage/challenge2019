@@ -18,8 +18,8 @@ type Capacity struct {
 	Value     int
 }
 
-// ReadCapacityFromCsv reads data from csv, parses it to Capacity instance and sends it to Capacity.ParsedDataChan,
-// if any error acquired, send it to Capacity.ErrChan.
+// ReadCapacityFromCsv reads data from csv, parses it to Capacity instance and sends it to parsedCapacityChan,
+// if any error acquired, send it to errChan.
 // if error acquired when reading from csv, stops method executing.
 func ReadCapacityFromCsv(inputRowChan <-chan *tools.CsvRow, parsedCapacityChan chan<- *Capacity, errChan chan<- error) {
 	defer close(parsedCapacityChan)

@@ -30,8 +30,8 @@ func NewCsvReaderConfig(sourceFilepath string, skipHeader bool) *CsvReaderConfig
 	}
 }
 
-// ReadLineFromCsv reads line from source csv file and send it to CsvReaderConfig.RowChan,
-// if any error acquired, sends it to CsvReaderConfig.ErrChan and stops reading.
+// ReadLineFromCsv reads line from source csv file and send it to rowChan,
+// if any error acquired, sends it to errChan and stops reading.
 func (cfg *CsvReaderConfig) ReadLineFromCsv(rowChan chan<- *CsvRow, errChan chan<- error) {
 	defer close(rowChan)
 	defer close(errChan)

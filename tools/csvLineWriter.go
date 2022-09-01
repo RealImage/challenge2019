@@ -18,8 +18,8 @@ func NewCsvWriterConfig(destinationFilepath string) *CsvWriteConfig {
 	return &CsvWriteConfig{destinationFilepath}
 }
 
-// WriteLineToCsv writes row to destination csv file.
-// Row is received from chan []string, if any error acquired, send it to CsvWriteConfig.ErrChan and stops writing.
+// WriteLineToCsv writes row to destination csv file. If dest file exists, the new one will be created to replace existent.
+// Row is received from chan []string, if any error acquired, send it to errChan and stops writing.
 func (cfg *CsvWriteConfig) WriteLineToCsv(rowChan <-chan []string, errChan chan<- error) {
 	defer close(errChan)
 	f, err := os.Create(cfg.DestinationFilepath)

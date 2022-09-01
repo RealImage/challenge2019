@@ -44,8 +44,8 @@ func (p *Partner) CalculateCost(contentSize int) (int, bool) {
 	return actualCost, true
 }
 
-// ParsePartnerFromCsvRow reads data from csv, parses it to Partner instance and sends it to PartnerParserConfig.ParsedDataChan,
-// if any error acquired, send it to PartnerParserConfig.ErrChan.
+// ParsePartnerFromCsvRow reads data from csv, parses it to Partner instance and sends it to parsedPartnerChan,
+// if any error acquired, send it to errChan.
 // if error acquired when reading from csv, stops method executing.
 func ParsePartnerFromCsvRow(inputRowChan <-chan *tools.CsvRow, parsedPartnerChan chan<- *Partner, errChan chan<- error) {
 	defer close(parsedPartnerChan)

@@ -20,9 +20,9 @@ func NewDeliverySvc(deliveryReader, partnerReader, capacityReader tools.CsvReade
 	return &DeliverySvc{deliveryReader, partnerReader, capacityReader}
 }
 
-// DistributeDeliveriesAmongPartnersByMinCost distributes given deliveries (read from DeliverySvc.DeliveriesSourceFilepath)
-// among the partners (read from DeliverySvc.PartnersSourceFilepath) by minimum cost, packing result to *models.Output
-// and sends it to  chan *models.Output, if any error acquired, sends it to  chan error
+// DistributeDeliveriesAmongPartnersByMinCost distributes given deliveries (read with DeliverySvc.DeliveryReader)
+// among the partners (read with DeliverySvc.PartnerReader) by minimum cost, packing result to *models.Output
+// and sends it to  chan *models.Output, if any error acquired, sends it to  errChan
 func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost(outChan chan<- *m.Output, errChan chan<- error) {
 	defer close(errChan)
 	defer close(outChan)
@@ -67,10 +67,10 @@ func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCost(outChan chan<
 	wg.Wait()
 }
 
-// DistributeDeliveriesAmongPartnersByMinCostAndCapacity distributes given deliveries (read from DeliverySvc.DeliveriesSourceFilepath)
-// among the partners (read from DeliverySvc.PartnersSourceFilepath) by minimum cost, takes partner
-// capacity (read from DeliverySvc.PartnersCapacitySourceFilepath) into consideration as well. Packing result to *models.Output
-// and sends it to  chan *models.Output, if any error acquired, sends it to  chan error
+// DistributeDeliveriesAmongPartnersByMinCostAndCapacity distributes given deliveries (read with DeliverySvc.DeliveryReader)
+// among the partners (read with DeliverySvc.DeliveryReader) by minimum cost, takes partner
+// capacity (read with DeliverySvc.CapacityReader) into consideration as well. Packing result to *models.Output
+// and sends it to  chan *models.Output, if any error acquired, sends it to  errChan
 func (svc *DeliverySvc) DistributeDeliveriesAmongPartnersByMinCostAndCapacity(resChan chan<- *m.Output, errChan chan<- error) {
 	defer close(resChan)
 	defer close(errChan)

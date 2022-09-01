@@ -24,8 +24,8 @@ func (d *Delivery) String() string {
 	return fmt.Sprintf("id: %s, tId: %s, ctx size: %d;", d.ID, d.TheaterID, d.ContentSize)
 }
 
-// ParseDeliveryFromCsvRow reads data from csv, parses it to Delivery instance and sends it to Delivery.ParsedDataChan,
-// if any error acquired, send it to Delivery.ErrChan.
+// ParseDeliveryFromCsvRow reads data from csv, parses it to Delivery instance and sends it to parsedDeliveryChan,
+// if any error acquired, send it to errChan.
 // if error acquired when reading from csv, stops method executing.
 func ParseDeliveryFromCsvRow(inputRowChan <-chan *tools.CsvRow, parsedDeliveryChan chan<- *Delivery, errChan chan<- error) {
 	defer close(parsedDeliveryChan)
