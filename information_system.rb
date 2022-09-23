@@ -4,10 +4,9 @@ require './database'
 require './csv_operations'
 require 'pp'
 # Information system to display menu and output results
-class InformationSystem < Database
+class InformationSystem
   include CsvOperations
   def initialize
-    super
     @partners = Database.new(load_csv(file: 'partners.csv'))
     @capacities = Database.new(load_csv(file: 'capacities.csv'))
     @input = Database.new(load_input_csv)

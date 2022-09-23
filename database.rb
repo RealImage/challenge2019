@@ -22,23 +22,7 @@ class Database
     @data.map { |hash| hash.slice(*keys) }
   end
 
-  def find_by_value(value:, keys: [])
-    filterd_data = @data.select { |hash| hash.value?(value) }
-    return filterd_data if keys.empty?
-
-    filterd_data.map { |hash| hash.slice(*keys) }
-  end
-
   private
-
-  def insert(hash)
-    @@row_id += 1
-    @data.push(hash)
-  end
-
-  def remove(key_value_pair)
-    @data.delete_if { |hash| pair_present?(hash, key_value_pair) }
-  end
 
   def pair_present?(hash, key_value_pair)
     Enumerable.instance_method(:include?).bind(hash).call(key_value_pair.to_a.flatten)
