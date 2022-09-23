@@ -9,13 +9,6 @@ class Database
     @data = hash_collection
   end
 
-  private
-
-  def insert(hash)
-    @@row_id += 1
-    @data.push({ 'id' => @@row_id }.merge(hash))
-  end
-
   def find(key_value_pair: nil, keys: [])
     return @data if key_value_pair.nil? && keys.empty?
 
@@ -34,6 +27,13 @@ class Database
     return filterd_data if keys.empty?
 
     filterd_data.map { |hash| hash.slice(*keys) }
+  end
+
+  private
+
+  def insert(hash)
+    @@row_id += 1
+    @data.push(hash)
   end
 
   def remove(key_value_pair)
