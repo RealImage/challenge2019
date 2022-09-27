@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Sample Input (input.csv)
 
 # D1,150,T1
@@ -20,19 +22,20 @@
 # D4,false,"",""
 
 # require 'csv'
-require_relative 'csv_helper.rb'
-
-include CsvHelper
+require_relative 'csv_helper'
 
 class QubeChallenge
-  def initialize(problem_type)
-    @deliveries = get_formatted_input_data
-    @partners_data = cook_csv_data("partners.csv", true)
+  include CsvHelper
 
-    if problem_type == "one"
+  def initialize(problem_type)
+    @deliveries = format_input_data
+    @partners_data = cook_csv_data('partners.csv', true)
+
+    case problem_type
+    when 'one'
       problem_one
-    elsif problem_type == "two"
-      @capacities = get_formatted_capacities_data
+    when 'two'
+      @capacities = format_capacities_data
       problem_two
     end
   end
@@ -42,54 +45,52 @@ class QubeChallenge
       find_optimal_priced_partner(delivery_id, delivery)
     end
 
-    write_to_csv_and_print_content("output1.csv", delivery_details, "Optimal priced partners: ")
+    write_to_csv_and_print_content('output1.csv', delivery_details, 'Optimal priced partners: ')
   end
 
   def problem_two
     delivery_details = @deliveries.map do |delivery_id, delivery|
-      find_optimal_priced_partner(delivery_id, delivery, {consider_capacity: true})
+      find_optimal_priced_partner(delivery_id, delivery, { consider_capacity: true })
     end
 
-    write_to_csv_and_print_content("output2.csv", delivery_details, "Optimal priced partners according to capacity: ")
+    write_to_csv_and_print_content('output2.csv', delivery_details, 'Optimal priced partners according to capacity: ')
   end
 
   def find_optimal_priced_partner(delivery_id, delivery, options = {})
     # Filter partners by availability
     eligible_partners = get_eligible_partners(delivery)
     is_delivery_possible = eligible_partners.any?
+    partner_id = ''
+    final_delivery_cost = ''
 
     if is_delivery_possible
-      final_partners = []
-      # Format eligible partners data
+      # Find delivery cost for each eligible partner
       formatted_eligible_partners = eligible_partners.map do |partner|
         delivery_cost = partner[:cost_per_gb] * delivery[:size_of_delivery]
-        # Take minimum cost into consideration
-        final_cost = [delivery_cost, partner[:minimum_cost]].max
-        {partner_id: partner[:partner_id], delivery_cost: final_cost}
+        final_cost = [delivery_cost, partner[:minimum_cost]].max # Take minimum cost into consideration
+        { partner_id: partner[:partner_id], delivery_cost: final_cost }
       end
 
       # Sort based on the optimal price
-      sorted_partners = formatted_eligible_partners.sort_by{|partner| partner[:delivery_cost]}
+      sorted_partners = formatted_eligible_partners.sort_by { |partner| partner[:delivery_cost] }
+
       # Set Optimal partner based on cheapest price
-      final_list = {sorted_partners: sorted_partners, optimal_partner: sorted_partners.first}
+      final_list = { sorted_partners: sorted_partners, optimal_partner: sorted_partners.first }
 
       # Consider capacity of partners
       if options[:consider_capacity]
         sorted_partners.each do |partner|
           partner_id = partner[:partner_id]
-          if delivery[:size_of_delivery] <= @capacities[partner_id]
-            final_list[:optimal_partner] = partner
-            @capacities[partner_id] -= delivery[:size_of_delivery]
-            break
-          end
+          next unless delivery[:size_of_delivery] <= @capacities[partner_id]
+
+          final_list[:optimal_partner] = partner
+          @capacities[partner_id] -= delivery[:size_of_delivery]
+          break
         end
       end
 
       partner_id = final_list[:optimal_partner][:partner_id]
       final_delivery_cost = final_list[:optimal_partner][:delivery_cost]
-    else
-      partner_id = ""
-      final_delivery_cost = ""
     end
 
     [delivery_id, is_delivery_possible, partner_id, final_delivery_cost]
@@ -97,19 +98,19 @@ class QubeChallenge
 
   private
 
-  def get_formatted_input_data
-    input_data = cook_csv_data("input.csv", false)
+  def format_input_data
+    input_data = cook_csv_data('input.csv', false)
     formatted_input = {}
 
     input_data.each do |input|
-      formatted_input[input[0]] = {size_of_delivery: input[1], theatre_id: input[2]}
+      formatted_input[input[0]] = { size_of_delivery: input[1], theatre_id: input[2] }
     end
 
     formatted_input
   end
 
-  def get_formatted_capacities_data
-    capacities_data = cook_csv_data("capacities.csv", true)
+  def format_capacities_data
+    capacities_data = cook_csv_data('capacities.csv', true)
     capacities = {}
 
     capacities_data.each do |capacity|
@@ -121,15 +122,14 @@ class QubeChallenge
 
   def get_eligible_partners(delivery)
     @partners_data.filter do |partner|
-      size_array = partner[:size_slab_in_gb].split("-").map(&:to_i)
+      size_array = partner[:size_slab_in_gb].split('-').map(&:to_i)
       delivery_size_range = size_array[0]..size_array[1]
 
       (partner[:theatre] == delivery[:theatre_id]) &&
-      (delivery_size_range.include? delivery[:size_of_delivery])
+        (delivery_size_range.include? delivery[:size_of_delivery])
     end
   end
-
 end
 
-QubeChallenge.new("one")
-QubeChallenge.new("two")
+QubeChallenge.new('one')
+QubeChallenge.new('two')
