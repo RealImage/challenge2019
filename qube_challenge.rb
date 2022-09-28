@@ -28,14 +28,14 @@ class QubeChallenge
   include CsvHelper
 
   def initialize(problem_type)
-    @deliveries = format_input_data
+    @deliveries = format_data('input', false)
     @partners_data = cook_csv_data('partners.csv', true)
 
     case problem_type
     when 'one'
       problem_one
     when 'two'
-      @capacities = format_capacities_data
+      @capacities = format_data('capacities', true)
       problem_two
     end
   end
@@ -56,78 +56,75 @@ class QubeChallenge
     write_to_csv_and_print_content('output2.csv', delivery_details, 'Optimal priced partners according to capacity: ')
   end
 
+  private
+
   def find_optimal_priced_partner(delivery_id, delivery, options = {})
     # Filter partners by availability
     eligible_partners = get_eligible_partners(delivery)
-    is_delivery_possible = eligible_partners.any?
-    partner_id = ''
-    final_delivery_cost = ''
+    delivery_possible = eligible_partners.any?
+    @optimal_partner = {}
 
-    if is_delivery_possible
-      # Find delivery cost for each eligible partner
-      formatted_eligible_partners = eligible_partners.map do |partner|
-        delivery_cost = partner[:cost_per_gb] * delivery[:size_of_delivery]
-        final_cost = [delivery_cost, partner[:minimum_cost]].max # Take minimum cost into consideration
-        { partner_id: partner[:partner_id], delivery_cost: final_cost }
-      end
-
-      # Sort based on the optimal price
-      sorted_partners = formatted_eligible_partners.sort_by { |partner| partner[:delivery_cost] }
-
-      # Set Optimal partner based on cheapest price
-      final_list = { sorted_partners: sorted_partners, optimal_partner: sorted_partners.first }
-
-      # Consider capacity of partners
-      if options[:consider_capacity]
-        sorted_partners.each do |partner|
-          partner_id = partner[:partner_id]
-          next unless delivery[:size_of_delivery] <= @capacities[partner_id]
-
-          final_list[:optimal_partner] = partner
-          @capacities[partner_id] -= delivery[:size_of_delivery]
-          break
-        end
-      end
-
-      partner_id = final_list[:optimal_partner][:partner_id]
-      final_delivery_cost = final_list[:optimal_partner][:delivery_cost]
+    if delivery_possible
+      @optimal_partner = find_partner(eligible_partners, options[:consider_capacity],
+                                      delivery[:size_of_delivery])
     end
 
-    [delivery_id, is_delivery_possible, partner_id, final_delivery_cost]
-  end
-
-  private
-
-  def format_input_data
-    input_data = cook_csv_data('input.csv', false)
-    formatted_input = {}
-
-    input_data.each do |input|
-      formatted_input[input[0]] = { size_of_delivery: input[1], theatre_id: input[2] }
-    end
-
-    formatted_input
-  end
-
-  def format_capacities_data
-    capacities_data = cook_csv_data('capacities.csv', true)
-    capacities = {}
-
-    capacities_data.each do |capacity|
-      capacities[capacity[:partner_id]] = capacity[:capacity_in_gb]
-    end
-
-    capacities
+    [delivery_id, delivery_possible, @optimal_partner[:partner_id] || '', @optimal_partner[:delivery_cost] || '']
   end
 
   def get_eligible_partners(delivery)
-    @partners_data.filter do |partner|
+    eligible_partners = @partners_data.filter do |partner|
       size_array = partner[:size_slab_in_gb].split('-').map(&:to_i)
       delivery_size_range = size_array[0]..size_array[1]
 
       (partner[:theatre] == delivery[:theatre_id]) &&
         (delivery_size_range.include? delivery[:size_of_delivery])
     end
+
+    # Find delivery cost for each eligible partner
+    eligible_partners.map do |partner|
+      # Take minimum cost into consideration
+      final_cost = [partner[:cost_per_gb] * delivery[:size_of_delivery], partner[:minimum_cost]].max
+      { partner_id: partner[:partner_id], delivery_cost: final_cost }
+    end
+  end
+
+  def find_partner(eligible_partners, consider_capacity, delivery_size)
+    # Sort based on the optimal price
+    sorted_partners = eligible_partners.sort_by { |partner| partner[:delivery_cost] }
+
+    # Set Optimal partner based on cheapest price
+    @optimal_partner = sorted_partners.first
+
+    # Consider capacity of partners
+    if consider_capacity
+      sorted_partners.each do |partner|
+        partner_id = partner[:partner_id]
+        next unless delivery_size <= @capacities[partner_id]
+
+        @optimal_partner = partner
+        @capacities[partner_id] -= delivery_size
+        break
+      end
+    end
+
+    @optimal_partner
+  end
+
+  def format_data(data_type, header)
+    data = cook_csv_data("#{data_type}.csv", header)
+    formatted_data = {}
+
+    data.each do |d|
+      case data_type
+      when 'input'
+        formatted_data[d[0]] = { size_of_delivery: d[1], theatre_id: d[2] }
+      when 'capacities'
+        formatted_data[d[:partner_id]] = d[:capacity_in_gb]
+      end
+    end
+
+    formatted_data
   end
 end
 
