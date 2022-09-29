@@ -1,4 +1,7 @@
-D1,150,T1
-D2,325,T2
-D3,510,T1
-D4,700,T2
+delivery_id,size,theatre_id
+D1,100,T1
+D2,300,T1
+D3,350,T1
+D1, 70, T1
+D2, 300, T1
+D1, 70, T3

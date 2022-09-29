@@ -1,0 +1,7 @@
+delivery_id,delivery_possible,cost_of_delivery,partner_id
+D1,true,2000,P1
+D2,true,4500,P1
+D3,true,5250,P1
+D1,true,1750,P2
+D2,true,4500,P1
+D1,false
