@@ -15,8 +15,16 @@ var filenames = models.FileDetails{
 }
 
 func main() {
+	//..To "catch" panic and exit gracefully
+	defer func() {
+		if err := recover(); err != nil {
+			log.Fatal("panic occurred:", err)
+		}
+	}()
 	log.Println("Solving....")
+
 	if err := solve.Solution(&filenames); err != nil {
 		log.Fatal(err)
 	}
+
 }

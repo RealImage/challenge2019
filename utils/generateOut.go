@@ -1,4 +1,4 @@
-package solve
+package utils
 
 import (
 	"challenge2019/models"
@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func generateOut(f string, outArray []models.OutputDetails) error {
+func GenerateOut(f string, outArray []models.OutputDetails) error {
 	file, err := os.Create(f)
 	if err != nil {
 		return err
