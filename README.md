@@ -1,9 +1,13 @@
 # solution
-Solved using golang
-Data models in /models
-Soltion function in /solve
+Solved using golang::
+
+Data models in /models,
+
+Soltion function in /solve,
+
 Utility functions in /utils
-you can insert new filenames main.go
+
+you can insert new filenames in main.go
 
 
 # Qube Cinemas Challenge 2019
