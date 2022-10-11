@@ -3,7 +3,7 @@ Solved using golang::
 
 Data models in /models,
 
-Soltion function in /solve,
+Solution functions in /solve,
 
 Utility functions in /utils
 
