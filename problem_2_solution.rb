@@ -60,4 +60,4 @@ class Problem
 end
 end
 
-Problem.new.solve
+Problem.new.solve 

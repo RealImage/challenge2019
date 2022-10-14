@@ -1,6 +1,6 @@
 require 'csv'
 class Problem
-    def solve
+    def solve 
         mincost= nil
         partner_id = nil
         partner = {}
