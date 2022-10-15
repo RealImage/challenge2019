@@ -73,6 +73,18 @@ D1, false, "", ""
 D2, true, P1, 4500
 ```
 
+## Check Solution 1
+
+Run in console ```irb``` command.
+Run in irb console this lines:
+```
+require_relative 'lib/services/deliveries_processor'
+
+Services::DeliveriesProcessor.new.call
+```
+
+It should generate **result_1.csv** file with result.
+
 ## Problem Statement 2
 
 Each partner specifies the **maximum capacity** they can serve, across all their deliveries in following manner:
@@ -114,3 +126,15 @@ D3, true, P1, 3900
 To submit a solution, fork this repo and send a Pull Request on Github.
 
 For any questions or clarifications, raise an issue on this repo and we'll answer your questions as fast as we can.
+
+## Check Solution 2
+
+Run in console ```irb``` command.
+Run in irb console this lines:
+```
+require_relative 'lib/services/deliveries_processor_by_capacity'
+
+Services::DeliveriesProcessorByCapacity.new.call
+```
+
+It should generate **result_2.csv** file with result.
