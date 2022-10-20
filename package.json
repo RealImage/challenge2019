@@ -1,0 +1,23 @@
+{
+  "name": "csv-parser",
+  "version": "1.0.0",
+  "description": "Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giftsonsingh/challenge2019.git"
+  },
+  "author": "Giftson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giftsonsingh/challenge2019/issues"
+  },
+  "homepage": "https://github.com/giftsonsingh/challenge2019#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security"
+  }
+}
