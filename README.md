@@ -99,7 +99,7 @@ Use `partners.csv` and `capacities.csv`.
 ```
 D1, 100, T1
 D2, 240, T1
-D3, 260, T1
+D2, 260, T1
 ```
 
 **OUTPUT**:
