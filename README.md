@@ -1,4 +1,12 @@
-# Qube Cinemas Challenge 2019
+# Qube Cinemas Challenge 2019 - Solution execution steps
+
+To execute the program and generate the output files:
+1. Have Ruby installed on your system.
+2. Via the terminal, go into the project's directory and run the following command: `ruby output.rb`. This executes the ruby code written in the 'output.rb' file.
+3. Once the command is executed successfully, the output files titled 'myoutput1.csv' and 'myoutput2.csv' are generated and can be found in the project's root directory.
+
+# Qube Cinemas Challenge 2019 - Problem Statements
+
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
 Delivery partners specify the rate of delivery and cost in following manner (All costs are in paise):
