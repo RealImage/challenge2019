@@ -1,0 +1,5 @@
+delivery_id,is_possible,partner_id,cost
+D2,true,P1,3250
+D4,false," "," "
+D3,true,P3,15300
+D1,true,P1,2000
