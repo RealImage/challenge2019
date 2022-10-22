@@ -1,0 +1,15 @@
+{
+  "name": "qube2019",
+  "version": "1.0.0",
+  "description": "This project contains the solutions for 2 problems in the Qube 2019 coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Junaid Althaf",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
