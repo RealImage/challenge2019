@@ -1,9 +1,19 @@
+
 const csv = require("csv-parser");
 
 const fs = require("fs");
+
+//stores the partner data
 let results = [];
+//store the input data
 let input = [];
+//stores the capacity data
 let capacities = [];
+
+//This is used to parse the partner csv file into a array of object
+/*
+[{theater,startingslab,endingslab,minimumCost,costPerGB,partnerId},{...},{...}]
+*/
 function partnerParse(filename) {
   return new Promise((resolve, reject) => {
     fs.createReadStream(filename)
@@ -33,6 +43,10 @@ function partnerParse(filename) {
   });
 }
 
+//This is used to parse the input csv file into a array of object
+/*
+[{delivery,sizeUsed,theater},{...},{...}]
+*/
 function inputParse(filename) {
   return new Promise((resolve, reject) => {
     fs.createReadStream(filename)
@@ -59,6 +73,10 @@ function inputParse(filename) {
   });
 }
 
+//This is used to parse the capacity csv file into a array of object
+/*
+[{partnerID,capacity},{...},{...}]
+*/
 function capacityParse(filename) {
   return new Promise((resolve, reject) => {
     fs.createReadStream(filename)
@@ -85,7 +103,7 @@ function capacityParse(filename) {
       });
   });
 }
-
+//export the module that are in need for problem 1 and problem 2
 module.exports = {
   partnerParse,
   inputParse,
