@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "csv-reader": "^1.0.10"
+  },
+  "name": "challenge2019",
+  "description": "Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poornachandar30/challenge2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poornachandar30/challenge2019/issues"
+  },
+  "homepage": "https://github.com/Poornachandar30/challenge2019#readme"
+}
