@@ -105,7 +105,5 @@ async function problem1() {
 }
 
 module.exports = {
-  problem1,
-  partnerParse,
-  inputParse,
+  problem1
 };
