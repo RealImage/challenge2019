@@ -1,0 +1,15 @@
+{
+  "name": "qube_cinemas_challenge_2019",
+  "version": "1.0.0",
+  "description": "to complete problem1 and problem2 statements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deva Anbu G",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "random-words": "^1.2.0"
+  }
+}
