@@ -1,3 +1,15 @@
+# solution
+Solved using golang::
+
+Data models in /models,
+
+Solution functions in /solve,
+
+Utility functions in /utils
+
+you can insert new filenames in main.go
+
+
 # Qube Cinemas Challenge 2019
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
