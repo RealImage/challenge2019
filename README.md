@@ -1,4 +1,9 @@
-# Qube Cinemas Challenge 2019
+# Qube Cinemas Challenge 2019 - Solution execution steps
+To execute the program and generate the output files:
+1- Ruby installation required.
+2- On the terminal, go into the project's directory and run the following command: `ruby output.rb`. This executes the ruby code written in the 'output.rb' file.
+3- Once the command is executed successfully, the output files titled 'myoutput1.csv' and 'myoutput2.csv' will be generated and can be found in the project's root directory.
+# Qube Cinemas Challenge 2019 - Problem Statements
 Qube delivers the movie content to theatres all around the world. There are multiple delivery partners to help us deliver the content.
 
 Delivery partners specify the rate of delivery and cost in following manner (All costs are in paise):
@@ -16,7 +21,7 @@ Table 1:
 
 First row allows 0 to 200 GB content to be sent to theatre T1 with the rate 20 paise per GB. However, if total cost comes less than minimum cost, minimum cost (2000 paise) will be charged.
 
-*NOTE*: 
+*NOTE*:
 - Multiple partners can deliver to same theatre
 
 
@@ -69,7 +74,7 @@ D2, 300, T1
 ```
 **OUTPUT**:
 ```
-D1, false, "", "" 
+D1, false, "", ""
 D2, true, P1, 4500
 ```
 
