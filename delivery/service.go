@@ -96,21 +96,26 @@ type container struct {
 	capacityLeft map[TrimString]int
 }
 
+func (c *container) checkOptimal(opt container) bool {
+	return c.okCount > opt.okCount || (c.okCount == opt.okCount && c.value <= opt.value && len(c.deliveries) >= len(opt.deliveries))
+}
+
 func (c *container) copyAndAdd(d Input, p Partner) container {
 	cl := copyMap(c.capacityLeft)
 	out := Output{DeliveryID: d.DeliveryID, IsPossible: false}
 	ok := c.okCount
 	value := c.value
-	if cl[p.PartnerID] >= d.Amount {
+
+	if cl[p.PartnerID] >= d.Amount && d.Amount >= p.Slab.MinSlab && d.Amount <= p.Slab.MaxSlab {
 		ok++
 		cost := d.Amount * p.CostPerGB
 		if cost < p.MinCost {
 			cost = p.MinCost
 		}
 		value += cost
+		cl[p.PartnerID] = cl[p.PartnerID] - d.Amount
 		out = Output{DeliveryID: d.DeliveryID, IsPossible: true, Cost: cost, PartnerID: p.PartnerID}
 	}
-	cl[p.PartnerID] = cl[p.PartnerID] - d.Amount
 
 	dd := make([]Output, len(c.deliveries), len(c.deliveries)+1)
 	copy(dd, c.deliveries)
@@ -137,15 +142,15 @@ func newContainer(d Input, p Partner, cc map[TrimString]int) container {
 	out := Output{DeliveryID: d.DeliveryID, IsPossible: false}
 	ok := 0
 
-	if cl[p.PartnerID] >= d.Amount {
+	if cl[p.PartnerID] >= d.Amount && d.Amount >= p.Slab.MinSlab && d.Amount <= p.Slab.MaxSlab {
 		ok++
 		value = d.Amount * p.CostPerGB
 		if value < p.MinCost {
 			value = p.MinCost
 		}
+		cl[p.PartnerID] = cl[p.PartnerID] - d.Amount
 		out = Output{DeliveryID: d.DeliveryID, IsPossible: true, Cost: value, PartnerID: p.PartnerID}
 	}
-	cl[p.PartnerID] = cl[p.PartnerID] - d.Amount
 
 	return container{
 		value:        value,
@@ -185,17 +190,13 @@ func (s *Service) Assign(input string) ([]Output, error) {
 		pp := partnersMap[d.TheatreID]
 		var cc []container
 		for _, p := range pp {
-			if d.Amount < p.Slab.MinSlab || d.Amount > p.Slab.MaxSlab {
-				continue
-			}
-
 			cc = append(cc, newContainer(d, p, capacities))
 
 			for i := 0; i < len(containerSet); i++ {
 				newC := containerSet[i].copyAndAdd(d, p)
 				cc = append(cc, newC)
 
-				if newC.okCount > opt.okCount || (newC.okCount == opt.okCount && newC.value <= opt.value) {
+				if newC.checkOptimal(opt) {
 					opt = newC
 				}
 			}
