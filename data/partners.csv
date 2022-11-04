@@ -1,4 +1,4 @@
-Theatre,Size Slab (in GB),Minimum cost,Cost Per GB,Partner ID
+theatre_id,slab,min_cost,cost_gb,partner_id
 T1     ,0-100            ,1500        ,20         ,P1
 T1     ,100-200          ,2000        ,13         ,P1
 T1     ,200-300          ,2500        ,12         ,P1
