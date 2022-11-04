@@ -50,19 +50,18 @@ func merge(in ...chan Output) chan Output {
 
 func (s *Service) checkPartner(in <-chan Partner, d Input) chan Output {
 	out := make(chan Output)
+	min := Output{DeliveryID: d.DeliveryID, IsPossible: false}
 	go func() {
 		for p := range in {
-			out <- func(p Partner) Output {
-				if d.TheatreID == p.TheatreID && d.Amount >= p.Slab.MinSlab && d.Amount <= p.Slab.MaxSlab {
-					cost := d.Amount * p.CostPerGB
-					if cost < p.MinCost {
-						cost = p.MinCost
-					}
-					return Output{DeliveryID: d.DeliveryID, IsPossible: true, Cost: cost, PartnerID: p.PartnerID}
+			if d.TheatreID == p.TheatreID && d.Amount >= p.Slab.MinSlab && d.Amount <= p.Slab.MaxSlab {
+				cost := d.Amount * p.CostPerGB
+				if cost < p.MinCost {
+					cost = p.MinCost
 				}
-				return Output{DeliveryID: d.DeliveryID, IsPossible: false}
-			}(p)
+				min = Output{DeliveryID: d.DeliveryID, IsPossible: true, Cost: cost, PartnerID: p.PartnerID}
+			}
 		}
+		out <- min
 		close(out)
 	}()
 
@@ -89,7 +88,6 @@ func (s *Service) FindMinCostPartners(deliveryFile, partnerFile string) ([]Outpu
 
 	size := len(deliveries)
 	out := make([]chan Output, 0, size)
-	outMap := make(map[TrimString]Output)
 	result := make([]Output, 0, size)
 	deliveryChannels := make([]chan Partner, size, size)
 
@@ -102,12 +100,6 @@ func (s *Service) FindMinCostPartners(deliveryFile, partnerFile string) ([]Outpu
 	fanOut(partners, deliveryChannels...)
 
 	for o := range merge(out...) {
-		if v, ok := outMap[o.DeliveryID]; !ok || (o.IsPossible && !v.IsPossible) || (o.IsPossible && o.Cost < v.Cost) {
-			outMap[o.DeliveryID] = o
-		}
-	}
-
-	for _, o := range outMap {
 		result = append(result, o)
 	}
 
