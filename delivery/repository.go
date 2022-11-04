@@ -4,12 +4,16 @@ import "github.com/challenge2019/file"
 
 type Repository struct{}
 
-func (r *Repository) FetchDeliveries(c chan<- error, fileName string, deliveries *[]Input) {
-	file.ReadAsync(c, fileName, deliveries)
+func (r *Repository) FetchDeliveries(fileName string, deliveries *[]Input) chan error {
+	return file.ReadAsync(fileName, deliveries)
 }
 
-func (r *Repository) FetchPartners(c chan<- error, fileName string, partners *[]Partner) {
-	file.ReadAsync(c, fileName, partners)
+func (r *Repository) FetchPartners(fileName string, partners *[]Partner) chan error {
+	return file.ReadAsync(fileName, partners)
+}
+
+func (r *Repository) FetchCapacities(fileName string, capacities *map[TrimString]int) chan error {
+	return file.ReadToMapAsync(fileName, capacities)
 }
 
 func (r *Repository) SaveDeliveriesOutput(fileName string, out *[]Output) error {

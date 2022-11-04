@@ -1,26 +1,61 @@
 package file
 
 import (
+	"encoding/csv"
 	"github.com/gocarina/gocsv"
 	"os"
 )
 
-func ReadAsync(c chan<- error, fileName string, out interface{}) {
-	file, err := os.Open(fileName)
-	if err != nil {
-		c <- err
-		return
-	}
+func ReadAsync(fileName string, out interface{}) chan error {
+	c := make(chan error)
 
-	defer file.Close()
+	go func() {
+		defer close(c)
 
-	if err := gocsv.UnmarshalFile(file, out); err != nil {
-		c <- err
-		return
-	}
+		file, err := os.Open(fileName)
+		if err != nil {
+			c <- err
+			return
+		}
 
-	c <- nil
-	return
+		defer file.Close()
+
+		if err := gocsv.UnmarshalFile(file, out); err != nil {
+			c <- err
+			return
+		}
+
+		c <- nil
+	}()
+
+	return c
+}
+
+func ReadToMapAsync(fileName string, out interface{}) chan error {
+	c := make(chan error)
+
+	go func() {
+		defer close(c)
+
+		file, err := os.Open(fileName)
+		if err != nil {
+			c <- err
+			return
+		}
+
+		r := csv.NewReader(file)
+
+		defer file.Close()
+
+		if err := gocsv.UnmarshalCSVToMap(r, out); err != nil {
+			c <- err
+			return
+		}
+
+		c <- nil
+	}()
+
+	return c
 }
 
 func Write(fileName string, data interface{}) (err error) {
