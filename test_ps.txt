@@ -1,0 +1,1626 @@
+City Code,Province Code,Country Code,City Name,Province Name,Country Name
+CENAI,TN,IN,Chennai,Tamil Nadu,India
+BHWAI,BR,IN,Bhawanipur,Bihar,India
+ZIAWU,PB,IN,Zira,Punjab,India
+RMAGN,AP,IN,Ramagundam,Andhra Pradesh,India
+KIADU,CT,IN,Kirandul,Chhattisgarh,India
+ZXOYZ,DA,IQ,Zaxo,Dahuk,Iraq
+ALVND,11,IR,Alvand,Zanjan,Iran
+SHARI,07,IR,Shahriar,Tehran,Iran
+ALIGR,20,IR,Aligudarz,Lorestan,Iran
+ALESH,20,IR,Aleshtar,Lorestan,Iran
+AKRBD,14,IR,Akbarabad,Fars,Iran
+AHVAZ,10,IR,Ahvaz,Khuzestan,Iran
+AGJRI,10,IR,Aghajari,Khuzestan,Iran
+ABYEK,22,IR,Abyek,Markazi,Iran
+ABHAR,11,IR,Abhar,Zanjan,Iran
+ABANA,05,IR,Abdanan,Ilam,Iran
+ABDEH,14,IR,Abadeh,Fars,Iran
+ABADA,10,IR,Abadan,Khuzestan,Iran
+EQBIY,07,IR,Eqbaliyeh,Tehran,Iran
+ZABOL,13,IR,Zabol,Sistan va Baluchestan,Iran
+ZHEDA,13,IR,Zahedan,Sistan va Baluchestan,Iran
+KHASH,13,IR,Khash,Sistan va Baluchestan,Iran
+INSHR,13,IR,Iranshahr,Sistan va Baluchestan,Iran
+CABHR,13,IR,Chabahar,Sistan va Baluchestan,Iran
+MDSHR,12,IR,Mahdishahr,Semnan,Iran
+VVAET,78,IT,Vibo Valentia,Calabria,Italy
+SINOS,78,IT,SIDERNO SUPERIORE,Calabria,Italy
+SIERN,78,IT,Siderno,Calabria,Italy
+SGINF,78,IT,San Giovanni in Fiore,Calabria,Italy
+RSTAN,78,IT,Rossano Stazione,Calabria,Italy
+REGOC,78,IT,Reggio Calabria,Calabria,Italy
+QUTRA,78,IT,Quattromiglia,Calabria,Italy
+PALMI,78,IT,Palmi,Calabria,Italy
+NCTOS,78,IT,Nicastro-Sambiase,Calabria,Italy
+GTARO,78,IT,Gioia Tauro,Calabria,Italy
+CTONE,78,IT,Crotone,Calabria,Italy
+COSEZ,78,IT,Cosenza,Calabria,Italy
+CTANO,78,IT,Catanzaro,Calabria,Italy
+CSOVR,78,IT,Castrovillari,Calabria,Italy
+CSNAI,78,IT,Cassano Allo Ionio,Calabria,Italy
+AMATO,78,IT,Amato,Calabria,Italy
+ZPROS,45,IT,Zola Predosa,Emilia-Romagna,Italy
+VTORV,34,IT,Vittorio Veneto,Veneto,Italy
+LACGV,34,IT,Lancenigo-Villorba,Veneto,Italy
+VILRC,72,IT,Villaricca,Campania,Italy
+VRNDV,34,IT,Villafranca di Verona,Veneto,Italy
+VIGNO,45,IT,Vignola,Emilia-Romagna,Italy
+VICNZ,34,IT,Vicenza,Veneto,Italy
+VERON,34,IT,Verona,Veneto,Italy
+VRELI,VC,IT,Vercelli,Vercelli,Italy
+VENGL,42,IT,Ventimiglia,Liguria,Italy
+QURTO,72,IT,Quarto,Campania,Italy
+ODAEL,72,IT,Orta di Atella,Campania,Italy
+CAVTR,72,IT,Casavatore,Campania,Italy
+VOLLA,72,IT,Volla,Campania,Italy
+BEAIM,45,IT,Bellaria-Igea Marina,Emilia-Romagna,Italy
+SPAIT,14,JM,Spanish Town,Saint Catherine,Jamaica
+SANLM,10,JM,Savanna-la-Mar,Westmoreland,Jamaica
+PORTE,14,JM,Portmore,Saint Catherine,Jamaica
+OHABR,14,JM,Old Harbour,Saint Catherine,Jamaica
+NKIST,02,JM,New Kingston,Saint Andrew,Jamaica
+MONGB,08,JM,Montego Bay,Saint James,Jamaica
+MAYPE,13,JM,May Pen,Clarendon,Jamaica
+MANIE,12,JM,Mandeville,Manchester,Jamaica
+LINST,14,JM,Linstead,Saint Catherine,Jamaica
+KINGO,01,JM,Kingston,Kingston,Jamaica
+HWTRE,02,JM,Half Way Tree,Saint Andrew,Jamaica
+WASIR,AM,JO,Wadi as Sir,Amman,Jordan
+UASMQ,AM,JO,Umm as Summaq,Amman,Jordan
+SAHAB,AM,JO,Sahab,Amman,Jordan
+MADBA,MD,JO,Madaba,Madaba,Jordan
+MAAN,MN,JO,Ma'an,Ma'an,Jordan
+KUAMH,IR,JO,Kurayyimah,Irbid,Jordan
+JUDIT,IR,JO,Judita,Irbid,Jordan
+IRBID,IR,JO,Irbid,Irbid,Jordan
+AYDUN,IR,JO,Aydun,Irbid,Jordan
+ARMTH,IR,JO,Ar Ramtha,Irbid,Jordan
+ANJRH,IR,JO,`Anjarah,Irbid,Jordan
+AMMAN,AM,JO,Amman,Amman,Jordan
+QWYSH,AM,JO,Al Quwaysimah,Amman,Jordan
+QMOAV,MN,JO,Qir Moav,Ma'an,Jordan
+JUBAY,AM,JO,Al Jubayhah,Amman,Jordan
+AJLUN,AJ,JO,'Ajlun,Ajlun,Jordan
+SINGU,30,JP,Shingu,Wakayama,Japan
+ASUGI,14,JP,Atsugi,Kanagawa,Japan
+AKSHI,28,JP,Akashi,Hyogo,Japan
+ZUSHI,14,JP,Zushi,Kanagawa,Japan
+ZMAAU,14,JP,Zama,Kanagawa,Japan
+YUZPY,06,JP,Yuza,Yamagata,Japan
+YUKSH,40,JP,Yukuhashi,Fukuoka,Japan
+YKIPZ,08,JP,Yuki,Ibaraki,Japan
+YUGWR,14,JP,Yugawara,Kanagawa,Japan
+YOSHW,11,JP,Yoshikawa,Saitama,Japan
+YOSHI,10,JP,Yoshii,Gumma,Japan
+YKSGH,15,JP,Yoshida-kasugacho,Niigata,Japan
+YORII,11,JP,Yorii,Saitama,Japan
+YONYX,11,JP,Yono,Saitama,Japan
+YONAG,31,JP,Yonago,Tottori,Japan
+YOKSU,14,JP,Yokosuka,Kanagawa,Japan
+YOKHM,14,JP,Yokohama,Kanagawa,Japan
+YOKIH,24,JP,Yokkaichi,Mie,Japan
+YOUCH,25,JP,Youkaichi,Shiga,Japan
+YAATA,26,JP,Yawata,Kyoto,Japan
+YATUR,43,JP,Yatsushiro,Kumamoto,Japan
+YTCIH,16,JP,Yatsuomachi-higashikumisaka,Toyama,Japan
+YAUGC,32,JP,Yasugicho,Shimane,Japan
+YAUWX,25,JP,YASU,Shiga,Japan
+YASIR,28,JP,Yashiro,Hyogo,Japan
+YAHIS,11,JP,Yashio-shi,Saitama,Japan
+YAJWF,27,JP,Yao,Osaka,Japan
+YANAI,35,JP,Yanai,Yamaguchi,Japan
+YNGWA,40,JP,Yanagawa,Fukuoka,Japan
+YMION,28,JP,Yamazakicho-nakabirose,Hyogo,Japan
+YAMIS,35,JP,Yamaguchi-shi,Yamaguchi,Japan
+YMAGA,43,JP,Yamaga,Kumamoto,Japan
+YAIZU,22,JP,Yaizu,Shizuoka,Japan
+YAITA,09,JP,Yaita,Tochigi,Japan
+WRABI,11,JP,WARABI,Saitama,Japan
+WAKCI,36,JP,Wakimachi,Tokushima,Japan
+UTYAS,09,JP,Utsunomiya-shi,Tochigi,Japan
+UOWUQ,43,JP,Uto,Kumamoto,Japan
+TAWRO,29,JP,Tawaramoto,Nara,Japan
+TASNO,20,JP,Tatsuno,Nagano,Japan
+TTUOT,28,JP,Tatsunocho-tominaga,Hyogo,Japan
+TEYMA,12,JP,Tateyama,Chiba,Japan
+TABYI,10,JP,Tatebayashi,Gumma,Japan
+TARZU,46,JP,Tarumizu,Kagoshima,Japan
+TARUI,21,JP,Tarui,Gifu,Japan
+TANIT,40,JP,Tanushimarumachi-toyoki,Fukuoka,Japan
+TNUMA,09,JP,Tanuma,Tochigi,Japan
+NTKOS,13,JP,Nishi-Tokyo-shi,Tokyo,Japan
+TACHO,13,JP,Tanashicho,Tokyo,Japan
+TNABE,26,JP,Tanabe,Kyoto,Japan
+TNABE,30,JP,Tanabe,Wakayama,Japan
+TMANO,33,JP,Tamano,Okayama,Japan
+TAMNA,43,JP,Tamana,Kumamoto,Japan
+TMAUR,10,JP,Tamamura,Gumma,Japan
+TAKEO,23,JP,Taketoyo,Aichi,Japan
+TACOT,41,JP,Takeocho-takeo,Saga,Japan
+TKEHA,34,JP,Takehara,Hiroshima,Japan
+TAKEF,18,JP,Takefu,Fukui,Japan
+TADMI,44,JP,Takedamachi,Oita,Japan
+TKYAM,21,JP,Takayama,Gifu,Japan
+TASUI,27,JP,Takatsuki,Osaka,Japan
+TSAKI,10,JP,Takasaki,Gumma,Japan
+TKAZU,28,JP,Takarazuka,Hyogo,Japan
+TAKAK,16,JP,Takaoka,Toyama,Japan
+TAKNB,45,JP,Takanabe,Miyazaki,Japan
+TAKUS,37,JP,Takamatsu-shi,Kagawa,Japan
+TAKIH,27,JP,Takaishi,Osaka,Japan
+TAHSI,33,JP,Takahashi,Okayama,Japan
+TKAHM,23,JP,Takahama,Aichi,Japan
+BNOTS,44,JP,Bungo-Takada-shi,Oita,Japan
+TAJIM,21,JP,Tajimi,Gifu,Japan
+TAHAA,23,JP,Tahara,Aichi,Japan
+TAGAW,40,JP,Tagawa,Fukuoka,Japan
+TADSU,37,JP,Tadotsu,Kagawa,Japan
+TACHW,13,JP,TACHIKAWA,Tokyo,Japan
+KAWGE,24,JP,Kawage,Mie,Japan
+NEYGA,27,JP,Neyagawa,Osaka,Japan
+HITCN,08,JP,Hitachi-Naka,Ibaraki,Japan
+INAHK,08,JP,Inashiki,Ibaraki,Japan
+AKUOS,13,JP,AKIRUNO-SHI,Tokyo,Japan
+ONOJO,40,JP,Onojo,Fukuoka,Japan
+KMAYS,12,JP,KAMAGAYA-SHI,Chiba,Japan
+MINAO,21,JP,Minokamo,Gifu,Japan
+GJOVV,21,JP,Gujo,Gifu,Japan
+JETSU,15,JP,Joetsu,Niigata,Japan
+SHINK,13,JP,Shinjuku,Tokyo,Japan
+SHUYK,13,JP,Shibuya-Ku,Tokyo,Japan
+SAITM,11,JP,Saitama,Saitama,Japan
+HIUYS,13,JP,Higashimurayama-shi,Tokyo,Japan
+KUNAS,44,JP,KUNISAKI-SHI,Oita,Japan
+FJIUO,19,JP,Fujikawaguchiko,Yamanashi,Japan
+DZIFU,40,JP,Dazaifu,Fukuoka,Japan
+KAGYK,26,JP,Kamigyo-ku,Kyoto,Japan
+BUZEN,40,JP,Buzen,Fukuoka,Japan
+ADCIK,13,JP,Adachi-ku,Tokyo,Japan
+ARAKK,13,JP,ARAKAWA-KU,Tokyo,Japan
+BNYOK,13,JP,BUNKYO-KU,Tokyo,Japan
+CHIAK,13,JP,Chiyoda-ku,Tokyo,Japan
+CHUOK,13,JP,Chuo-Ku,Tokyo,Japan
+ITBHK,13,JP,Itabashi-Ku,Tokyo,Japan
+KASAK,13,JP,KATSUSHIKA-KU,Tokyo,Japan
+KITAK,13,JP,Kita-ku,Tokyo,Japan
+MGURO,13,JP,Meguro,Tokyo,Japan
+MINOK,13,JP,Minato-ku,Tokyo,Japan
+NKNOK,13,JP,NAKANO-KU,Tokyo,Japan
+OTAKU,13,JP,OTA-KU,Tokyo,Japan
+SUAMK,13,JP,SUGINAMI-KU,Tokyo,Japan
+SMIDK,13,JP,Sumida-ku,Tokyo,Japan
+TAIOK,13,JP,TAITO-KU,Tokyo,Japan
+TOIMK,13,JP,Toshima-ku,Tokyo,Japan
+SENDA,04,JP,Sendai,Miyagi,Japan
+WBUYE,03,KE,Webuye,Bungoma,Kenya
+WAJIR,46,KE,Wajir,Wajir,Kenya
+VOPFF,39,KE,Voi,Taita/Taveta,Kenya
+RONAI,31,KE,Rongai,Nakuru,Kenya
+NYERI,36,KE,Nyeri,Nyeri,Kenya
+NAHUR,20,KE,Nyahururu,Laikipia,Kenya
+NAROK,33,KE,Narok,Narok,Kenya
+NAUKI,20,KE,Nanyuki,Laikipia,Kenya
+NAKUR,31,KE,Nakuru,Nakuru,Kenya
+NAISH,31,KE,Naivasha,Nakuru,Kenya
+MUIAS,11,KE,Mumias,Kakamega,Kenya
+MUORI,17,KE,Muhoroni,Kisumu,Kenya
+MOYLE,25,KE,Moyale,Marsabit,Kenya
+MOBAS,28,KE,Mombasa,Mombasa,Kenya
+MLOPV,31,KE,Molo,Nakuru,Kenya
+MGORI,27,KE,Migori,Migori,Kenya
+MEUYY,26,KE,Meru,Meru,Kenya
+MBALE,45,KE,Mbale,Vihiga,Kenya
+MARSI,25,KE,Marsabit,Marsabit,Kenya
+MARLL,37,KE,Maralal,Samburu,Kenya
+MANDE,24,KE,Mandera,Mandera,Kenya
+MALID,14,KE,Malindi,Kilifi,Kenya
+MAKEN,23,KE,Makueni,Makueni,Kenya
+MACKO,22,KE,Machakos,Machakos,Kenya
+LUULU,04,KE,Lugulu,Busia,Kenya
+LODWA,43,KE,Lodwar,Turkana,Kenya
+LAMJP,21,KE,Lamu,Lamu,Kenya
+KITUI,18,KE,Kitui,Kitui,Kenya
+KTALE,42,KE,Kitale,Trans Nzoia,Kenya
+KISUM,17,KE,Kisumu,Kisumu,Kenya
+KISII,16,KE,Kisii,Kisii,Kenya
+KLIFI,14,KE,Kilifi,Kilifi,Kenya
+KIAMB,13,KE,Kiambu,Kiambu,Kenya
+KEUGA,15,KE,Keruguya,Kirinyaga,Kenya
+KERIC,12,KE,Kericho,Kericho,Kenya
+KPEUR,47,KE,Kapenguria,West Pokot,Kenya
+KAMEG,11,KE,Kakamega,Kakamega,Kenya
+KABRN,01,KE,Kabarnet,Baringo,Kenya
+ISOLO,09,KE,Isiolo,Isiolo,Kenya
+HOMAB,08,KE,Homa Bay,Homa Bay,Kenya
+GRISA,07,KE,Garissa,Garissa,Kenya
+EBUZF,06,KE,Embu,Embu,Kenya
+ELDOT,44,KE,Eldoret,Uasin Gishu,Kenya
+BUSIA,04,KE,Busia,Busia,Kenya
+BUNOM,03,KE,Bungoma,Bungoma,Kenya
+ARIVE,22,KE,Athi River,Machakos,Kenya
+SIAYA,38,KE,Siaya,Siaya,Kenya
+OKALU,35,KE,Ol Kalou,Nyandarua,Kenya
+UZGEN,GO,KG,Uzgen,Osskaja Oblast,Kyrgyzstan
+OSUZF,GO,KG,Osh,Osskaja Oblast,Kyrgyzstan
+KYZYK,GO,KG,Kyzyl-Kyya,Osskaja Oblast,Kyrgyzstan
+KARAS,GO,KG,Kara Suu,Osskaja Oblast,Kyrgyzstan
+SRIEG,20,KH,Svay Rieng,Svay Rieng,Cambodia
+SIOPH,1,KH,Sisophon,Banteay Meanchey,Cambodia
+PVENG,14,KH,Prey Veng,Prey Veng,Cambodia
+TMENC,13,KH,Tbeng Meanchey,Preah Vihear,Cambodia
+PAOYP,1,KH,Paoy Pet,Banteay Meanchey,Cambodia
+KAMPT,7,KH,Kampot,Kampot,Cambodia
+KAPNC,4,KH,Kampong Chhnang,Kampong Chhnang,Cambodia
+TARAA,G,KI,Tarawa,Gilbert Islands,Kiribati
+MOSAU,A,KM,Moutsamoudou,Anjouan,Comoros
+MRONI,G,KM,Moroni,Grande Comore,Comoros
+BASTE,03,KN,Basseterre,Saint George Basseterre,Saint Kitts and Nevis
+YOANU,05,KP,Yonan-up,Hwanghae-namdo,North Korea
+SOGNI,06,KP,Songnim,Hwanghae-bukto,North Korea
+SINAK,06,KP,Sinmak,Hwanghae-bukto,North Korea
+SARIW,06,KP,Sariwon,Hwanghae-bukto,North Korea
+OGJIN,05,KP,Ongjin,Hwanghae-namdo,North Korea
+KAESG,05,KP,Kaesong,Hwanghae-namdo,North Korea
+HANJU,06,KP,Hwangju-up,Hwanghae-bukto,North Korea
+HKYOR,06,KP,Hukkyo-ri,Hwanghae-bukto,North Korea
+HAEJU,05,KP,Haeju,Hwanghae-namdo,North Korea
+CHAGN,05,KP,Changyon,Hwanghae-namdo,North Korea
+CAERU,05,KP,Chaeryong-up,Hwanghae-namdo,North Korea
+AANGN,05,KP,Ayang-ni,Hwanghae-namdo,North Korea
+ANKZY,06,KP,Anak,Hwanghae-bukto,North Korea
+KANES,04,KP,Kanggye-si,Chagang-do,North Korea
+JASUH,FA,KW,Janub as Surrah,Al Farwaniyah,Kuwait
+FAWIH,FA,KW,Al Farwaniyah,Al Farwaniyah,Kuwait
+SAAAS,MU,KW,Sabah as Salim,Mubarak al Kabir,Kuwait
+UTYBE,ALM,KZ,Ush-Tyube,Almaty Oblysy,Kazakhstan
+TEKLI,ALM,KZ,Tekeli,Almaty Oblysy,Kazakhstan
+TGHAR,ALM,KZ,Talghar,Almaty Oblysy,Kazakhstan
+TALDG,ALM,KZ,Taldyqorgan,Almaty Oblysy,Kazakhstan
+SRKAN,ALM,KZ,Sarkand,Almaty Oblysy,Kazakhstan
+KPSHY,ALM,KZ,Kapshagay,Almaty Oblysy,Kazakhstan
+ZHRKN,ALM,KZ,Zharkent,Almaty Oblysy,Kazakhstan
+ESKFY,ALM,KZ,Esik,Almaty Oblysy,Kazakhstan
+EGTHS,ALM,KZ,Energeticheskiy,Almaty Oblysy,Kazakhstan
+BURNA,ALM,KZ,Burunday,Almaty Oblysy,Kazakhstan
+VENTI,VI,LA,Vientiane,Vientiane,Laos
+XAMNU,HO,LA,Xam Nua,Houaphan,Laos
+PAKXE,CH,LA,Pakxe,Champasak,Laos
+MUANX,OU,LA,Muang Xay,Oudomxai,Laos
+VAING,VI,LA,Vangviang,Vientiane,Laos
+MPKXN,BL,LA,Muang Pakxan,Bolikhamxai,Laos
+TAKHE,KH,LA,Thakhek,Khammouan,Laos
+LPHBN,LP,LA,Louangphabang,Louangphabang,Laos
+BHOUA,BK,LA,Ban Houakhoua,Bokeo,Laos
+ZAHLE,BI,LB,Zahle,Beqaa,Lebanon
+DJOUN,JL,LB,Djounie,Mont-Liban,Lebanon
+JBAIL,JL,LB,Jbail,Mont-Liban,Lebanon
+HBOUC,NA,LB,Habbouch,Nabatiye,Lebanon
+NABET,NA,LB,Nabatiye et Tahta,Nabatiye,Lebanon
+VADUZ,11,LI,Vaduz,Vaduz,Liechtenstein
+VUNIY,4,LK,Vavuniya,Northern Province,Sri Lanka
+VLEIU,4,LK,Valvedditturai,Northern Province,Sri Lanka
+TRCOM,5,LK,Trincomalee,Eastern Province,Sri Lanka
+PINTP,4,LK,Point Pedro,Northern Province,Sri Lanka
+KAMUI,5,LK,Kalmunai,Eastern Province,Sri Lanka
+JAFFN,4,LK,Jaffna,Northern Province,Sri Lanka
+EAURT,5,LK,Eravur Town,Eastern Province,Sri Lanka
+BACLO,5,LK,Batticaloa,Eastern Province,Sri Lanka
+APARA,5,LK,Ampara,Eastern Province,Sri Lanka
+SANVH,5,LK,Shanjeev Home,Eastern Province,Sri Lanka
+ZWEDR,GG,LR,Zwedru,Grand Gedeh,Liberia
+NYEPA,NI,LR,New Yekepa,Nimba,Liberia
+VOIAM,LO,LR,Voinjama,Lofa,Liberia
+MORVA,MO,LR,Monrovia,Montserrado,Liberia
+KAATA,MG,LR,Kakata,Margibi,Liberia
+HARPC,MY,LR,Harper City,Maryland,Liberia
+GREIL,SI,LR,Greenville,Sinoe,Liberia
+GBARN,BG,LR,Gbarnga,Bong,Liberia
+BUHAN,GB,LR,Buchanan,Grand Bassa,Liberia
+BEOVC,MO,LR,Bensonville City,Montserrado,Liberia
+QUTIG,G,LS,Quthing,Quthing,Lesotho
+QSNEK,H,LS,Qacha's Nek,Qacha's Nek,Lesotho
+MAERU,A,LS,Maseru,Maseru,Lesotho
+MAPUT,C,LS,Maputsoe,Leribe,Lesotho
+MAFNG,E,LS,Mafeteng,Mafeteng,Lesotho
+LERIB,C,LS,Leribe,Leribe,Lesotho
+BBTHE,B,LS,Butha-Buthe,Butha-Buthe,Lesotho
+VISGA,UT,LT,Visaginas,Utenos Apskritis,Lithuania
+UTENA,UT,LT,Utena,Utenos Apskritis,Lithuania
+TESIA,TE,LT,Telsiai,Telsiu Apskritis,Lithuania
+TURGE,TA,LT,Taurage,Taurages Apskritis,Lithuania
+SILTE,KL,LT,Silute,Klaipedos Apskritis,Lithuania
+SIULA,SA,LT,Siauliai,Siauliu Apskritis,Lithuania
+ROKSI,33,LT,Rokiskis,Panevezio Apskritis,Lithuania
+RAVIL,SA,LT,Radviliskis,Siauliu Apskritis,Lithuania
+PLUGE,TE,LT,Plunge,Telsiu Apskritis,Lithuania
+PANVE,33,LT,Panevezys,Panevezio Apskritis,Lithuania
+PALNG,KL,LT,Palanga,Klaipedos Apskritis,Lithuania
+MZEIK,TE,LT,Mazeikiai,Telsiu Apskritis,Lithuania
+MARIP,MR,LT,Marijampole,Marijampoles Apskritis,Lithuania
+KRTIA,KL,LT,Kretinga,Klaipedos Apskritis,Lithuania
+KLAED,KL,LT,Klaipeda,Klaipedos Apskritis,Lithuania
+KEAIN,KU,LT,Kedainiai,Kauno Apskritis,Lithuania
+KUNAS,KU,LT,Kaunas,Kauno Apskritis,Lithuania
+JONAV,KU,LT,Jonava,Kauno Apskritis,Lithuania
+GARZD,KL,LT,Gargzdai,Klaipedos Apskritis,Lithuania
+DRSKA,AL,LT,Druskininkai,Alytaus Apskritis,Lithuania
+ALYUS,AL,LT,Alytus,Alytaus Apskritis,Lithuania
+DAINK,KU,LT,Dainava (Kaunas),Kauno Apskritis,Lithuania
+VENSL,VEN,LV,Ventspils,Ventspils,Latvia
+VLIAJ,LPX,LV,Vec-Liepaja,Liepaja,Latvia
+RIGAX,RIX,LV,Riga,Riga,Latvia
+RZEKN,REZ,LV,Rezekne,Rezeknes Novads,Latvia
+LIEAJ,LPX,LV,Liepaja,Liepaja,Latvia
+JURAL,JUR,LV,Jurmala,Jurmala,Latvia
+JELVA,JEL,LV,Jelgava,Jelgavas Novads,Latvia
+DVPLS,DGV,LV,Daugavpils,Daugavpils Novads,Latvia
+SULUQ,BA,LY,Suluq,Banghazi,Libya
+DARNH,DR,LY,Darnah,Darnah,Libya
+BENGH,BA,LY,Benghazi,Banghazi,Libya
+TAVQJ,KF,LY,At Taj,Al Kufrah,Libya
+TURAH,MJ,LY,Tukrah,Al Marj,Libya
+QUBAH,DR,LY,Al Qubbah,Darnah,Libya
+MAJUX,MJ,LY,Al Marj,Al Marj,Libya
+JAFPP,KF,LY,Al Jawf,Al Kufrah,Libya
+ABYAR,MJ,LY,Al Abyar,Al Marj,Libya
+ZUARH,NQ,LY,Zuwarah,An Nuqat al Khams,Libya
+ZLTEN,MI,LY,Zliten,Misratah,Libya
+ZALTN,NQ,LY,Zaltan,An Nuqat al Khams,Libya
+WADDN,JU,LY,Waddan,Al Jufrah,Libya
+TARHU,MB,LY,Tarhuna,Al Marqab,Libya
+SIRTE,SR,LY,Sirte,Surt,Libya
+SUMAN,ZA,LY,Surman,Az Zawiyah,Libya
+SARTH,ZA,LY,Sabratah,Az Zawiyah,Libya
+SABHA,SB,LY,Sabha,Sabha,Libya
+MURZQ,MQ,LY,Murzuq,Murzuq,Libya
+MISRH,MI,LY,Misratah,Misratah,Libya
+MSALT,MB,LY,Masallatah,Al Marqab,Libya
+HUZJY,JU,LY,Hun,Al Jufrah,Libya
+ZAWIY,ZA,LY,Zawiya,Az Zawiyah,Libya
+BWLID,MI,LY,Bani Walid,Misratah,Libya
+AZIYH,ZA,LY,Az Zawiyah,Az Zawiyah,Libya
+KHUMS,MB,LY,Al Khums,Al Marqab,Libya
+JADID,SB,LY,Al Jadid,Sabha,Libya
+YOUSA,10,MA,Youssoufia,Doukkala-Abda,Morocco
+TIRMN,03,MA,Tirhanimine,Taza-Al Hoceima-Taounate,Morocco
+TIFLE,07,MA,Tiflet,Rabat-Sale-Zemmour-Zaer,Morocco
+TEOUA,01,MA,Tetouan,Tanger-Tetouan,Morocco
+TAZYY,03,MA,Taza,Taza-Al Hoceima-Taounate,Morocco
+TUNAE,03,MA,Taounate,Taza-Al Hoceima-Taounate,Morocco
+TANIR,01,MA,Tangier,Tanger-Tetouan,Morocco
+THALA,03,MA,Tahala,Taza-Al Hoceima-Taounate,Morocco
+SOULG,02,MA,Souq Larb'a al Gharb,Gharb-Chrarda-Beni Hssen,Morocco
+SYEGH,02,MA,Sidi Yahia el Gharb,Gharb-Chrarda-Beni Hssen,Morocco
+SSLIN,02,MA,Sidi Slimane,Gharb-Chrarda-Beni Hssen,Morocco
+SQCEM,02,MA,Sidi Qacem,Gharb-Chrarda-Beni Hssen,Morocco
+SIDIB,10,MA,Sidi Bennour,Doukkala-Abda,Morocco
+SETTA,09,MA,Settat,Chaouia-Ouardigha,Morocco
+SEROU,05,MA,Sefrou,Fes-Boulemane,Morocco
+SAEPV,07,MA,Sale,Rabat-Sale-Zemmour-Zaer,Morocco
+SFIPV,10,MA,Safi,Doukkala-Abda,Morocco
+RABAT,07,MA,Rabat,Rabat-Sale-Zemmour-Zaer,Morocco
+OUEDZ,09,MA,Oued Zem,Chaouia-Ouardigha,Morocco
+OZANE,02,MA,Ouazzane,Gharb-Chrarda-Beni Hssen,Morocco
+MOAED,08,MA,Mohammedia,Grand Casablanca,Morocco
+MIDEL,06,MA,Midelt,Meknes-Tafilalet,Morocco
+MKNES,06,MA,Meknes,Meknes-Tafilalet,Morocco
+MECRB,02,MA,Mechra Belqsiri,Gharb-Chrarda-Beni Hssen,Morocco
+MARIL,01,MA,Martil,Tanger-Tetouan,Morocco
+MAKES,11,MA,Marrakesh,Marrakech-Tensift-Al Haouz,Morocco
+LARCH,01,MA,Larache,Tanger-Tetouan,Morocco
+KEKEI,01,MA,Ksar el Kebir,Tanger-Tetouan,Morocco
+KHUGA,09,MA,Khouribga,Chaouia-Ouardigha,Morocco
+KHEIR,06,MA,Khenifra,Meknes-Tafilalet,Morocco
+KENTA,02,MA,Kenitra,Gharb-Chrarda-Beni Hssen,Morocco
+KSBAT,12,MA,Kasba Tadla,Tadla-Azilal,Morocco
+IMORE,03,MA,Imzourene,Taza-Al Hoceima-Taounate,Morocco
+GURCI,03,MA,Guercif,Taza-Al Hoceima-Taounate,Morocco
+FBSAL,12,MA,Fkih Ben Salah,Tadla-Azilal,Morocco
+FEPUX,05,MA,Fes,Fes-Boulemane,Morocco
+ESAOR,11,MA,Essaouira,Marrakech-Tensift-Al Haouz,Morocco
+EJIDA,10,MA,El Jadida,Doukkala-Abda,Morocco
+EHAJB,06,MA,El Hajeb,Meknes-Tafilalet,Morocco
+CHAON,01,MA,Chefchaouene,Tanger-Tetouan,Morocco
+CASLN,08,MA,Casablanca,Grand Casablanca,Morocco
+BOZIK,09,MA,Bouznika,Chaouia-Ouardigha,Morocco
+BMELA,12,MA,Beni Mellal,Tadla-Azilal,Morocco
+BECHD,09,MA,Berrechid,Chaouia-Ouardigha,Morocco
+AZROU,06,MA,Azrou,Meknes-Tafilalet,Morocco
+AZEMR,10,MA,Azemmour,Doukkala-Abda,Morocco
+ASILH,01,MA,Asilah,Tanger-Tetouan,Morocco
+KHEMS,07,MA,Khemisset,Rabat-Sale-Zemmour-Zaer,Morocco
+HOCEA,03,MA,Al Hoceima,Taza-Al Hoceima-Taounate,Morocco
+SKHIR,07,MA,Skhirat,Rabat-Sale-Zemmour-Zaer,Morocco
+BOUJI,09,MA,Boujniba,Chaouia-Ouardigha,Morocco
+UGHEN,UN,MD,Ungheni,Ungheni,Moldova
+STRAN,ST,MD,Straseni,Straseni,Moldova
+BLINV,SI,MD,Bilicenii Vechi,Singerei,Moldova
+ORHEI,OR,MD,Orhei,Orhei,Moldova
+HIEST,HI,MD,Hincesti,Hincesti,Moldova
+CASEN,CS,MD,Causeni,Causeni,Moldova
+FLORI,FL,MD,Floresti,Floresti,Moldova
+DRCHI,DR,MD,Drochia,Drochia,Moldova
+CHSIU,CU,MD,Chisinau,Chisinau,Moldova
+CAHUL,CA,MD,Cahul,Cahul,Moldova
+BALTI,BA,MD,Balti,Balti,Moldova
+PDGRC,16,ME,Podgorica,Podgorica,Montenegro
+PLEVA,14,ME,Pljevlja,Pljevlja,Montenegro
+HNOVI,08,ME,Herceg-Novi,Herceg Novi,Montenegro
+CTNJE,06,ME,Cetinje,Cetinje,Montenegro
+BUDVA,05,ME,Budva,Budva,Montenegro
+BILOP,04,ME,Bijelo Polje,Bijelo Polje,Montenegro
+BRZQP,02,ME,Bar,Bar,Montenegro
+ZHELN,30,MK,Zhelino,Zelino,Macedonia
+VNICA,14,MK,Vinica,Vinica,Macedonia
+VELES,13,MK,Veles,Veles,Macedonia
+TETVO,76,MK,Tetovo,Tetovo,Macedonia
+TARCE,75,MK,Tearce,Tearce,Macedonia
+SDCHN,74,MK,Studenichani,Studenicani,Macedonia
+STMIC,73,MK,Strumica,Strumica,Macedonia
+SRUGA,72,MK,Struga,Struga,Macedonia
+SHTIP,83,MK,Shtip,Stip,Macedonia
+SKOPJ,38,MK,Skopje,Karpos,Macedonia
+SARAJ,68,MK,Saraj,Saraj,Macedonia
+RESEN,66,MK,Resen,Resen,Macedonia
+RAOVH,64,MK,Radovish,Radovis,Macedonia
+PRILE,62,MK,Prilep,Prilep,Macedonia
+OHRID,58,MK,Ohrid,Ohrid,Macedonia
+NEGOI,16,MK,Negotino,Vrapciste,Macedonia
+NGOTI,54,MK,Negotino,Negotino,Macedonia
+KUMNV,47,MK,Kumanovo,Kumanovo,Macedonia
+KPLNA,44,MK,Kriva Palanka,Kriva Palanka,Macedonia
+KOCHN,42,MK,Kochani,Kocani,Macedonia
+KICEV,40,MK,Kicevo,Kicevo,Macedonia
+KVADR,36,MK,Kavadarci,Kavadarci,Macedonia
+KMEJA,06,MK,Kamenjane,Bogovinje,Macedonia
+GOSVR,19,MK,Gostivar,Gostivar,Macedonia
+GEVIJ,18,MK,Gevgelija,Gevgelija,Macedonia
+DLCEV,23,MK,Delcevo,Delcevo,Macedonia
+DEBAR,21,MK,Debar,Debar,Macedonia
+BRNIC,08,MK,Brvenica,Brvenica,Macedonia
+BOGIJ,06,MK,Bogovinje,Bogovinje,Macedonia
+BITOA,04,MK,Bitola,Bitola,Macedonia
+SORZE,84,MK,Suto Orizare,Suto Orizari,Macedonia
+BUTEL,09,MK,Butel,Butel,Macedonia
+CARZP,79,MK,Cair,Cair,Macedonia
+ILDEN,34,MK,Ilinden,Ilinden,Macedonia
+KISAV,39,MK,Kisela Voda,Kisela Voda,Macedonia
+CENAZ,78,MK,Centar Zupa,Centar Zupa,Macedonia
+YORSS,3,ML,Yorosso,Sikasso,Mali
+TIMBU,6,ML,Timbuktu,Tombouctou,Mali
+SIKAO,3,ML,Sikasso,Sikasso,Mali
+SEGOU,4,ML,Segou,Segou,Mali
+SAUWY,4,ML,San,Segou,Mali
+SGALO,1,ML,Sagalo,Kayes,Mali
+MOPTI,5,ML,Mopti,Mopti,Mali
+MRKAL,4,ML,Markala,Segou,Mali
+KOULA,3,ML,Koutiala,Sikasso,Mali
+KULIO,2,ML,Koulikoro,Koulikoro,Mali
+KLOAI,2,ML,Kolokani,Koulikoro,Mali
+KAYES,1,ML,Kayes,Kayes,Mali
+KTIAY,2,ML,Kati,Koulikoro,Mali
+KANGB,2,ML,Kangaba,Koulikoro,Mali
+GOQZY,7,ML,Gao,Gao,Mali
+DJENE,5,ML,Djenne,Mopti,Mali
+BOGUN,3,ML,Bougouni,Sikasso,Mali
+BANBA,2,ML,Banamba,Koulikoro,Mali
+BMAKO,BKO,ML,Bamako,Bamako,Mali
+BAULE,1,ML,Bafoulabe,Kayes,Mali
+YENUG,03,MM,Yenangyaung,Magway,Myanmar
+YAMHN,04,MM,Yamethin,Mandalay,Myanmar
+TWANE,06,MM,Twante,Yangon,Myanmar
+TAUNO,02,MM,Taungoo,Bago,Myanmar
+THONG,06,MM,Thongwa,Yangon,Myanmar
+THYMO,03,MM,Thayetmyo,Magway,Myanmar
+THAON,15,MM,Thaton,Mon,Myanmar
+THRYA,02,MM,Tharyarwady,Bago,Myanmar
+THAIN,02,MM,Thanatpin,Bago,Myanmar
+TAUGI,17,MM,Taunggyi,Shan,Myanmar
+TAUDY,03,MM,Taungdwingyi,Magway,Myanmar
+SYRAM,06,MM,Syriam,Yangon,Myanmar
+SITWE,16,MM,Sittwe,Rakhine,Myanmar
+YAGON,06,MM,Yangon,Yangon,Myanmar
+PYVUA,02,MM,Pyu,Bago,Myanmar
+PYIMN,04,MM,Pyinmana,Mandalay,Myanmar
+PYAVX,02,MM,Pyay,Bago,Myanmar
+BAOYW,02,MM,Bago,Bago,Myanmar
+PAUND,02,MM,Paungde,Bago,Myanmar
+PAKOU,03,MM,Pakokku,Magway,Myanmar
+HPAAN,13,MM,Hpa-an,Kayin,Myanmar
+NYAEI,02,MM,Nyaunglebin,Bago,Myanmar
+MYIKA,11,MM,Myitkyina,Kachin,Myanmar
+MYNGA,04,MM,Myingyan,Mandalay,Myanmar
+MUDON,15,MM,Mudon,Mon,Myanmar
+MAYIN,15,MM,Mawlamyine,Mon,Myanmar
+MOGOK,04,MM,Mogok,Mandalay,Myanmar
+MINBU,03,MM,Minbu,Magway,Myanmar
+MEKTI,04,MM,Meiktila,Mandalay,Myanmar
+POLWI,04,MM,Pyin Oo Lwin,Mandalay,Myanmar
+MARTB,15,MM,Martaban,Mon,Myanmar
+MADLY,04,MM,Mandalay,Mandalay,Myanmar
+MGWAY,03,MM,Magway,Magway,Myanmar
+LOIKW,12,MM,Loikaw,Kayah,Myanmar
+LETND,02,MM,Letpandan,Bago,Myanmar
+LAHIO,17,MM,Lashio,Shan,Myanmar
+KYAUE,04,MM,Kyaukse,Mandalay,Myanmar
+KAITO,15,MM,Kyaikto,Mon,Myanmar
+KYAIM,15,MM,Kyaikkami,Mon,Myanmar
+KAYAN,06,MM,Kayan,Yangon,Myanmar
+KANBE,06,MM,Kanbe,Yangon,Myanmar
+HAKHA,14,MM,Hakha,Chin,Myanmar
+CHAUK,03,MM,Chauk,Magway,Myanmar
+BHAMO,11,MM,Bhamo,Kachin,Myanmar
+MYADO,03,MM,Myaydo,Magway,Myanmar
+NPYIT,04,MM,Nay Pyi Taw,Mandalay,Myanmar
+ULAOM,046,MN,Ulaangom,Uvs,Mongolia
+OLGIY,071,MN,OElgiy,Bayan-Olgiy,Mongolia
+KHOVD,043,MN,Khovd,Hovd,Mongolia
+ALTAI,065,MN,Altai,Govi-Altay,Mongolia
+ULANR,1,MN,Ulaanbaatar,Ulaanbaatar,Mongolia
+SHBTR,049,MN,Suhbaatar,Selenge,Mongolia
+MURNK,041,MN,Murun-kuren,Hovsgol,Mongolia
+ERDNT,035,MN,Erdenet,Orhon,Mongolia
+DZURA,049,MN,Dzuunharaa,Selenge,Mongolia
+DRHAN,037,MN,Darhan,Darhan Uul,Mongolia
+BULAN,067,MN,Bulgan,Bulgan,Mongolia
+BAYGR,069,MN,Bayanhongor,Bayanhongor,Mongolia
+BARNU,051,MN,Baruun-Urt,Suhbaatar,Mongolia
+ZOURT,11,MR,Zouerat,Tiris Zemmour,Mauritania
+TKANE,06,MR,Tekane,Trarza,Mauritania
+SEIBA,10,MR,Selibabi,Guidimaka,Mauritania
+ROSSO,06,MR,Rosso,Trarza,Mauritania
+NUAKT,NKC,MR,Nouakchott,Nouakchott,Mauritania
+NOAIB,08,MR,Nouadhibou,Dakhlet Nouadhibou,Mauritania
+NEAVF,01,MR,Nema,Hodh ech Chargui,Mauritania
+KIFFA,03,MR,Kiffa,Assaba,Mauritania
+KAEDI,04,MR,Kaedi,Gorgol,Mauritania
+ATRXW,07,MR,Atar,Adrar,Mauritania
+ALEPX,05,MR,Aleg,Brakna,Mauritania
+QORMI,43,MT,Qormi,Qormi,Malta
+BIRKA,04,MT,Birkirkara,Birkirkara,Malta
+VACOS,PW,MU,Vacoas,Plaines Wilhems,Mauritius
+TRILE,PA,MU,Triolet,Pamplemousses,Mauritius
+SINTP,MO,MU,Saint Pierre,Moka,Mauritius
+QATRB,PW,MU,Quatre Bornes,Plaines Wilhems,Mauritius
+PLOUS,PL,MU,Port Louis,Port Louis,Mauritius
+MAEBG,GP,MU,Mahebourg,Grand Port,Mauritius
+GOLAS,RR,MU,Goodlands,Riviere du Rempart,Mauritius
+CUREP,PW,MU,Curepipe,Plaines Wilhems,Mauritius
+CNREF,FL,MU,Centre de Flacq,Flacq,Mauritius
+BARSH,FL,MU,Bel Air Riviere Seche,Flacq,Mauritius
+LHCET,PA,MU,Le Hochet,Pamplemousses,Mauritius
+KAONG,N,MW,Karonga,Northern Region,Malawi
+ZOMBA,S,MW,Zomba,Southern Region,Malawi
+SALIM,C,MW,Salima,Central Region,Malawi
+RUMPH,N,MW,Rumphi,Northern Region,Malawi
+NSAJE,S,MW,Nsanje,Southern Region,Malawi
+NHOTA,C,MW,Nkhotakota,Central Region,Malawi
+MZUZU,N,MW,Mzuzu,Northern Region,Malawi
+MZIBA,N,MW,Mzimba,Northern Region,Malawi
+MULAN,S,MW,Mulanje,Southern Region,Malawi
+MCHIJ,C,MW,Mchinji,Central Region,Malawi
+MANOI,S,MW,Mangochi,Southern Region,Malawi
+LIWNE,S,MW,Liwonde,Southern Region,Malawi
+LIOGE,C,MW,Lilongwe,Central Region,Malawi
+KASUG,C,MW,Kasungu,Central Region,Malawi
+DEDZA,C,MW,Dedza,Central Region,Malawi
+BLTYR,S,MW,Blantyre,Southern Region,Malawi
+BLAKA,S,MW,Balaka,Southern Region,Malawi
+GUAOM,TAM,MX,Gustavo A. Madero,Tamaulipas,Mexico
+SFERN,TAM,MX,San Fernando,Tamaulipas,Mexico
+ZUMPO,MEX,MX,Zumpango,Mexico,Mexico
+ZPNDR,GRO,MX,Zumpango del Rio,Guerrero,Mexico
+ZCLPN,HID,MX,Zacualtipan,Hidalgo,Mexico
+ZCATL,PUE,MX,Zacatlan,Puebla,Mexico
+ZATEC,MOR,MX,Zacatepec,Morelos,Mexico
+YEIXA,MOR,MX,Yecapixtla,Morelos,Mexico
+YAUPE,MOR,MX,Yautepec,Morelos,Mexico
+XCOTL,MOR,MX,Xoxocotla,Morelos,Mexico
+XONAT,MOR,MX,Xonacatlan,Morelos,Mexico
+XOHEP,MOR,MX,Xochitepec,Morelos,Mexico
+XICPJ,PUE,MX,Xicotepec de Juarez,Puebla,Mexico
+XICJA,VER,MX,Xico,Veracruz,Mexico
+SMUXV,MEX,MX,San Miguel Xico Viejo,Mexico,Mexico
+VILOS,TAB,MX,Villahermosa,Tabasco,Mexico
+VCUTO,MEX,MX,Villa Cuauhtemoc Otzolotepec,Mexico,Mexico
+VERCZ,VER,MX,Veracruz,Veracruz,Mexico
+VENIC,CHP,MX,Venustiano Carranza,Chiapas,Mexico
+VHRMS,TAM,MX,Valle Hermoso,Tamaulipas,Mexico
+VADLI,YUC,MX,Valladolid,Yucatan,Mexico
+UMNUW,YUC,MX,Uman,Yucatan,Mexico
+TUXLG,CHP,MX,Tuxtla Gutierrez,Chiapas,Mexico
+TUNRC,VER,MX,Tuxpan,Veracruz,Mexico
+TUILA,MEX,MX,Tultitlan,Mexico,Mexico
+TUPEC,MEX,MX,Tultepec,Mexico,Mexico
+TUACO,HID,MX,Tulancingo,Hidalgo,Mexico
+TULAA,HID,MX,Tula de Allende,Hidalgo,Mexico
+TOLCA,MEX,MX,Toluca,Mexico,Mexico
+TLZAG,PUE,MX,Tlazcalancingo,Puebla,Mexico
+TLQUA,MOR,MX,Tlaquiltenango,Morelos,Mexico
+TCOMR,GRO,MX,Tlapa de Comonfort,Guerrero,Mexico
+TLPCN,VER,MX,Tlapacoyan,Veracruz,Mexico
+TLAEP,MEX,MX,Tlalnepantla,Mexico,Mexico
+SVCLN,MEX,MX,San Vicente Chicoloapan,Mexico,Mexico
+CHENI,YUC,MX,Chichen-Itza,Yucatan,Mexico
+CHILA,MEX,MX,Chiautla,Mexico,Mexico
+CHAPC,CHP,MX,Chiapa de Corzo,Chiapas,Mexico
+CHEML,ROO,MX,Chetumal,Quintana Roo,Mexico
+CHAMP,CAM,MX,Champoton,Campeche,Mexico
+CACDC,MEX,MX,Chalco de Diaz Covarrubias,Mexico,Mexico
+CAZUL,VER,MX,Cerro Azul,Veracruz,Mexico
+CATMO,VER,MX,Catemaco,Veracruz,Mexico
+CCARR,VER,MX,Carlos A. Carrillo,Veracruz,Mexico
+CARES,SLP,MX,Cardenas,San Luis Potosi,Mexico
+CAENS,TAB,MX,Cardenas,Tabasco,Mexico
+CAPHU,MOR,MX,Capulhuac,Morelos,Mexico
+CACUN,ROO,MX,Cancun,Quintana Roo,Mexico
+CMPHE,CAM,MX,Campeche,Campeche,Mexico
+CALPN,HID,MX,Calpulalpan,Hidalgo,Mexico
+CARYT,NLE,MX,Cadereyta Jimenez,Nuevo Leon,Mexico
+BEIOZ,CHP,MX,Berriozabal,Chiapas,Mexico
+BADEL,VER,MX,Banderilla,Veracruz,Mexico
+ACHPN,MOR,MX,Axochiapan,Morelos,Mexico
+ATLIO,PUE,MX,Atlixco,Puebla,Mexico
+ATCOM,MEX,MX,Atlacomulco,Mexico,Mexico
+CUALM,MEX,MX,Ciudad Lopez Mateos,Mexico,Mexico
+APICO,TLA,MX,Apizaco,Tlaxcala,Mexico
+AANAW,HID,MX,Apan,Hidalgo,Mexico
+AOZCM,PUE,MX,Amozoc de Mota,Puebla,Mexico
+ACMEJ,MEX,MX,Amecameca de Juarez,Mexico,Mexico
+HEOIA,VER,MX,Heroica Alvarado,Veracruz,Mexico
+ALTOG,VER,MX,Altotonga,Veracruz,Mexico
+ALTXI,PUE,MX,Altepexi,Puebla,Mexico
+ALTIR,TAM,MX,Altamira,Tamaulipas,Mexico
+ALNDE,VER,MX,Allende,Veracruz,Mexico
+ALAMO,VER,MX,Alamo,Veracruz,Mexico
+AJLPN,PUE,MX,Ajalpan,Puebla,Mexico
+ACTON,HID,MX,Actopan,Hidalgo,Mexico
+AYUCN,VER,MX,Acayucan,Veracruz,Mexico
+ACTGH,PUE,MX,Acatzingo de Hidalgo,Puebla,Mexico
+ACTNO,PUE,MX,Acatlan,Puebla,Mexico
+ACLOJ,GRO,MX,Acapulco de Juarez,Guerrero,Mexico
+ACJET,PUE,MX,Acajete,Puebla,Mexico
+SNALC,OAX,MX,San Antonio de la Cal,Oaxaca,Mexico
+HIDLO,NLE,MX,Hidalgo,Nuevo Leon,Mexico
+RTEPA,TAB,MX,Rio de Teapa,Tabasco,Mexico
+HUANL,TLA,MX,Huamantla,Tlaxcala,Mexico
+ZATCO,TLA,MX,Zacatelco,Tlaxcala,Mexico
+TCLAX,TLA,MX,Tlaxcala,Tlaxcala,Mexico
+PALOT,TLA,MX,Papalotla de Xicohtencatl,Tlaxcala,Mexico
+VITEG,TLA,MX,Villa Vicente Guerrero,Tlaxcala,Mexico
+TONLA,CHP,MX,Tonala,Chiapas,Mexico
+ARRAA,CHP,MX,Arriaga,Chiapas,Mexico
+SANAC,PUE,MX,San Andres Cholula,Puebla,Mexico
+ALUCR,VER,MX,Alto Lucero de Gutierrez Barrios,Veracruz,Mexico
+SMOCP,MOR,MX,San Mateo Otzacatipan,Morelos,Mexico
+SMAIT,MEX,MX,Santa Maria Totoltepec,Mexico,Mexico
+HUQIN,MEX,MX,Huixquilucan,Mexico,Mexico
+MCHRO,MEX,MX,Melchor Ocampo,Mexico,Mexico
+HUILO,MEX,MX,Huilango,Mexico,Mexico
+STHLC,MEX,MX,Santiago Teyahualco,Mexico,Mexico
+OAGUA,MEX,MX,Ojo de Agua,Mexico,Mexico
+BUNAS,MEX,MX,Buenavista,Mexico,Mexico
+MALDC,SON,MX,Miguel Aleman,Sonora,Mexico
+LYVAS,SIN,MX,Leyva Solano,Sinaloa,Mexico
+CIHTN,JAL,MX,Cihuatlan,Jalisco,Mexico
+GUDEV,BCN,MX,Guadalupe Victoria,Baja California,Mexico
+ITAPZ,GRO,MX,Ixtapa-Zihuatanejo,Guerrero,Mexico
+ZAPEJ,JAL,MX,Zapotlanejo,Jalisco,Mexico
+ZAPOC,JAL,MX,Zapotiltic,Jalisco,Mexico
+ZAPON,JAL,MX,Zapopan,Jalisco,Mexico
+ZAMOR,MIC,MX,Zamora,Michoacan,Mexico
+ZAOCT,JAL,MX,Zacoalco de Torres,Jalisco,Mexico
+ZATEC,ZAC,MX,Zacatecas,Zacatecas,Mexico
+ZCAPU,MIC,MX,Zacapu,Michoacan,Mexico
+YUIRA,GUA,MX,Yuriria,Guanajuato,Mexico
+YUCRO,MIC,MX,Yurecuaro,Michoacan,Mexico
+VILAR,GUA,MX,Villagran,Guanajuato,Mexico
+CIUDF,COA,MX,Ciudad Frontera,Coahuila,Mexico
+GARCI,NLE,MX,Garcia,Nuevo Leon,Mexico
+CVARZ,COL,MX,Ciudad de Villa de Alvarez,Colima,Mexico
+VSANG,GUA,MX,Valle de Santiago,Guanajuato,Mexico
+VBRAO,MEX,MX,Valle de Bravo,Mexico,Mexico
+URPAN,MIC,MX,Uruapan,Michoacan,Mexico
+URNAT,GUA,MX,Uriangato,Guanajuato,Mexico
+TUXAN,JAL,MX,Tuxpan,Jalisco,Mexico
+TOREN,COA,MX,Torreon,Coahuila,Mexico
+TONAL,JAL,MX,Tonala,Jalisco,Mexico
+TLQAE,JAL,MX,Tlaquepaque,Jalisco,Mexico
+TLMUZ,JAL,MX,Tlajomulco de Zuniga,Jalisco,Mexico
+TIUNA,BCN,MX,Tijuana,Baja California,Mexico
+TSIAN,JAL,MX,Tesistan,Jalisco,Mexico
+TEUIL,JAL,MX,Tequila,Jalisco,Mexico
+TEPIC,NAY,MX,Tepic,Nayarit,Mexico
+TELAM,JAL,MX,Tepatitlan de Morelos,Jalisco,Mexico
+TECAP,MIC,MX,Tepalcatepec,Michoacan,Mexico
+TOCAI,JAL,MX,Teocaltiche,Jalisco,Mexico
+TEUCH,MEX,MX,Tejupilco de Hidalgo,Mexico,Mexico
+TECOM,COL,MX,Tecoman,Colima,Mexico
+TECAE,BCN,MX,Tecate,Baja California,Mexico
+TNICA,MEX,MX,Tangancicuaro de Arista,Mexico,Mexico
+TZULG,JAL,MX,Tamazula de Gordiano,Jalisco,Mexico
+TALVA,JAL,MX,Tala,Jalisco,Mexico
+TABOC,MIC,MX,Tacambaro de Codallos,Michoacan,Mexico
+ROSAT,BCN,MX,Rosarito,Baja California,Mexico
+ROMIT,GUA,MX,Romita,Guanajuato,Mexico
+RGANE,ZAC,MX,Rio Grande,Zacatecas,Mexico
+RIONR,AGU,MX,Rincon de Romos,Aguascalientes,Mexico
+RAIPE,COA,MX,Ramos Arizpe,Coahuila,Mexico
+SANOQ,QUE,MX,Santiago de Queretaro,Queretaro,Mexico
+PUNDR,MEX,MX,Puruandiro,Mexico,Mexico
+PUETV,JAL,MX,Puerto Vallarta,Jalisco,Mexico
+PUERP,SON,MX,Puerto Penasco,Sonora,Mexico
+PIRAN,COA,MX,Piedras Negras,Coahuila,Mexico
+PETLN,GRO,MX,Petatlan,Guerrero,Mexico
+PENJA,GUA,MX,Penjamo,Guanajuato,Mexico
+PATUO,MIC,MX,Patzcuaro,Michoacan,Mexico
+PLFUE,COA,MX,Parras de la Fuente,Coahuila,Mexico
+PACHV,MIC,MX,Paracho de Verduzco,Michoacan,Mexico
+PALAU,COA,MX,Palau,Coahuila,Mexico
+OJING,CHH,MX,Ojinaga,Chihuahua,Mexico
+OCLAN,JAL,MX,Ocotlan,Jalisco,Mexico
+NUEVM,JAL,MX,Nuevo Mexico,Jalisco,Mexico
+VROSL,ZAC,MX,Victor Rosales,Zacatecas,Mexico
+AUTLN,JAL,MX,Autlan de Navarro,Jalisco,Mexico
+ATOYA,GRO,MX,Atoyac de Alvarez,Guerrero,Mexico
+ATNEA,JAL,MX,Atotonilco el Alto,Jalisco,Mexico
+ARMEI,COL,MX,Armeria,Colima,Mexico
+ARCEI,GRO,MX,Arcelia,Guerrero,Mexico
+ARNDS,JAL,MX,Arandas,Jalisco,Mexico
+APODC,NLE,MX,Ciudad Apodaca,Nuevo Leon,Mexico
+APZNG,MIC,MX,Apatzingan,Michoacan,Mexico
+AEGRN,GUA,MX,Apaseo el Grande,Guanajuato,Mexico
+APEEA,GUA,MX,Apaseo el Alto,Guanajuato,Mexico
+AMECA,JAL,MX,Ameca,Jalisco,Mexico
+ALEND,COA,MX,Allende,Coahuila,Mexico
+ALEND,NLE,MX,Allende,Nuevo Leon,Mexico
+AGSET,AGU,MX,Aguascalientes,Aguascalientes,Mexico
+APRET,SON,MX,Agua Prieta,Sonora,Mexico
+ACPET,NAY,MX,Acaponeta,Nayarit,Mexico
+ACMBO,GUA,MX,Acambaro,Guanajuato,Mexico
+ABSOL,GUA,MX,Abasolo,Guanajuato,Mexico
+ANHUC,NLE,MX,Anahuac,Nuevo Leon,Mexico
+DHCLI,GUA,MX,Dolores Hidalgo Cuna de la Independencia Nacional,Guanajuato,Mexico
+GUCYS,MIC,MX,Guacamayas,Michoacan,Mexico
+CIALC,MIC,MX,Ciudad Lazaro Cardenas,Michoacan,Mexico
+CLINS,MEX,MX,Colonia Lindavista,Mexico,Mexico
+SNPGG,NLE,MX,San Pedro Garza Garcia,Nuevo Leon,Mexico
+KUHWW,02,MY,Kuah,Kedah,Malaysia
+JERUT,06,MY,Jerantut,Pahang,Malaysia
+RAUVP,06,MY,Raub,Pahang,Malaysia
+BATUP,01,MY,Batu Pahat,Johor,Malaysia
+PRAJA,01,MY,Parit Raja,Johor,Malaysia
+PNEAS,01,MY,Pekan Nenas,Johor,Malaysia
+POINK,01,MY,Pontian Kechil,Johor,Malaysia
+KPSGB,01,MY,Pasir Gudang,Johor,Malaysia
+KTNGI,01,MY,Kota Tinggi,Johor,Malaysia
+TAMNS,01,MY,Taman Senai,Johor,Malaysia
+KULAI,01,MY,Kulai,Johor,Malaysia
+SKUDI,01,MY,Skudai,Johor,Malaysia
+JBAHR,01,MY,Johor Bahru,Johor,Malaysia
+KUANG,01,MY,Kluang,Johor,Malaysia
+YONGP,01,MY,Yong Peng,Johor,Malaysia
+MERNG,01,MY,Mersing,Johor,Malaysia
+GORET,07,MY,Georgetown,Pulau Pinang,Malaysia
+SERND,10,MY,Serendah,Selangor,Malaysia
+RWANG,10,MY,Rawang,Selangor,Malaysia
+PETLJ,10,MY,Petaling Jaya,Selangor,Malaysia
+SBERN,10,MY,Sabak Bernam,Selangor,Malaysia
+SUNAB,10,MY,Sungai Besar,Selangor,Malaysia
+KUNTA,06,MY,Kuantan,Pahang,Malaysia
+BGAJH,08,MY,Batu Gajah,Perak,Malaysia
+KMPAR,08,MY,Kampar,Perak,Malaysia
+TAPHR,08,MY,Tapah Road,Perak,Malaysia
+BIDUR,08,MY,Bidur,Perak,Malaysia
+LUMUT,08,MY,Lumut,Perak,Malaysia
+TELUI,08,MY,Teluk Intan,Perak,Malaysia
+GURUN,02,MY,Gurun,Kedah,Malaysia
+SUNGP,02,MY,Sungai Petani,Kedah,Malaysia
+KBTAS,07,MY,Kepala Batas,Pulau Pinang,Malaysia
+TMRAH,03,MY,Tanah Merah,Kelantan,Malaysia
+KUCIG,13,MY,Kuching,Sarawak,Malaysia
+SIMNA,13,MY,Simanggang,Sarawak,Malaysia
+SAKEI,13,MY,Sarikei,Sarawak,Malaysia
+SIBZU,13,MY,Sibu,Sarawak,Malaysia
+KNGAR,09,MY,Kangar,Perlis,Malaysia
+JITRA,02,MY,Jitra,Kedah,Malaysia
+KUAAK,02,MY,Kuala Kedah,Kedah,Malaysia
+ALORS,02,MY,Alor Setar,Kedah,Malaysia
+PAIRM,03,MY,Pasir Mas,Kelantan,Malaysia
+KBHRU,03,MY,Kota Bharu,Kelantan,Malaysia
+KUDAT,12,MY,Kudat,Sabah,Malaysia
+KAPIT,13,MY,Kapit,Sarawak,Malaysia
+BINTL,13,MY,Bintulu,Sarawak,Malaysia
+LIMBN,13,MY,Limbang,Sarawak,Malaysia
+MIRQA,13,MY,Miri,Sarawak,Malaysia
+UTIRM,01,MY,Ulu Tiram,Johor,Malaysia
+TANJT,07,MY,Tanjung Tokong,Pulau Pinang,Malaysia
+TANUS,10,MY,Tanjung Sepat,Selangor,Malaysia
+PERGK,07,MY,Permatang Kuching,Pulau Pinang,Malaysia
+PERIA,03,MY,Peringat,Kelantan,Malaysia
+LDASK,10,MY,Ladang Seri Kundang,Selangor,Malaysia
+PATIR,08,MY,Pantai Remis,Perak,Malaysia
+KUANG,10,MY,Kuang,Selangor,Malaysia
+KLANB,04,MY,Klebang Besar,Melaka,Malaysia
+KMGTK,10,MY,Kampung Tanjung Karang,Selangor,Malaysia
+KMNSA,07,MY,Kampung Sungai Ara,Pulau Pinang,Malaysia
+KAMSR,01,MY,Kampung Simpang Renggam,Johor,Malaysia
+KPOPK,03,MY,Kampong Pangkal Kalong,Kelantan,Malaysia
+KMSJT,04,MY,Kampong Masjid Tanah,Melaka,Malaysia
+KAPOK,03,MY,Kampong Kadok,Kelantan,Malaysia
+KAPGD,08,MY,Kampong Dungun,Perak,Malaysia
+KAUBB,04,MY,Kampung Bukit Baharu,Melaka,Malaysia
+KMUBS,10,MY,Kampung Baru Subang,Selangor,Malaysia
+KPGBN,05,MY,Kampung Baharu Nilai,Negeri Sembilan,Malaysia
+KPOBB,10,MY,Balakong,Selangor,Malaysia
+KPUAM,04,MY,Kampung Ayer Molek,Melaka,Malaysia
+BUKIR,04,MY,Bukit Rambai,Melaka,Malaysia
+BENOT,06,MY,Bentong Town,Pahang,Malaysia
+BBERN,04,MY,Batu Berendam,Melaka,Malaysia
+BDARL,12,MY,Bandar Labuan,Sabah,Malaysia
+SUBGJ,10,MY,Subang Jaya,Selangor,Malaysia
+XAIXA,G,MZ,Xai-Xai,Gaza,Mozambique
+DONDO,S,MZ,Dondo,Sofala,Mozambique
+MACIA,G,MZ,Macia,Gaza,Mozambique
+TETQA,T,MZ,Tete,Tete,Mozambique
+REANG,L,MZ,Ressano Garcia,Maputo,Mozambique
+QULNE,Q,MZ,Quelimane,Zambezia,Mozambique
+PEMBA,P,MZ,Pemba,Cabo Delgado,Mozambique
+NAPUL,N,MZ,Nampula,Nampula,Mozambique
+NAALA,N,MZ,Nacala,Nampula,Mozambique
+MOTPU,P,MZ,Montepuez,Cabo Delgado,Mozambique
+MOCBA,P,MZ,Mocimboa,Cabo Delgado,Mozambique
+IMOAE,N,MZ,Ilha de Mocambique,Nampula,Mozambique
+MAXIE,I,MZ,Maxixe,Inhambane,Mozambique
+MTOLA,L,MZ,Matola,Maputo,Mozambique
+MAJCE,G,MZ,Manjacaze,Gaza,Mozambique
+LICNA,A,MZ,Lichinga,Niassa,Mozambique
+INAMB,I,MZ,Inhambane,Inhambane,Mozambique
+CUMBA,A,MZ,Cuamba,Niassa,Mozambique
+CHKWE,G,MZ,Chokwe,Gaza,Mozambique
+CHMIO,B,MZ,Chimoio,Manica,Mozambique
+CHITO,G,MZ,Chibuto,Gaza,Mozambique
+BEIRA,S,MZ,Beira,Sofala,Mozambique
+ATONE,N,MZ,Antonio Enes,Nampula,Mozambique
+MUTAL,N,MZ,Mutuali,Nampula,Mozambique
+KMULI,CA,NA,Katima Mulilo,Zambezi,Namibia
+WIDEK,KH,NA,Windhoek,Khomas,Namibia
+SWAKM,ER,NA,Swakopmund,Erongo,Namibia
+RUNDU,KE,NA,Rundu,Kavango East,Namibia
+REOBT,HA,NA,Rehoboth,Hardap,Namibia
+OTIWR,OD,NA,Otjiwarongo,Otjozondjupa,Namibia
+OSHKT,ON,NA,Oshakati,Oshana,Namibia
+OKAHJ,OD,NA,Okahandja,Otjozondjupa,Namibia
+LUEIT,KA,NA,Luderitz,Karas,Namibia
+KMNHP,KA,NA,Keetmanshoop,Karas,Namibia
+GRFTE,OD,NA,Grootfontein,Otjozondjupa,Namibia
+GOABI,OH,NA,Gobabis,Omaheke,Namibia
+WALSB,ER,NA,Walvis Bay,Erongo,Namibia
+BIRNK,5,NE,Birni N Konni,Tahoua,Niger
+ZINDE,7,NE,Zinder,Zinder,Niger
+TILBR,6,NE,Tillaberi,Tillaberi,Niger
+TIBIR,4,NE,Tibiri,Maradi,Niger
+TESUA,4,NE,Tessaoua,Maradi,Niger
+TRAWF,6,NE,Tera,Tillaberi,Niger
+TANOU,7,NE,Tanout,Zinder,Niger
+THOUA,5,NE,Tahoua,Tahoua,Niger
+NIMEY,8,NE,Niamey,Niamey,Niger
+NUIGM,2,NE,Nguigmi,Diffa,Niger
+MIRAH,7,NE,Mirriah,Zinder,Niger
+MYAHI,4,NE,Mayahi,Maradi,Niger
+MATEY,7,NE,Matamey,Zinder,Niger
+MARDI,4,NE,Maradi,Maradi,Niger
+MGRIA,7,NE,Magaria,Zinder,Niger
+MDAOU,5,NE,Madaoua,Tahoua,Niger
+ILLLA,5,NE,Illela,Tahoua,Niger
+GYAWZ,3,NE,Gaya,Dosso,Niger
+DOSSO,3,NE,Dosso,Dosso,Niger
+DOTCI,3,NE,Dogondoutchi,Dosso,Niger
+DIFFA,2,NE,Diffa,Diffa,Niger
+DAKOR,4,NE,Dakoro,Maradi,Niger
+AYORU,6,NE,Ayorou,Tillaberi,Niger
+ALGHS,1,NE,Alaghsas,Agadez,Niger
+AGDEZ,1,NE,Agadez,Agadez,Niger
+ZURQY,KE,NG,Zuru,Kebbi,Nigeria
+ZNGEU,NI,NG,Zungeru,Niger,Nigeria
+ZARIA,KD,NG,Zaria,Kaduna,Nigeria
+YOAVU,AD,NG,Yola,Adamawa,Nigeria
+YNAGO,BY,NG,Yenagoa,Bayelsa,Nigeria
+WUKAR,TA,NG,Wukari,Taraba,Nigeria
+WUDIL,KN,NG,Wudil,Kano,Nigeria
+WARRI,DE,NG,Warri,Delta,Nigeria
+UOYZV,AK,NG,Uyo,Akwa Ibom,Nigeria
+GAYVW,KN,NG,Gaya,Kano,Nigeria
+GSHUA,YO,NG,Gashua,Yobe,Nigeria
+GARKO,GO,NG,Garko,Gombe,Nigeria
+GANYE,AD,NG,Ganye,Adamawa,Nigeria
+GAMBR,BO,NG,Gambaru,Borno,Nigeria
+FUNTA,KT,NG,Funtua,Katsina,Nigeria
+FIDII,OY,NG,Fiditi,Oyo,Nigeria
+EZZAO,EB,NG,Ezza-Ohu,Ebonyi,Nigeria
+EORON,AK,NG,Esuk Oron,Akwa Ibom,Nigeria
+EEYQY,LA,NG,Epe,Lagos,Nigeria
+ENGUU,AN,NG,Enugu-Ukwu,Anambra,Nigeria
+ENUGE,EN,NG,Enugu-Ezike,Enugu,Nigeria
+ENUGU,EN,NG,Enugu,Enugu,Nigeria
+EUREE,EK,NG,Emure-Ekiti,Ekiti,Nigeria
+ELELE,RI,NG,Elele,Rivers,Nigeria
+EPOMA,ED,NG,Ekpoma,Edo,Nigeria
+EKTYZ,AK,NG,Eket,Akwa Ibom,Nigeria
+EJIBO,OS,NG,Ejigbo,Osun,Nigeria
+EAMFU,EN,NG,Eha Amufu,Enugu,Nigeria
+EGBQJ,KO,NG,Egbe,Kogi,Nigeria
+EFONA,OS,NG,Effon Alaiye,Osun,Nigeria
+EFIUM,EB,NG,Effium,Ebonyi,Nigeria
+EIKRD,LA,NG,Ebute Ikorodu,Lagos,Nigeria
+DUTEW,KD,NG,Dutsen Wai,Kaduna,Nigeria
+DUTSE,JI,NG,Dutse,Jigawa,Nigeria
+DUKKU,GO,NG,Dukku,Gombe,Nigeria
+DIKWA,BO,NG,Dikwa,Borno,Nigeria
+DHABE,GO,NG,Deba Habe,Gombe,Nigeria
+DAURA,KT,NG,Daura,Katsina,Nigeria
+DAURA,YO,NG,Daura,Yobe,Nigeria
+DRAZO,BA,NG,Darazo,Bauchi,Nigeria
+DAMBO,BO,NG,Damboa,Borno,Nigeria
+DATRU,YO,NG,Damaturu,Yobe,Nigeria
+CLABR,CR,NG,Calabar,Cross River,Nigeria
+BRUTU,DE,NG,Burutu,Delta,Nigeria
+BUKUR,PL,NG,Bukuru,Plateau,Nigeria
+BUGMA,RI,NG,Buguma,Rivers,Nigeria
+BONNY,RI,NG,Bonny,Rivers,Nigeria
+BODES,KW,NG,Bode Saadu,Kwara,Nigeria
+BUYFF,BO,NG,Biu,Borno,Nigeria
+BRINK,JI,NG,Birnin Kudu,Jigawa,Nigeria
+BRINK,KE,NG,Birnin Kebbi,Kebbi,Nigeria
+SBRNG,KD,NG,Sofo-Birnin-Gwari,Kaduna,Nigeria
+BLIRI,GO,NG,Biliri,Gombe,Nigeria
+BIAUY,NI,NG,Bida,Niger,Nigeria
+BENIC,ED,NG,Benin City,Edo,Nigeria
+BENDE,AB,NG,Bende,Abia,Nigeria
+BELYJ,TA,NG,Beli,Taraba,Nigeria
+BAUCH,BA,NG,Bauchi,Bauchi,Nigeria
+BAOPZ,NI,NG,Baro,Niger,Nigeria
+BMAFU,BO,NG,Bama,Borno,Nigeria
+BDAGR,LA,NG,Badagry,Lagos,Nigeria
+BABAN,NI,NG,Babana,Niger,Nigeria
+AZARE,BA,NG,Azare,Bauchi,Nigeria
+AWKXF,AN,NG,Awka,Anambra,Nigeria
+RIVAS,RI,NI,Rivas,Rivas,Nicaragua
+RBANC,MT,NI,Rio Blanco,Matagalpa,Nicaragua
+RMAYW,AS,NI,Rama,Atlantico Sur,Nicaragua
+OCTAL,NS,NI,Ocotal,Nueva Segovia,Nicaragua
+NUEVG,AS,NI,Nueva Guinea,Atlantico Sur,Nicaragua
+NADIM,GR,NI,Nandaime,Granada,Nicaragua
+NAGOT,LE,NI,Nagarote,Leon,Nicaragua
+MATGL,MT,NI,Matagalpa,Matagalpa,Nicaragua
+MAAYA,MS,NI,Masaya,Masaya,Nicaragua
+MATPE,MS,NI,Masatepe,Masaya,Nicaragua
+MNGUA,MN,NI,Managua,Managua,Nicaragua
+LONWV,LE,NI,Leon,Leon,Nicaragua
+LPCNR,LE,NI,La Paz Centro,Leon,Nicaragua
+JUIGA,CO,NI,Juigalpa,Chontales,Nicaragua
+JIOTP,CA,NI,Jinotepe,Carazo,Nicaragua
+JINOE,JI,NI,Jinotega,Jinotega,Nicaragua
+JLAPA,NS,NI,Jalapa,Nueva Segovia,Nicaragua
+GRNAD,GR,NI,Granada,Granada,Nicaragua
+ESTLI,ES,NI,Esteli,Esteli,Nicaragua
+EVIJO,CI,NI,El Viejo,Chinandega,Nicaragua
+ECURO,MN,NI,El Crucero,Managua,Nicaragua
+DIMBA,CA,NI,Diriamba,Carazo,Nicaragua
+CRNTO,CI,NI,Corinto,Chinandega,Nicaragua
+CHIDE,CI,NI,Chinandega,Chinandega,Nicaragua
+CHIGP,CI,NI,Chichigalpa,Chinandega,Nicaragua
+CAMOP,BO,NI,Camoapa,Boaco,Nicaragua
+BOACO,BO,NI,Boaco,Boaco,Nicaragua
+BLUFS,AS,NI,Bluefields,Atlantico Sur,Nicaragua
+CIUAS,MN,NI,Ciudad Sandino,Managua,Nicaragua
+ZWOLE,OV,NL,Zwolle,Overijssel,Netherlands
+ZUTHN,GE,NL,Zutphen,Gelderland,Netherlands
+ZEVNR,GE,NL,Zevenaar,Gelderland,Netherlands
+ZEIST,UT,NL,Zeist,Utrecht,Netherlands
+ZEOLD,FL,NL,Zeewolde,Flevoland,Netherlands
+ZALTE,GE,NL,Zaltbommel,Gelderland,Netherlands
+WORDE,UT,NL,Woerden,Utrecht,Netherlands
+WISCH,GE,NL,Wisch,Gelderland,Netherlands
+WTRSK,GE,NL,Winterswijk,Gelderland,Netherlands
+WISHN,GR,NL,Winschoten,Groningen,Netherlands
+WBDST,UT,NL,Wijk bij Duurstede,Utrecht,Netherlands
+WIJCN,GE,NL,Wijchen,Gelderland,Netherlands
+WIERD,OV,NL,Wierden,Overijssel,Netherlands
+WESOT,GE,NL,Westervoort,Gelderland,Netherlands
+WEERT,LI,NL,Weert,Limburg,Netherlands
+WAGIN,GE,NL,Wageningen,Gelderland,Netherlands
+VORST,GE,NL,Voorst,Gelderland,Netherlands
+VLIEN,ZE,NL,Vlissingen,Zeeland,Netherlands
+VLAWD,GR,NL,Vlagtwedde,Groningen,Netherlands
+VIAEN,UT,NL,Vianen,Utrecht,Netherlands
+VENAY,LI,NL,Venray,Limburg,Netherlands
+VENLO,LI,NL,Venlo,Limburg,Netherlands
+VEPYZ,GE,NL,Velp,Gelderland,Netherlands
+VEERE,ZE,NL,Veere,Zeeland,Netherlands
+VENDA,UT,NL,Veenendaal,Utrecht,Netherlands
+VNDAM,GR,NL,Veendam,Groningen,Netherlands
+UREHT,UT,NL,Utrecht,Utrecht,Netherlands
+UKAZP,FL,NL,Urk,Flevoland,Netherlands
+TUBRN,OV,NL,Tubbergen,Overijssel,Netherlands
+TIEWP,GE,NL,Tiel,Gelderland,Netherlands
+TERZN,ZE,NL,Terneuzen,Zeeland,Netherlands
+TGLEN,LI,NL,Tegelen,Limburg,Netherlands
+STEIJ,OV,NL,Steenwijk,Overijssel,Netherlands
+STAPO,OV,NL,Staphorst,Overijssel,Netherlands
+STANL,GR,NL,Stadskanaal,Groningen,Netherlands
+SOEST,UT,NL,Soest,Utrecht,Netherlands
+SITRD,LI,NL,Sittard,Limburg,Netherlands
+ROEMD,LI,NL,Roermond,Limburg,Netherlands
+RHENE,UT,NL,Rhenen,Utrecht,Netherlands
+RALTE,OV,NL,Raalte,Overijssel,Netherlands
+CULEM,GE,NL,Culemborg,Gelderland,Netherlands
+BUNCT,UT,NL,Bunschoten,Utrecht,Netherlands
+BRNUM,LI,NL,Brunssum,Limburg,Netherlands
+BRUMN,GE,NL,Brummen,Gelderland,Netherlands
+BORSE,ZE,NL,Borssele,Zeeland,Netherlands
+BORNE,OV,NL,Borne,Overijssel,Netherlands
+BORUJ,LI,NL,Born,Limburg,Netherlands
+BOGER,DR,NL,Borger,Drenthe,Netherlands
+BENIG,GE,NL,Beuningen,Gelderland,Netherlands
+BEKQP,LI,NL,Beek,Limburg,Netherlands
+BANVD,GE,NL,Barneveld,Gelderland,Netherlands
+BAARN,UT,NL,Baarn,Utrecht,Netherlands
+ASSEN,DR,NL,Assen,Drenthe,Netherlands
+ARNHE,GE,NL,Arnhem,Gelderland,Netherlands
+APLRN,GE,NL,Apeldoorn,Gelderland,Netherlands
+ANLOO,DR,NL,Anloo,Drenthe,Netherlands
+AMRST,UT,NL,Amersfoort,Utrecht,Netherlands
+ALERS,FL,NL,Almere Stad,Flevoland,Netherlands
+ALMEO,OV,NL,Almelo,Overijssel,Netherlands
+ALTEN,GE,NL,Aalten,Gelderland,Netherlands
+TRNDM,16,NO,Trondheim,Sor-Trondelag,Norway
+TONSB,07,NO,Tonsberg,Vestfold,Norway
+STIJR,17,NO,Steinkjer,Nord-Trondelag,Norway
+STAVR,11,NO,Stavanger,Rogaland,Norway
+SKIEN,08,NO,Skien,Telemark,Norway
+SAPBO,01,NO,Sarpsborg,Ostfold,Norway
+SADNE,11,NO,Sandnes,Rogaland,Norway
+SADOR,07,NO,Sandefjord,Vestfold,Norway
+POSGN,08,NO,Porsgrunn,Telemark,Norway
+OSLJQ,03,NO,Oslo,Oslo,Norway
+MOSJQ,01,NO,Moss,Ostfold,Norway
+MOLDE,15,NO,Molde,More og Romsdal,Norway
+MIRAN,18,NO,Mo i Rana,Nordland,Norway
+LIHAM,05,NO,Lillehammer,Oppland,Norway
+LARVI,07,NO,Larvik,Vestfold,Norway
+KRISN,15,NO,Kristiansund,More og Romsdal,Norway
+KISTD,10,NO,Kristiansand,Vest-Agder,Norway
+KONGB,06,NO,Kongsberg,Buskerud,Norway
+HOTEN,07,NO,Horten,Vestfold,Norway
+HAGSN,11,NO,Haugesund,Rogaland,Norway
+HAMAR,04,NO,Hamar,Hedmark,Norway
+HALDN,01,NO,Halden,Ostfold,Norway
+GJOVK,05,NO,Gjovik,Oppland,Norway
+FRKTA,01,NO,Fredrikstad,Ostfold,Norway
+DRAME,06,NO,Drammen,Buskerud,Norway
+BDOWA,18,NO,Bodo,Nordland,Norway
+BERGN,12,NO,Bergen,Hordaland,Norway
+ARENL,09,NO,Arendal,Aust-Agder,Norway
+ALEUN,15,NO,Alesund,More og Romsdal,Norway
+ASKOY,12,NO,Askoy,Hordaland,Norway
+YTBGD,12,NO,Ytrebygda,Hordaland,Norway
+TUSPR,2,NP,Tulsipur,Mid Western,Nepal
+TIKPR,5,NP,Tikapur,Far Western,Nepal
+MAHER,5,NP,Mahendranagar,Far Western,Nepal
+GUAIY,2,NP,Gulariya,Mid Western,Nepal
+DHANG,5,NP,Dhangadhi,Far Western,Nepal
+DAIEK,2,NP,Dailekh,Mid Western,Nepal
+DALUR,5,NP,Dadeldhura,Far Western,Nepal
+BINRG,2,NP,Birendranagar,Mid Western,Nepal
+DIPYA,5,NP,Dipayal,Far Western,Nepal
+NPLGJ,2,NP,Nepalgunj,Mid Western,Nepal
+WELNG,WGN,NZ,Wellington,Wellington,New Zealand
+WAGUI,MWT,NZ,Wanganui,Manawatu-Wanganui,New Zealand
+TIMAU,CAN,NZ,Timaru,Canterbury,New Zealand
+TAUPO,WKO,NZ,Taupo,Waikato,New Zealand
+PUKHE,AUK,NZ,Pukekohe East,Auckland,New Zealand
+POIUA,WGN,NZ,Porirua,Wellington,New Zealand
+PARMU,WGN,NZ,Paraparaumu,Wellington,New Zealand
+PASON,MWT,NZ,Palmerston North,Manawatu-Wanganui,New Zealand
+NSORE,AUK,NZ,North Shore,Auckland,New Zealand
+NPLOT,TKI,NZ,New Plymouth,Taranaki,New Zealand
+NAPIR,HKB,NZ,Napier,Hawke's Bay,New Zealand
+MANUC,AUK,NZ,Manukau City,Auckland,New Zealand
+MAGER,AUK,NZ,Mangere,Auckland,New Zealand
+LHUTT,WGN,NZ,Lower Hutt,Wellington,New Zealand
+INVEC,STL,NZ,Invercargill,Southland,New Zealand
+HASTN,HKB,NZ,Hastings,Hawke's Bay,New Zealand
+HAMIL,WKO,NZ,Hamilton,Waikato,New Zealand
+DUEIN,OTA,NZ,Dunedin,Otago,New Zealand
+CHISU,CAN,NZ,Christchurch,Canterbury,New Zealand
+ACKND,AUK,NZ,Auckland,Auckland,New Zealand
+LEVIN,MWT,NZ,Levin,Manawatu-Wanganui,New Zealand
+MSTRN,WGN,NZ,Masterton,Wellington,New Zealand
+TURAG,BOP,NZ,Tauranga,Bay of Plenty,New Zealand
+PKURA,AUK,NZ,Papakura,Auckland,New Zealand
+WHKAT,BOP,NZ,Whakatane,Bay of Plenty,New Zealand
+ASHBU,CAN,NZ,Ashburton,Canterbury,New Zealand
+WHARI,NTL,NZ,Whangarei,Northland,New Zealand
+CAMBG,WKO,NZ,Cambridge,Waikato,New Zealand
+RTOUA,BOP,NZ,Rotorua,Bay of Plenty,New Zealand
+UPERH,WGN,NZ,Upper Hutt,Wellington,New Zealand
+TRADL,HKB,NZ,Taradale,Hawke's Bay,New Zealand
+WAIKE,AUK,NZ,Waitakere,Auckland,New Zealand
+SRAYV,SH,OM,Sur,Ash Sharqiyah,Oman
+SFLSI,DA,OM,Sufalat Sama'il,Ad Dakhiliyah,Oman
+SALAH,ZU,OM,Salalah,Zufar,Oman
+NIZWA,DA,OM,Nizwa,Ad Dakhiliyah,Oman
+MSCAT,MA,OM,Muscat,Masqat,Oman
+KHSAB,MU,OM,Khasab,Musandam,Oman
+IZKYY,DA,OM,Izki,Ad Dakhiliyah,Oman
+IBRIU,ZA,OM,`Ibri,Az Zahirah,Oman
+BIDBD,DA,OM,Bidbid,Ad Dakhiliyah,Oman
+BWSHA,MA,OM,Bawshar,Masqat,Oman
+BARKA,BA,OM,Barka',Al Batinah,Oman
+BAHLA,DA,OM,Bahla',Ad Dakhiliyah,Oman
+ASIBJ,MA,OM,As Sib al Jadidah,Masqat,Oman
+RUSAQ,BA,OM,Rustaq,Al Batinah,Oman
+ADMJZ,DA,OM,Adam,Ad Dakhiliyah,Oman
+YANQL,ZA,OM,Yanqul,Az Zahirah,Oman
+VISTA,8,PA,Vista Alegre,Panama,Panama
+VERAC,8,PA,Veracruz,Panama,Panama
+TOUME,8,PA,Tocumen,Panama,Panama
+SNTAV,9,PA,Santiago de Veraguas,Veraguas,Panama
+SMIET,8,PA,San Miguelito,Panama,Panama
+PARMS,4,PA,Puerto Armuelles,Chiriqui,Panama
+PEDRG,4,PA,Pedregal,Chiriqui,Panama
+PNAMA,8,PA,Panama,Panama,Panama
+PACOR,8,PA,Pacora,Panama,Panama
+NARIJ,8,PA,Nuevo Arraijan,Panama,Panama
+LCBRS,8,PA,Las Cumbres,Panama,Panama
+LCNEO,4,PA,La Concepcion,Chiriqui,Panama
+LCHOA,8,PA,La Chorrera,Panama,Panama
+LCBIM,8,PA,La Cabima,Panama,Panama
+DAVID,4,PA,David,Chiriqui,Panama
+COLON,3,PA,Colon,Colon,Panama
+CITRE,6,PA,Chitre,Herrera,Panama
+CHIRE,8,PA,Chilibre,Panama,Panama
+CHEPO,8,PA,Chepo,Panama,Panama
+CHAUL,1,PA,Changuinola,Bocas del Toro,Panama
+CTIVA,3,PA,Cativa,Colon,Panama
+ARIJN,8,PA,Arraijan,Panama,Panama
+ACLDZ,8,PA,Alcaldediaz,Panama,Panama
+AGDUC,2,PA,Aguadulce,Cocle,Panama
+VIUFV,LAL,PE,Viru,La Libertad,Peru
+UHIZA,SAM,PE,Uchiza,San Martin,Peru
+TUMBS,TUM,PE,Tumbes,Tumbes,Peru
+TRUJI,LAL,PE,Trujillo,La Libertad,Peru
+TOACH,SAM,PE,Tocache,San Martin,Peru
+TIGOM,HUC,PE,Tingo Maria,Huanuco,Peru
+SATIC,LAL,PE,Santiago de Cao,La Libertad,Peru
+SPDOL,LAL,PE,San Pedro de Lloc,La Libertad,Peru
+ZANJU,LAM,PE,Zana,Lambayeque,Peru
+RIOJA,SAM,PE,Rioja,San Martin,Peru
+PUCLA,UCA,PE,Pucallpa,Ucayali,Peru
+PIMNE,LAM,PE,Pimentel,Lambayeque,Peru
+PICSI,LAM,PE,Picsi,Lambayeque,Peru
+PAIJN,LAL,PE,Paijan,La Libertad,Peru
+PASMY,LAL,PE,Pacasmayo,La Libertad,Peru
+MYOBA,SAM,PE,Moyobamba,San Martin,Peru
+MONSF,LAM,PE,Monsefu,Lambayeque,Peru
+MOCHE,LAL,PE,Moche,La Libertad,Peru
+LREDO,LAL,PE,Laredo,La Libertad,Peru
+LABYU,LAM,PE,Lambayeque,Lambayeque,Peru
+JUANI,SAM,PE,Juanjui,San Martin,Peru
+HNUCO,HUC,PE,Huanuco,Huanuco,Peru
+HUAMC,LAL,PE,Huamachuco,La Libertad,Peru
+GUADP,LAL,PE,Guadalupe,La Libertad,Peru
+FERNA,LAM,PE,Ferrenafe,Lambayeque,Peru
+CHNAP,LAM,PE,Chongoyape,Lambayeque,Peru
+CHOPE,LAL,PE,Chocope,La Libertad,Peru
+CHIAO,LAM,PE,Chiclayo,Lambayeque,Peru
+CHEPN,LAL,PE,Chepen,La Libertad,Peru
+BLVST,SAM,PE,Bellavista,San Martin,Peru
+ZRUMI,TUM,PE,Zarumilla,Tumbes,Peru
+YNCHA,HUC,PE,Yanacancha,Huanuco,Peru
+TARMA,JUN,PE,Tarma,Junin,Peru
+TACNA,TAC,PE,Tacna,Tacna,Peru
+SURCO,LIM,PE,Surco,Lima,Peru
+SICUN,CUS,PE,Sicuani,Cuzco,Peru
+SATIP,JUN,PE,Satipo,Junin,Peru
+SVENC,LIM,PE,San Vicente de Canete,Lima,Peru
+SNTAA,CUS,PE,Santa Ana,Cuzco,Peru
+SIDRO,LIM,PE,San Isidro,Lima,Peru
+SCLEN,ICA,PE,San Clemente,Ica,Peru
+PISCO,ICA,PE,Pisco,Ica,Peru
+PAMOG,LIM,PE,Paramonga,Lima,Peru
+NIPRL,LIM,PE,Nuevo Imperial,Lima,Peru
+NAZCA,ICA,PE,Nazca,Ica,Peru
+MOQGA,MOQ,PE,Moquegua,Moquegua,Peru
+MMARO,ICA,PE,Minas de Marcona,Ica,Peru
+MALFV,LIM,PE,Mala,Lima,Peru
+LIMXZ,LIM,PE,Lima,Lima,Peru
+LORYA,JUN,PE,La Oroya,Junin,Peru
+JUNIN,JUN,PE,Junin,Junin,Peru
+JAUJA,JUN,PE,Jauja,Junin,Peru
+IMPAL,LIM,PE,Imperial,Lima,Peru
+ILZWP,MOQ,PE,Ilo,Moquegua,Peru
+ICZUA,ICA,PE,Ica,Ica,Peru
+HAURA,LIM,PE,Huaura,Lima,Peru
+HUARL,LIM,PE,Huaral,Lima,Peru
+HUANT,AYA,PE,Huanta,Ayacucho,Peru
+HUACO,JUN,PE,Huancayo,Junin,Peru
+HALMY,LIM,PE,Hualmay,Lima,Peru
+HUACO,LIM,PE,Huacho,Lima,Peru
+CUSCO,CUS,PE,Cusco,Cuzco,Peru
+COSIA,LIM,PE,Chosica,Lima,Peru
+CHINA,ICA,PE,Chincha Alta,Ica,Peru
+CHNAY,LIM,PE,Chancay,Lima,Peru
+BARNC,LIM,PE,Barranca,Lima,Peru
+AYUHO,AYA,PE,Ayacucho,Ayacucho,Peru
+WEWAK,ESW,PG,Wewak,East Sepik,Papua New Guinea
+MONTH,WHM,PG,Mount Hagen,Western Highlands,Papua New Guinea
+MENDI,SHM,PG,Mendi,Southern Highlands,Papua New Guinea
+MADNG,MPM,PG,Madang,Madang,Papua New Guinea
+LEJJP,MPL,PG,Lae,Morobe,Papua New Guinea
+KOKOO,EBR,PG,Kokopo,East New Britain,Papua New Guinea
+KIMBE,WBK,PG,Kimbe,West New Britain,Papua New Guinea
+GORKA,EHG,PG,Goroka,Eastern Highlands,Papua New Guinea
+BLOLO,MPL,PG,Bulolo,Morobe,Papua New Guinea
+ARAWA,NSB,PG,Arawa,Bougainville,Papua New Guinea
+SNTAR,LAG,PH,Santa Rosa,Laguna,Philippines
+SPALO,LAG,PH,San Pablo,Laguna,Philippines
+OLNGP,ZMB,PH,Olongapo,Zambales,Philippines
+BAGIO,BEN,PH,Baguio,Benguet,Philippines
+ANGEL,PAM,PH,Angeles,Pampanga,Philippines
+CHUAJ,SD,PK,Chuhar Jamali,Sindh,Pakistan
+RWLAK,JK,PK,Rawala Kot,Azad Kashmir,Pakistan
+PJGOT,SD,PK,Pir jo Goth,Sindh,Pakistan
+KHIPR,SD,PK,Khairpur,Sindh,Pakistan
+ZHBZY,BA,PK,Zhob,Balochistan,Pakistan
+ZAIDA,KP,PK,Zaida,Khyber Pakhtunkhwa,Pakistan
+ZAIRP,PB,PK,Zahir Pir,Punjab,Pakistan
+ZAFRW,PB,PK,Zafarwal,Punjab,Pakistan
+YZMAN,PB,PK,Yazman,Punjab,Pakistan
+WAZRD,PB,PK,Wazirabad,Punjab,Pakistan
+WABTO,PB,PK,Warburton,Punjab,Pakistan
+WARAH,SD,PK,Warah,Sindh,Pakistan
+VHARI,PB,PK,Vihari,Punjab,Pakistan
+UTNZA,KP,PK,Utmanzai,Khyber Pakhtunkhwa,Pakistan
+UTHAL,BA,PK,Uthal,Balochistan,Pakistan
+USTAM,BA,PK,Usta Muhammad,Balochistan,Pakistan
+UMAKO,SD,PK,Umarkot,Sindh,Pakistan
+UBARO,SD,PK,Ubauro,Sindh,Pakistan
+TURBA,BA,PK,Turbat,Balochistan,Pakistan
+TPIJU,KP,PK,Topi,Khyber Pakhtunkhwa,Pakistan
+TTSIG,PB,PK,Toba Tek Singh,Punjab,Pakistan
+THUZA,SD,PK,Thul,Sindh,Pakistan
+THATA,SD,PK,Thatta,Sindh,Pakistan
+THARS,SD,PK,Tharu Shah,Sindh,Pakistan
+TUNSA,PB,PK,Taunsa,Punjab,Pakistan
+TNKVU,KP,PK,Tank,Khyber Pakhtunkhwa,Pakistan
+TANGI,KP,PK,Tangi,Khyber Pakhtunkhwa,Pakistan
+TAOMK,SD,PK,Tando Muhammad Khan,Sindh,Pakistan
+TANOJ,SD,PK,Tando Jam,Sindh,Pakistan
+TAHYR,SD,PK,Tando Allahyar,Sindh,Pakistan
+TNDOA,SD,PK,Tando Adam,Sindh,Pakistan
+TALIW,PB,PK,Tandlianwala,Punjab,Pakistan
+TALHR,SD,PK,Talhar,Sindh,Pakistan
+TLMBA,PB,PK,Talamba,Punjab,Pakistan
+PASNI,BA,PK,Pasni,Balochistan,Pakistan
+PAQIL,SD,PK,Pano Aqil,Sindh,Pakistan
+PKTAN,PB,PK,Pakpattan,Punjab,Pakistan
+PAHUR,KP,PK,Paharpur,Khyber Pakhtunkhwa,Pakistan
+PIDAN,SD,PK,Pad Idan,Sindh,Pakistan
+PABBI,KP,PK,Pabbi,Khyber Pakhtunkhwa,Pakistan
+OKARA,PB,PK,Okara,Punjab,Pakistan
+NUSKI,BA,PK,Nushki,Balochistan,Pakistan
+NWABS,SD,PK,Nawabshah,Sindh,Pakistan
+NAHOF,SD,PK,Naushahro Firoz,Sindh,Pakistan
+NUSHV,PB,PK,Naushahra Virkan,Punjab,Pakistan
+NAUEO,SD,PK,Naudero,Sindh,Pakistan
+NARBD,SD,PK,Nasirabad,Sindh,Pakistan
+NROAL,PB,PK,Narowal,Punjab,Pakistan
+NRANG,PB,PK,Narang,Punjab,Pakistan
+NAKOT,SD,PK,Naukot,Sindh,Pakistan
+NAANS,PB,PK,Nankana Sahib,Punjab,Pakistan
+MUZAH,PB,PK,Muzaffargarh,Punjab,Pakistan
+MUZFD,JK,PK,Muzaffarabad,Azad Kashmir,Pakistan
+MUSBA,PB,PK,Mustafabad,Punjab,Pakistan
+MRREE,PB,PK,Murree,Punjab,Pakistan
+MURKE,PB,PK,Muridke,Punjab,Pakistan
+MULTN,PB,PK,Multan,Punjab,Pakistan
+MROVX,SD,PK,Moro,Sindh,Pakistan
+MITHI,SD,PK,Mithi,Sindh,Pakistan
+MTIWA,PB,PK,Mitha Tiwana,Punjab,Pakistan
+MPURM,SD,PK,Mirpur Mathelo,Sindh,Pakistan
+MPURK,SD,PK,Mirpur Khas,Sindh,Pakistan
+MIGOR,KP,PK,Mingora,Khyber Pakhtunkhwa,Pakistan
+MINAD,PB,PK,Minchinabad,Punjab,Pakistan
+MINWA,PB,PK,Mianwali,Punjab,Pakistan
+MCHUN,PB,PK,Mian Channun,Punjab,Pakistan
+MEABR,BA,PK,Mehrabpur,Balochistan,Pakistan
+MEHAR,SD,PK,Mehar,Sindh,Pakistan
+BAIRP,PB,PK,Basirpur,Punjab,Pakistan
+BANNU,KP,PK,Bannu,Khyber Pakhtunkhwa,Pakistan
+BAHWR,PB,PK,Bahawalpur,Punjab,Pakistan
+BHAWG,PB,PK,Bahawalnagar,Punjab,Pakistan
+BADIN,SD,PK,Badin,Sindh,Pakistan
+BAMHI,PB,PK,Baddomalhi,Punjab,Pakistan
+ATOKC,PB,PK,Attock City,Punjab,Pakistan
+ARIWL,PB,PK,Arifwala,Punjab,Pakistan
+AMGRH,KP,PK,Amangarh,Khyber Pakhtunkhwa,Pakistan
+AIPUR,PB,PK,Alipur,Punjab,Pakistan
+AKORA,KP,PK,Akora,Khyber Pakhtunkhwa,Pakistan
+AHDPE,PB,PK,Ahmadpur East,Punjab,Pakistan
+ABOTD,KP,PK,Abbottabad,Khyber Pakhtunkhwa,Pakistan
+NOWAC,KP,PK,Nowshera Cantonment,Khyber Pakhtunkhwa,Pakistan
+AMDRS,PB,PK,Ahmadpur Sial,Punjab,Pakistan
+NBADH,SD,PK,New Badah,Sindh,Pakistan
+TGULA,SD,PK,Tando Ghulam Ali,Sindh,Pakistan
+SEAJO,SD,PK,Setharja Old,Sindh,Pakistan
+RISAP,KP,PK,Risalpur,Khyber Pakhtunkhwa,Pakistan
+MAKLC,PB,PK,Malakwal City,Punjab,Pakistan
+STAZO,SK,PL,Staszow,Swietokrzyskie,Poland
+SARWC,SK,PL,Starachowice,Swietokrzyskie,Poland
+SRZYK,SK,PL,Skarzysko-Kamienna,Swietokrzyskie,Poland
+SANDR,SK,PL,Sandomierz,Swietokrzyskie,Poland
+OIECS,SK,PL,Ostrowiec Swietokrzyski,Swietokrzyskie,Poland
+KOSIE,SK,PL,Konskie,Swietokrzyskie,Poland
+KILCE,SK,PL,Kielce,Swietokrzyskie,Poland
+JEZOW,SK,PL,Jedrzejow,Swietokrzyskie,Poland
+BZDOJ,SK,PL,Busko-Zdroj,Swietokrzyskie,Poland
+WLOCK,KP,PL,Wloclawek,Kujawsko-Pomorskie,Poland
+TORUN,KP,PL,Torun,Kujawsko-Pomorskie,Poland
+SWECI,KP,PL,Swiecie,Kujawsko-Pomorskie,Poland
+SKUJW,KP,PL,Solec Kujawski,Kujawsko-Pomorskie,Poland
+RYPIN,KP,PL,Rypin,Kujawsko-Pomorskie,Poland
+NKONN,KP,PL,Naklo nad Notecia,Kujawsko-Pomorskie,Poland
+INOWR,KP,PL,Inowroclaw,Kujawsko-Pomorskie,Poland
+GRZAD,KP,PL,Grudziadz,Kujawsko-Pomorskie,Poland
+FORDN,KP,PL,Fordon,Kujawsko-Pomorskie,Poland
+CHEMZ,KP,PL,Chelmza,Kujawsko-Pomorskie,Poland
+CHELO,KP,PL,Chelmno,Kujawsko-Pomorskie,Poland
+BYGSZ,KP,PL,Bydgoszcz,Kujawsko-Pomorskie,Poland
+BRDNA,KP,PL,Brodnica,Kujawsko-Pomorskie,Poland
+TOMAR,14,PT,Tomar,Santarem,Portugal
+SEMBR,15,PT,Sesimbra,Setubal,Portugal
+SETBA,15,PT,Setubal,Setubal,Portugal
+SATRM,14,PT,Santarem,Santarem,Portugal
+QUREI,08,PT,Quarteira,Faro,Portugal
+POTIA,08,PT,Portimao,Faro,Portugal
+POTAE,12,PT,Portalegre,Portalegre,Portugal
+POBAL,10,PT,Pombal,Leiria,Portugal
+PNOVO,15,PT,Pinhal Novo,Setubal,Portugal
+PIEAD,15,PT,Piedade,Setubal,Portugal
+PENIH,10,PT,Peniche,Leiria,Portugal
+PAMEL,15,PT,Palmela,Setubal,Portugal
+OLHAO,08,PT,Olhao,Faro,Portugal
+MOTIJ,15,PT,Montijo,Setubal,Portugal
+MOSNT,14,PT,Monsanto,Santarem,Portugal
+MOITA,15,PT,Moita,Setubal,Portugal
+MRIAG,10,PT,Marinha Grande,Leiria,Portugal
+LOULE,08,PT,Loule,Faro,Portugal
+LERIA,10,PT,Leiria,Leiria,Portugal
+LAJIO,08,PT,Laranjeiro,Faro,Portugal
+LAGOS,08,PT,Lagos,Faro,Portugal
+FARUZ,08,PT,Faro,Faro,Portugal
+EVORA,07,PT,Evora,Evora,Portugal
+ENOMT,14,PT,Entroncamento,Santarem,Portugal
+CRIOS,15,PT,Corroios,Setubal,Portugal
+CHANE,15,PT,Charneca,Setubal,Portugal
+CAEOB,05,PT,Castelo Branco,Castelo Branco,Portugal
+CPARI,15,PT,Caparica,Setubal,Portugal
+CLSDR,10,PT,Caldas da Rainha,Leiria,Portugal
+BJAZU,02,PT,Beja,Beja,Portugal
+BREIO,15,PT,Barreiro,Setubal,Portugal
+ARENL,15,PT,Arrentela,Setubal,Portugal
+AMORA,15,PT,Amora,Setubal,Portugal
+ALADA,15,PT,Almada,Setubal,Portugal
+ALBFI,08,PT,Albufeira,Faro,Portugal
+VISEU,18,PT,Viseu,Viseu,Portugal
+VILAR,17,PT,Vila Real,Vila Real,Portugal
+VANRH,13,PT,Vilar de Andorinho,Porto,Portugal
+VIANG,13,PT,Vila Nova de Gaia,Porto,Portugal
+VDCNE,13,PT,Vila do Conde,Porto,Portugal
+VDCST,16,PT,Viana do Castelo,Viana do Castelo,Portugal
+VANGO,13,PT,Valongo,Porto,Portugal
+SQUEI,09,PT,Sequeira,Guarda,Portugal
+SERDH,13,PT,Senhora da Hora,Porto,Portugal
+SPDCV,13,PT,Sao Pedro da Cova,Porto,Portugal
+SAOMI,13,PT,Sao Mamede de Infesta,Porto,Portugal
+SJODM,01,PT,Sao Joao da Madeira,Aveiro,Portugal
+RTINO,13,PT,Rio Tinto,Porto,Portugal
+POOAV,13,PT,Povoa de Varzim,Porto,Portugal
+PORTO,13,PT,Porto,Porto,Portugal
+PNTEL,16,PT,Ponte de Lima,Viana do Castelo,Portugal
+PEROS,13,PT,Pedroso,Porto,Portugal
+OVAXJ,01,PT,Ovar,Aveiro,Portugal
+OIRDD,13,PT,Oliveira do Douro,Porto,Portugal
+MONCA,16,PT,Moncao,Viana do Castelo,Portugal
+MTSNH,13,PT,Matosinhos,Porto,Portugal
+MAIUA,13,PT,Maia,Porto,Portugal
+LDBIO,13,PT,Leca do Bailio,Porto,Portugal
+LEADP,13,PT,Leca da Palmeira,Porto,Portugal
+ILHAV,01,PT,Ilhavo,Aveiro,Portugal
+GUIMA,03,PT,Guimaraes,Braga,Portugal
+GUARD,09,PT,Guarda,Guarda,Portugal
+GONMA,13,PT,Gondomar,Porto,Portugal
+FEIRA,01,PT,Feira,Aveiro,Portugal
+FANER,13,PT,Fanzeres,Porto,Portugal
+FAEYQ,03,PT,Fafe,Braga,Portugal
+ESPND,03,PT,Esposende,Braga,Portugal
+ERMSI,13,PT,Ermesinde,Porto,Portugal
+CUSIA,09,PT,Custoias,Guarda,Portugal
+COVIH,05,PT,Covilha,Castelo Branco,Portugal
+COIMB,06,PT,Coimbra,Coimbra,Portugal
+CANDL,13,PT,Canidelo,Porto,Portugal
+BRGNC,04,PT,Braganca,Braganca,Portugal
+BRAGA,03,PT,Braga,Braga,Portugal
+BUGAO,13,PT,Bougado,Porto,Portugal
+BRCLS,03,PT,Barcelos,Braga,Portugal
+BAIDM,13,PT,Baguim do Monte,Porto,Portugal
+AVEIR,01,PT,Aveiro,Aveiro,Portugal
+ASNTS,13,PT,Aguas Santas,Porto,Portugal
+MLKEO,212,PW,Melekeok,Melekeok,Palau
+VILCA,4,PY,Villarrica,Guaira,Paraguay
+VILAH,15,PY,Villa Hayes,Presidente Hayes,Paraguay
+VELIS,11,PY,Villa Elisa,Central,Paraguay
+SLOEZ,11,PY,San Lorenzo,Central,Paraguay
+SANJB,8,PY,San Juan Bautista,Misiones,Paraguay
+SATNI,11,PY,San Antonio,Central,Paraguay
+PRETF,10,PY,Presidente Franco,Alto Parana,Paraguay
+PILAR,12,PY,Pilar,Neembucu,Paraguay
+PJUAC,13,PY,Pedro Juan Caballero,Amambay,Paraguay
+NEMBY,11,PY,Nemby,Central,Paraguay
+LMPIO,11,PY,Limpio,Central,Paraguay
+LMBAE,11,PY,Lambare,Central,Paraguay
+ITGUA,11,PY,Itaugua,Central,Paraguay
+IAFUW,11,PY,Ita,Central,Paraguay
+FRNLM,11,PY,Fernando de la Mora,Central,Paraguay
+ENRCI,7,PY,Encarnacion,Itapua,Paraguay
+CRELO,5,PY,Coronel Oviedo,Caaguazu,Paraguay
+CONPI,1,PY,Concepcion,Concepcion,Paraguay
+CMNRA,11,PY,Colonia Mariano Roque Alonso,Central,Paraguay
+CIUDE,10,PY,Ciudad del Este,Alto Parana,Paraguay
+CAPIT,11,PY,Capiata,Central,Paraguay
+CAAZA,6,PY,Caazapa,Caazapa,Paraguay
+CAGZU,5,PY,Caaguazu,Caaguazu,Paraguay
+CAUPE,3,PY,Caacupe,Cordillera,Paraguay
+ASNCI,ASU,PY,Asuncion,Asuncion,Paraguay
+UMMSM,US,QA,Umm Salal Muhammad,Umm Salal,Qatar
+ARAYA,RA,QA,Ar Rayyan,Ar Rayyan,Qatar
+WAKRH,WA,QA,Al Wakrah,Al Wakrah,Qatar
+ZIMEA,TR,RO,Zimnicea,Teleorman,Romania
+ZAREI,BV,RO,Zarnesti,Brasov,Romania
+ZALAU,SJ,RO,Zalau,Salaj,Romania
+VULCA,HD,RO,Vulcan,Hunedoara,Romania
+VOURI,IF,RO,Voluntari,Ilfov,Romania
+VIEUS,MM,RO,Viseu de Sus,Maramures,Romania
+VDORE,SV,RO,Vatra Dornei,Suceava,Romania
+VASLI,VS,RO,Vaslui,Vaslui,Romania
+URIEN,IL,RO,Urziceni,Ialomita,Romania
+TMARE,TR,RO,Turnu Magurele,Teleorman,Romania
+TURDA,CJ,RO,Turda,Cluj,Romania
+TULCE,TL,RO,Tulcea,Tulcea,Romania
+TARNV,MS,RO,Tarnaveni,Mures,Romania
+TRGUS,CV,RO,Targu Secuiesc,Covasna,Romania
+TARGN,NT,RO,Targu Neamt,Neamt,Romania
+TARGM,MS,RO,Targu-Mures,Mures,Romania
+TRGUJ,GJ,RO,Targu Jiu,Gorj,Romania
+TARIS,DB,RO,Targoviste,Dambovita,Romania
+TIOAR,TM,RO,Timisoara,Timis,Romania
+TEUCI,GL,RO,Tecuci,Galati,Romania
+SUCAV,SV,RO,Suceava,Suceava,Romania
+SLTNA,OT,RO,Slatina,Olt,Romania
+SIMES,SJ,RO,Simleu Silvaniei,Salaj,Romania
+SGTUM,MM,RO,Sighetu Marmatiei,Maramures,Romania
+SIBIU,SB,RO,Sibiu,Sibiu,Romania
+SFATG,CV,RO,Sfantu-Gheorghe,Covasna,Romania
+SEBES,AB,RO,Sebes,Alba,Romania
+SATUM,SM,RO,Satu Mare,Satu Mare,Romania
+SAONT,BH,RO,Salonta,Bihor,Romania
+SACLE,BV,RO,Sacele,Brasov,Romania
+ROSIV,TR,RO,Rosiori de Vede,Teleorman,Romania
+ROMAN,NT,RO,Roman,Neamt,Romania
+RASOV,BV,RO,Rasnov,Brasov,Romania
+RAMNV,VL,RO,Ramnicu Valcea,Valcea,Romania
+RAMCS,BZ,RO,Ramnicu Sarat,Buzau,Romania
+RSITA,CS,RO,Resita,Caras-Severin,Romania
+RGHNS,MS,RO,Reghin-Sat,Mures,Romania
+RDATI,SV,RO,Radauti,Suceava,Romania
+PESTL,IF,RO,Popesti-Leordeni,Ilfov,Romania
+PLOIT,PH,RO,Ploiesti,Prahova,Romania
+PTESI,AG,RO,Pitesti,Arges,Romania
+PIATN,NT,RO,Piatra Neamt,Neamt,Romania
+PTRSN,HD,RO,Petrosani,Hunedoara,Romania
+PETRL,HD,RO,Petrila,Hunedoara,Romania
+PANLO,IF,RO,Pantelimon,Ilfov,Romania
+ORAIE,HD,RO,Orastie,Hunedoara,Romania
+ORADE,BH,RO,Oradea,Bihor,Romania
+OLTNA,CL,RO,Oltenita,Calarasi,Romania
+ODRES,HR,RO,Odorheiu Secuiesc,Harghita,Romania
+OCNAM,AB,RO,Ocna Mures,Alba,Romania
+NAVOR,CT,RO,Navodari,Constanta,Romania
+MOTRU,GJ,RO,Motru,Gorj,Romania
+MOENI,DB,RO,Moreni,Dambovita,Romania
+MOIST,BC,RO,Moinesti,Bacau,Romania
+MIZIL,PH,RO,Mizil,Prahova,Romania
+MIURC,HR,RO,Miercurea-Ciuc,Harghita,Romania
+MDIAS,SB,RO,Medias,Sibiu,Romania
+MEDIA,CT,RO,Medgidia,Constanta,Romania
+MARGT,BH,RO,Margita,Bihor,Romania
+MNGAL,CT,RO,Mangalia,Constanta,Romania
+LUPEN,HD,RO,Lupeni,Hunedoara,Romania
+LUGOJ,TM,RO,Lugoj,Timis,Romania
+LUDUS,MS,RO,Ludus,Mures,Romania
+IASJF,IS,RO,Iasi,Iasi,Romania
+HSIFJ,VS,RO,Husi,Vaslui,Romania
+HUDRA,HD,RO,Hunedoara,Hunedoara,Romania
+GHMRU,SV,RO,Gura Humorului,Suceava,Romania
+GIRGI,GR,RO,Giurgiu,Giurgiu,Romania
+GERLA,CJ,RO,Gherla,Cluj,Romania
+GHERI,HR,RO,Gheorgheni,Harghita,Romania
+GLATI,GL,RO,Galati,Galati,Romania
+GASTI,DB,RO,Gaesti,Dambovita,Romania
+FOCSA,VN,RO,Focsani,Vrancea,Romania
+FLASI,DJ,RO,Filiasi,Dolj,Romania
+FTSIG,IL,RO,Fetesti-Gara,Ialomita,Romania
+FTESI,IL,RO,Fetesti,Ialomita,Romania
+FATNI,SV,RO,Falticeni,Suceava,Romania
+FOARH,BV,RO,Fogarasch,Brasov,Romania
+DOATS,MH,RO,Drobeta-Turnu Severin,Mehedinti,Romania
+DRAGI,VL,RO,Dragasani,Valcea,Romania
+DORHI,BT,RO,Dorohoi,Botosani,Romania
+DEVAZ,HD,RO,Deva,Hunedoara,Romania
+DJXYW,CJ,RO,Dej,Cluj,Romania
+CARGE,AG,RO,Curtea de Arges,Arges,Romania
+AIULA,AB,RO,Alba Iulia,Alba,Romania
+AUDYA,AB,RO,Aiud,Alba,Romania
+ADJUD,VN,RO,Adjud,Vrancea,Romania
+BAIAM,SM,RO,Baia Mare,Satu Mare,Romania
+PSCAI,IS,RO,Pascani,Iasi,Romania
+MIOVE,AG,RO,Mioveni,Arges,Romania
+SIGRA,MS,RO,Sighisoara,Mures,Romania
+SLOBZ,IL,RO,Slobozia,Ialomita,Romania
+NYANM,NEN,RU,Nar'yan-Mar,Nenetskiy Avtonomnyy Okrug,Russia
+URYAV,KHM,RU,Uray,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+SRGUT,KHM,RU,Surgut,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+SVTKY,KHM,RU,Sovetskiy,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+POYVK,KHM,RU,Poykovskiy,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+NYAGN,KHM,RU,Nyagan,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+NIHAK,KHM,RU,Nizhnevartovsk,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+NFTUG,KHM,RU,Nefteyugansk,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+MEION,KHM,RU,Megion,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+YUGOK,KHM,RU,Yugorsk,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+KHANM,KHM,RU,Khanty-Mansiysk,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+BELSY,KHM,RU,Beloyarskiy,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+RDZNY,KHM,RU,Raduzhny,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+LYATO,KHM,RU,Lyantor,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+ULANU,BU,RU,Ulan-Ude,Respublika Buryatiya,Russia
+SEAAS,BU,RU,Severobaykal'sk,Respublika Buryatiya,Russia
+KYHTA,BU,RU,Kyakhta,Respublika Buryatiya,Russia
+GUNYR,BU,RU,Gusinoozyorsk,Respublika Buryatiya,Russia
+KOGAL,KHM,RU,Kogalym,Khanty-Mansiyskiy Avtonomnyy Okrug,Russia
+KASUY,40,JP,Kasuya,Fukuoka,Japan
+BCAES,10,MY,Batu Caves,Selangor,Malaysia
+BOJAN,NW,ZA,Bojanala,North-West,South Africa
+MVALE,ENG,GB,Maida Vale,England,United Kingdom
+WITRE,ENG,GB,Wiltshire,England,United Kingdom
+METBF,I,FR,Metabief,Franche-Comte,France
+MNTHA,V,FR,Montricher-Albanne,Rhone-Alpes,France
+VVEHR,05,PT,Vila Velha de Rodao,Castelo Branco,Portugal
+RDAPU,UP,IN,Rudrapur,Uttar Pradesh,India
+ETVAL,CA,US,Eastvale,California,United States
+RAYVM,AP,IN,Rayavaram,Andhra Pradesh,India
+PUBAM,WB,IN,Purba Madhabpur,West Bengal,India
+KNGLM,TN,IN,Karimangalam,Tamil Nadu,India
+ALMUR,AP,IN,Alamuru,Andhra Pradesh,India
+PARGI,TG,IN,Parigi,Telangana,India
+KAPWU,AP,IN,Kapileswarapuram,Andhra Pradesh,India
+KPLWU,AP,IN,Kapileswarapuram,Andhra Pradesh,India
+MAVAL,MH,IN,Maval,Maharashtra,India
+SUJTN,AP,IN,Sujathanagar,Andhra Pradesh,India
+LAVAA,MH,IN,Mulshi,Maharashtra,India
+SWLMN,KY,US,South Williamson,Kentucky,United States
+SOWAE,KA,IN,Somwarpet,Karnataka,India
+PUATR,AP,IN,Pusapatirega,Andhra Pradesh,India
+DEVUA,KL,IN,Devikulam,Kerala,India
+DEVUA,KL,IN,HUBLI,KARNATAKA,INDIA
