@@ -1,0 +1,130 @@
+[
+	{
+		"theatre_id": "T1",
+		"min_size": 0,
+		"max_size": 100,
+		"minimum_cost": 1500,
+		"cost_per_gb": 20,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 100,
+		"max_size": 200,
+		"minimum_cost": 2000,
+		"cost_per_gb": 13,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 200,
+		"max_size": 300,
+		"minimum_cost": 2500,
+		"cost_per_gb": 12,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 300,
+		"max_size": 400,
+		"minimum_cost": 3000,
+		"cost_per_gb": 10,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 0,
+		"max_size": 100,
+		"minimum_cost": 1500,
+		"cost_per_gb": 20,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 100,
+		"max_size": 200,
+		"minimum_cost": 2000,
+		"cost_per_gb": 15,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 200,
+		"max_size": 300,
+		"minimum_cost": 2500,
+		"cost_per_gb": 12,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 300,
+		"max_size": 400,
+		"minimum_cost": 3000,
+		"cost_per_gb": 10,
+		"partner_id": "P1"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 0,
+		"max_size": 200,
+		"minimum_cost": 1000,
+		"cost_per_gb": 20,
+		"partner_id": "P2"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 200,
+		"max_size": 400,
+		"minimum_cost": 2500,
+		"cost_per_gb": 15,
+		"partner_id": "P2"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 0,
+		"max_size": 200,
+		"minimum_cost": 2500,
+		"cost_per_gb": 20,
+		"partner_id": "P2"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 200,
+		"max_size": 400,
+		"minimum_cost": 3500,
+		"cost_per_gb": 10,
+		"partner_id": "P2"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 100,
+		"max_size": 200,
+		"minimum_cost": 800,
+		"cost_per_gb": 25,
+		"partner_id": "P3"
+	},
+	{
+		"theatre_id": "T1",
+		"min_size": 200,
+		"max_size": 600,
+		"minimum_cost": 1200,
+		"cost_per_gb": 30,
+		"partner_id": "P3"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 100,
+		"max_size": 200,
+		"minimum_cost": 900,
+		"cost_per_gb": 15,
+		"partner_id": "P3"
+	},
+	{
+		"theatre_id": "T2",
+		"min_size": 200,
+		"max_size": 400,
+		"minimum_cost": 1000,
+		"cost_per_gb": 12,
+		"partner_id": "P3"
+	}
+]
