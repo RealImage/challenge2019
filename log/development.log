@@ -1,0 +1,2767 @@
+Started GET "/csv_dta" for 127.0.0.1 at 2022-07-19 15:45:00 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/csv_dta"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/csv_data" for 127.0.0.1 at 2022-07-19 15:45:05 +0530
+  
+ActionController::RoutingError (uninitialized constant Problem1Controller):
+  
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data" for 127.0.0.1 at 2022-07-19 15:45:35 +0530
+  
+ActionController::RoutingError (uninitialized constant Problem1Controller):
+  
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data_path" for 127.0.0.1 at 2022-07-19 15:45:46 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_csv_data_path"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data_path" for 127.0.0.1 at 2022-07-19 15:46:19 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_csv_data_path"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data_path" for 127.0.0.1 at 2022-07-19 15:46:27 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_csv_data_path"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data_path" for 127.0.0.1 at 2022-07-19 15:46:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_csv_data_path"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data_path" for 127.0.0.1 at 2022-07-19 15:46:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_csv_data_path"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data" for 127.0.0.1 at 2022-07-19 15:46:35 +0530
+Processing by Problems1Controller#get_csv_data as HTML
+Completed 406 Not Acceptable in 5124ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems1Controller#get_csv_data is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_csv_data" for 127.0.0.1 at 2022-07-19 15:50:12 +0530
+Processing by Problems1Controller#get_csv_data as HTML
+Completed 406 Not Acceptable in 11903ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems1Controller#get_csv_data is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 15:58:31 +0530
+Processing by Problems1Controller#index as HTML
+Completed 406 Not Acceptable in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems1Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 15:59:05 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:04:12 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:04:14 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:05:49 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 709922ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:17:47 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `theatres' for #<Problems1Controller:0x0000563ddc247a00>
+Did you mean?  theatres_info):
+  
+app/controllers/problems1_controller.rb:17:in `find_partner_info'
+app/controllers/problems1_controller.rb:5:in `block in index'
+app/controllers/problems1_controller.rb:4:in `map'
+app/controllers/problems1_controller.rb:4:in `index'
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:18:43 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:19:09 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 104034ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:20:56 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 159385ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for nil:NilClass):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:23:39 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 92594ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/problems1_controller.rb:29:in `block in find_partner_info'
+app/controllers/problems1_controller.rb:29:in `min'
+app/controllers/problems1_controller.rb:29:in `find_partner_info'
+app/controllers/problems1_controller.rb:5:in `block in index'
+app/controllers/problems1_controller.rb:4:in `map'
+app/controllers/problems1_controller.rb:4:in `index'
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:25:18 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_result_data" for 127.0.0.1 at 2022-07-19 16:26:49 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 270660ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for nil:NilClass):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:31:39 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00005653c215e9d0>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:02 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d9482a0f8>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:03 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d9c007058>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:04 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d8ce67d88>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:05 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d948da598>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:05 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 8ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d802f1230>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:06 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00005653c2437828>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:16 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d804e00f0>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:8:in `map'
+app/controllers/problems1_controller.rb:8:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:32:31 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 37036ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d8cce17c0>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:10:in `map'
+app/controllers/problems1_controller.rb:10:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:33:11 +0530
+Processing by Problems1Controller#index as HTML
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:33:46 +0530
+Completed 500 Internal Server Error in 35271ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for #<Hash:0x00007f4d805bdcc0>
+Did you mean?  to_s):
+  
+app/controllers/problems1_controller.rb:9:in `map'
+app/controllers/problems1_controller.rb:9:in `index'
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:33:49 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:33:49 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:34:07 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 16:34:08 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:47:14 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:48:41 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:48:42 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:48:43 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:48:57 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:49:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:49:02 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:49:03 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:51:16 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:52:14 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:52:16 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:54:31 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 103520ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:56:35 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_csv' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:14:in `map'
+app/controllers/problems2_controller.rb:14:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:57:07 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:57:50 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:57:52 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:57:53 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 16:57:54 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 17:00:41 +0530
+Processing by Problems1Controller#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `values' for #<Array:0x00007f9bf5107258>
+Did you mean?  values_at):
+  
+app/controllers/problems1_controller.rb:28:in `find_partner_info'
+app/controllers/problems1_controller.rb:5:in `block in index'
+app/controllers/problems1_controller.rb:4:in `map'
+app/controllers/problems1_controller.rb:4:in `index'
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 17:02:05 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 17:03:31 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:03:51 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:37:20 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:52: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:52: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:37:51 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+...veryTheater][partner].costPerGB
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:38:24 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+...veryTheater][partner].costPerGB
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '\n', expecting =>
+...ryTheater][partner].minimumCost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '}'
+                    } else {
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:44: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:51: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:54: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '}'
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:44: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:51: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:54: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:39:08 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:52: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:52: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:39:44 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+...veryTheater][partner].costPerGB
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                            }
+                            ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:40:10 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+...eryTheater][partner].costPerGB)
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                            }
+                            ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:40:12 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+...eryTheater][partner].costPerGB)
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                            }
+                            ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:41:00 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:27: syntax error, unexpected ']', expecting ')'
+...eryTheater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:31: syntax error, unexpected '}', expecting ')'
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting ')'
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting ')'
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting ')'
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting ')'
+        }
+        ^):
+  
+app/controllers/problems2_controller.rb:27: syntax error, unexpected ']', expecting ')'
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:31: syntax error, unexpected '}', expecting ')'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting ')'
+app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting ')'
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting ')'
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting ')'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:41:22 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:41:25 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:50: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:41:38 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:31: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:31: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:41:59 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:54: syntax error, unexpected end-of-input, expecting '}'):
+  
+app/controllers/problems2_controller.rb:28: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:30: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:34: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:37: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:39: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:41: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:43: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:54: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:42:23 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:29: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:43:04 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:43:06 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...Theater][partner].partnerID]) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...heater][partner].minimumCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+...     if (minimumDeliveryCost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+... (minimumDeliveryCost > cost) {
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+                        }
+                        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+...     minimumDeliveryCost = cost
+...                               ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+                    }
+                    ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+                }
+                ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+        }
+        ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:53: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/problems2_controller.rb:27: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:29: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:32: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:33: syntax error, unexpected '{', expecting keyword_then or ';' or '\n'
+app/controllers/problems2_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:38: syntax error, unexpected '\n', expecting =>
+app/controllers/problems2_controller.rb:40: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:42: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:49: syntax error, unexpected '}', expecting keyword_end
+app/controllers/problems2_controller.rb:53: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:44:47 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `arr' for #<Problems2Controller:0x00007f9bf0366490>
+Did you mean?  Array):
+  
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:45:40 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/problems2_controller.rb:11:in `block in index'
+app/controllers/problems2_controller.rb:10:in `each'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:46:15 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 221172ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into Integer):
+  
+app/controllers/problems2_controller.rb:12:in `block in index'
+app/controllers/problems2_controller.rb:10:in `each'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:50:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `slabSize' for ["D1", "150", "T1"]:Array):
+  
+app/controllers/problems2_controller.rb:11:in `block in index'
+app/controllers/problems2_controller.rb:10:in `each'
+app/controllers/problems2_controller.rb:10:in `each_with_index'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:51:21 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 154221ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `slabSize' for ["D1", "150", "T1"]:Array):
+  
+app/controllers/problems2_controller.rb:12:in `block in index'
+app/controllers/problems2_controller.rb:10:in `each'
+app/controllers/problems2_controller.rb:10:in `each_with_index'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:54:00 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 41370ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `slabSizeMax' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:26:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:24:in `each'
+app/controllers/problems2_controller.rb:24:in `block in index'
+app/controllers/problems2_controller.rb:17:in `each'
+app/controllers/problems2_controller.rb:17:in `each_with_index'
+app/controllers/problems2_controller.rb:17:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:54:46 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `slabSizeMax' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:25:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:23:in `each'
+app/controllers/problems2_controller.rb:23:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:55:53 +0530
+Processing by Problems2Controller#index as HTML
+Completed   in 226837ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 17:59:50 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 250115ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `partner' for #<Problems2Controller:0x0000557e01f6a340>):
+  
+app/controllers/problems2_controller.rb:26:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:23:in `each'
+app/controllers/problems2_controller.rb:23:in `each_with_index'
+app/controllers/problems2_controller.rb:23:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:04:03 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 3344ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `partner' for #<Problems2Controller:0x00007f7388080b80>):
+  
+app/controllers/problems2_controller.rb:27:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:23:in `each'
+app/controllers/problems2_controller.rb:23:in `each_with_index'
+app/controllers/problems2_controller.rb:23:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:04:22 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 6511ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/problems2_controller.rb:45:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:05:27 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 4325ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/problems2_controller.rb:45:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:05:48 +0530
+Processing by Problems2Controller#index as HTML
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:07:11 +0530
+Completed 500 Internal Server Error in 83705ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/problems2_controller.rb:46:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 2482ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/problems2_controller.rb:47:in `+'
+app/controllers/problems2_controller.rb:47:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:07:43 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 423873ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/problems2_controller.rb:49:in `+'
+app/controllers/problems2_controller.rb:49:in `block in index'
+app/controllers/problems2_controller.rb:16:in `each'
+app/controllers/problems2_controller.rb:16:in `each_with_index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:14:51 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `squish' for #<Problems2Controller:0x00007faaf42b4ef8>):
+  
+app/controllers/problems2_controller.rb:13:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:13:in `each'
+app/controllers/problems2_controller.rb:13:in `map'
+app/controllers/problems2_controller.rb:13:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:16:37 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `partners' for #<Problems2Controller:0x00007faaf40911a8>
+Did you mean?  @partners):
+  
+app/controllers/problems2_controller.rb:8:in `block in index'
+app/controllers/problems2_controller.rb:7:in `map'
+app/controllers/problems2_controller.rb:7:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:16:53 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `squish' for #<Problems2Controller:0x0000555d6cfed890>):
+  
+app/controllers/problems2_controller.rb:13:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:13:in `each'
+app/controllers/problems2_controller.rb:13:in `map'
+app/controllers/problems2_controller.rb:13:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:17:06 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_i' for [:capacity, 500]:Array
+Did you mean?  to_s
+               to_a
+               to_h):
+  
+app/controllers/problems2_controller.rb:17:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:17:29 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (comparison of Integer with Array failed):
+  
+app/controllers/problems2_controller.rb:17:in `>'
+app/controllers/problems2_controller.rb:17:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:18:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 71339ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (comparison of Integer with Array failed):
+  
+app/controllers/problems2_controller.rb:18:in `>'
+app/controllers/problems2_controller.rb:18:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:19:15 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_i' for [:size_lab_min, 100]:Array
+Did you mean?  to_s
+               to_a
+               to_h):
+  
+app/controllers/problems2_controller.rb:54:in `map'
+app/controllers/problems2_controller.rb:54:in `block in get_optimal'
+app/controllers/problems2_controller.rb:52:in `get_optimal'
+app/controllers/problems2_controller.rb:23:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:21:in `each'
+app/controllers/problems2_controller.rb:21:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:20:05 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `split' for 100:Integer):
+  
+app/controllers/problems2_controller.rb:54:in `block in get_optimal'
+app/controllers/problems2_controller.rb:52:in `get_optimal'
+app/controllers/problems2_controller.rb:23:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:21:in `each'
+app/controllers/problems2_controller.rb:21:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:20:06 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `split' for 100:Integer):
+  
+app/controllers/problems2_controller.rb:54:in `block in get_optimal'
+app/controllers/problems2_controller.rb:52:in `get_optimal'
+app/controllers/problems2_controller.rb:23:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:21:in `each'
+app/controllers/problems2_controller.rb:21:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:20:12 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `split' for 100:Integer):
+  
+app/controllers/problems2_controller.rb:54:in `block in get_optimal'
+app/controllers/problems2_controller.rb:52:in `get_optimal'
+app/controllers/problems2_controller.rb:23:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:21:in `each'
+app/controllers/problems2_controller.rb:21:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:20:40 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:25:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:21:in `each'
+app/controllers/problems2_controller.rb:21:in `block in index'
+app/controllers/problems2_controller.rb:12:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:22:45 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:22:46 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:23:06 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:27:09 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `squish' for #<Problems2Controller:0x00007fab014430a0>):
+  
+app/controllers/problems2_controller.rb:17:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:17:in `map'
+app/controllers/problems2_controller.rb:17:in `block in index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:28:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `count' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:83:in `get_optimal'
+app/controllers/problems2_controller.rb:27:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:25:in `each'
+app/controllers/problems2_controller.rb:25:in `block in index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:29:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `partners_file' for #<Problems2Controller:0x0000555d6cc9a3f0>):
+  
+app/controllers/problems2_controller.rb:83:in `get_optimal'
+app/controllers/problems2_controller.rb:27:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:25:in `each'
+app/controllers/problems2_controller.rb:25:in `block in index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:29:23 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:29:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:25:in `each'
+app/controllers/problems2_controller.rb:25:in `block in index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:29:55 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 51034ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/problems2_controller.rb:30:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:25:in `each'
+app/controllers/problems2_controller.rb:25:in `block in index'
+app/controllers/problems2_controller.rb:16:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:30:49 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find_partner_info' for #<Problems2Controller:0x00007faaf41111f0>):
+  
+app/controllers/problems2_controller.rb:12:in `block in index'
+app/controllers/problems2_controller.rb:11:in `map'
+app/controllers/problems2_controller.rb:11:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:31:06 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `squish' for #<Problems2Controller:0x00007fab014627c0>):
+  
+app/controllers/problems2_controller.rb:59:in `block (3 levels) in low_delivery_cost'
+app/controllers/problems2_controller.rb:59:in `map'
+app/controllers/problems2_controller.rb:59:in `block (2 levels) in low_delivery_cost'
+app/controllers/problems2_controller.rb:58:in `block in low_delivery_cost'
+app/controllers/problems2_controller.rb:56:in `each'
+app/controllers/problems2_controller.rb:56:in `low_delivery_cost'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:31:50 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `squish' for #<Problems2Controller:0x00007faaf4424bd0>):
+  
+app/controllers/problems2_controller.rb:59:in `block (3 levels) in low_delivery_cost'
+app/controllers/problems2_controller.rb:59:in `map'
+app/controllers/problems2_controller.rb:59:in `block (2 levels) in low_delivery_cost'
+app/controllers/problems2_controller.rb:58:in `block in low_delivery_cost'
+app/controllers/problems2_controller.rb:56:in `each'
+app/controllers/problems2_controller.rb:56:in `low_delivery_cost'
+app/controllers/problems2_controller.rb:10:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:32:38 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 112ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `my_output_file2' for #<Problems2Controller:0x00007fab0146f330>):
+  
+app/controllers/problems2_controller.rb:42:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:32:53 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:33:26 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 191ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `final_arr' for #<Problems2Controller:0x00007faaf437f8d8>):
+  
+app/controllers/problems2_controller.rb:42:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:33:42 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:33:57 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:34:35 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:51: unknown regexp options - partr
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:51: unmatched close parenthesis: /output2.csv,"a+") do |row|
+      low_delivery_cost_with_limit.flatten(1).uniq.each do |a|
+        row << a[0..-3]
+      end
+    end
+  end
+
+def low_delivery_cost
+  array = []
+  partners_file = Dir.pwd  + '/
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:52: syntax error, unexpected tSTRING_BEG, expecting ')'
+..._file = Dir.pwd  + '/input.csv'
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:71: syntax error, unexpected keyword_true, expecting keyword_end
+...  array << [input_row[0], 'true', optimal_partner[4], optima...
+...                           ^~~~
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:73: syntax error, unexpected keyword_false, expecting keyword_end
+... array << [input_row[0], 'false', '', '',input_row[2], input...
+...                          ^~~~~
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:104: unterminated string meets end of file
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:51: unknown regexp options - partr
+app/controllers/problems2_controller.rb:51: unmatched close parenthesis: /output2.csv,"a+") do |row|
+app/controllers/problems2_controller.rb:52: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/controllers/problems2_controller.rb:71: syntax error, unexpected keyword_true, expecting keyword_end
+app/controllers/problems2_controller.rb:73: syntax error, unexpected keyword_false, expecting keyword_end
+app/controllers/problems2_controller.rb:104: unterminated string meets end of file
+app/controllers/problems2_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:34:40 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:34:42 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:34:43 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:34:44 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:34:53 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:51: unknown regexp options - partr
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:51: unmatched close parenthesis: /output2.csv,"a+") do |row|
+      low_delivery_cost_with_limit.flatten(1).uniq.each do |a|
+        row << a[0..-3]
+      end
+    end
+  end
+
+def low_delivery_cost
+  array = []
+  partners_file = Dir.pwd  + '/
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:52: syntax error, unexpected tSTRING_BEG, expecting ')'
+..._file = Dir.pwd  + '/input.csv'
+...                              ^
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:71: syntax error, unexpected keyword_true, expecting keyword_end
+...  array << [input_row[0], 'true', optimal_partner[4], optima...
+...                           ^~~~
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:73: syntax error, unexpected keyword_false, expecting keyword_end
+... array << [input_row[0], 'false', '', '',input_row[2], input...
+...                          ^~~~~
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:104: unterminated string meets end of file
+/home/indium/challenge2019/app/controllers/problems2_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:51: unknown regexp options - partr
+app/controllers/problems2_controller.rb:51: unmatched close parenthesis: /output2.csv,"a+") do |row|
+app/controllers/problems2_controller.rb:52: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/controllers/problems2_controller.rb:71: syntax error, unexpected keyword_true, expecting keyword_end
+app/controllers/problems2_controller.rb:73: syntax error, unexpected keyword_false, expecting keyword_end
+app/controllers/problems2_controller.rb:104: unterminated string meets end of file
+app/controllers/problems2_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:35:30 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+  
+IOError (not opened for writing):
+  
+app/controllers/problems2_controller.rb:44:in `block (2 levels) in index'
+app/controllers/problems2_controller.rb:43:in `each'
+app/controllers/problems2_controller.rb:43:in `block in index'
+app/controllers/problems2_controller.rb:42:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:36:18 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:36:43 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:36:43 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:36:44 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:37:36 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:38:24 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:39:32 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:20 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:35 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:36 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:36 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:94: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:52 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:53 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:41:54 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:95: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:42:09 +0530
+  
+SyntaxError (/home/indium/challenge2019/app/controllers/problems2_controller.rb:96: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/problems2_controller.rb:96: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:42:56 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:43:12 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:43:48 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EACCES (Permission denied @ rb_sysopen - /output.csv):
+  
+app/controllers/problems2_controller.rb:108:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:44:09 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EACCES (Permission denied @ rb_sysopen - /output.csv):
+  
+app/controllers/problems2_controller.rb:107:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:44:19 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EACCES (Permission denied @ rb_sysopen - /output2.csv):
+  
+app/controllers/problems2_controller.rb:107:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:44:20 +0530
+Processing by Problems2Controller#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EACCES (Permission denied @ rb_sysopen - /output2.csv):
+  
+app/controllers/problems2_controller.rb:107:in `index'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:44:41 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:47:01 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:47:02 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:47:04 +0530
+Processing by Problems2Controller#index as HTML
+Completed 406 Not Acceptable in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Problems2Controller#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.8.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/get_problem_2_data" for 127.0.0.1 at 2022-07-19 18:47:24 +0530
+Processing by Problems2Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:47:57 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:48:25 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_problem_1_data" for 127.0.0.1 at 2022-07-19 18:49:15 +0530
+Processing by Problems1Controller#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
