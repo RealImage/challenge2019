@@ -57,6 +57,7 @@ func ProblemStatementTwo(inputPath, outputPath string) error {
 		return err
 	}
 
+	// For each delivery_id in input.csv stores size_requirement, number of valid available Partner Options, details of each partner options.
 	deliveryChoices := []schemas.DeliveryChoices{}
 	for _, row := range inputRows {
 		deliveryID := utils.Trim(row[0])
@@ -90,12 +91,14 @@ func ProblemStatementTwo(inputPath, outputPath string) error {
 		deliveryChoices = append(deliveryChoices, choice)
 	}
 
+	// Sort the above array on the basis number of available options.
 	sort.SliceStable(deliveryChoices, func(i, j int) bool {
 		return deliveryChoices[i].NumberOfOptions < deliveryChoices[j].NumberOfOptions
 	})
 
 	log.Println(deliveryChoices)
 
+	// Delivery with least number of options will get processed first.
 	output := make([]string, len(inputRows))
 	for _, delivery := range deliveryChoices {
 		finalCost := math.MaxInt
