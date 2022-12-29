@@ -50,3 +50,32 @@ For problem statement 2, my output is different than expected output. However, t
 2. Stores in array, for each delivery_id in input.csv stores size_requirement, number of valid available Partner Options, details of each partner options.
 3. Sort the above array on the basis number of available options.
 4. Delivery with least number of options will get processed first.
+
+
+<br />
+
+## Tree Layout
+
+```tree
+.
+
+├── go.mod
+├── main.go
+├── README.md
+├── common
+│   ├── db
+│   │   ├── db.go
+│   │   └── utils.go
+│   ├── schemas
+│   │   ├── schemas.go
+│   ├── utils
+│   │   ├── fileutils.go
+│   │   └── utils.go
+├── config
+│   └── config.go
+├── README.md
+└── src
+│   │── compute.go
+│   └── solutions.go
+
+```
